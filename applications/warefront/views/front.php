@@ -11,8 +11,12 @@
         <li class="hidden-xs hidden-sm"><a href="#features">Features</a></li>
         <li class="hidden-xs hidden-sm"><a href="#pricing">Api Service</a></li>
         <li class="hidden-xs hidden-sm"><a href="#reviews">Reviews</a></li>
-        <li class="hidden-xs"><a href="signin.html">Sign In</a></li>
-        <li><a href="signup.html" class="btn btn-nav">Sign Up</a></li>
+        <?php if($status === 'Member'):?>
+        <li class="hidden-xs"><a href="<?php echo base_url()."login/logout"; ?>">Keluar</a></li>
+          <?php else:?>
+          <li class="hidden-xs"><a href="<?php echo base_url()."login"; ?>">Masuk</a></li>
+        <?php endif ?>
+        <li><a href="<?php echo base_url()."register"; ?>" class="btn btn-nav">Daftar</a></li>
         <li class="hidden-md hidden-lg"><a id="toggle"><i class="fa fa-bars fa-2x"></i><i class="fa fa-times fa-2x"></i></a></li>
       </ul>
     </div>
@@ -30,7 +34,10 @@
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#team">Team</a></li>
-        <li class="hidden-sm"><a href="signin.html">Sign In</a></li>
+        <?php if($status === 'Member'):?>
+        <li class="hidden-sm"><a href="<?php echo base_url()."login/logout"; ?>">Sign Out</a></li>
+        <?php endif ?>
+        <li class="hidden-sm"><a href="<?php echo base_url()."login"; ?>">Sign In</a></li>
       </ul>
     </nav>
   </div>
@@ -359,7 +366,7 @@
   </div>
 </section>
 
-<!--cta info end --> 
+<!--cta info end -->
 
 <!--Pricing-->
 
@@ -369,8 +376,8 @@
       <h2>API Service Packages</h2>
       <h3>30 day money back guarantee. No credit card required!</h3>
     </header>
-    <div class="row"> 
-      
+    <div class="row">
+
       <!--pricing tabel 1-->
       <div class="col-sm-4">
         <div class="pricing-table-container">
@@ -378,13 +385,13 @@
             <h4>Basic</h4>
           </div>
           <div class="plan-price">
-            <h5>Free</h5>
+            <h5>Free Plan</h5>
           </div>
-          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="#" class="btn">TRY FOR FREE</a> </div>
+          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="<?php echo base_url()."login"; ?>" class="btn">TRY FOR FREE</a> </div>
           <div class="plan-details">
             <ul>
-              <li><strong>1</strong> user</li>
-              <li><strong>5000</strong> Views per/m</li>
+              <li><strong>1</strong> Pengguna</li>
+              <li><strong>50</strong> barang </li>
               <li><strong>12</strong> Projects</li>
               <li><strong>5</strong> agent per account<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
             </ul>
