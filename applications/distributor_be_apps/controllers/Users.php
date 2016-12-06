@@ -11,15 +11,38 @@ class Users extends CI_Controller {
 			redirect('auth');
 
 		$this->config->load('rest');
+		$this->load->model('users_model');
 	}
 
 	public function index()
 	{
 		$package = $this->Crud_model->get('package', '*');
-		$this->load->view('pages/users_view', ['package' => $package]);
+		$users = $this->users_model->get_all();
+
+		$data = [
+			'package' => $package,
+			'users' => $users,
+		];
+		$this->load->view('users/list_view', $data);
+	}
+
+	public function create()
+	{
+		$this->load->view('users/form_view');
 	}
 
 	public function store()
+	{
+		$user = $this->input->post('data');
+		$user['password']   = password_hash($user['password'], PASSWORD_DEFAULT);
+		$user['created_at'] = date('Y-m-d H:i:s');
+		$user['updated_at'] = date('Y-m-d H:i:s');
+
+		$this->users_model->insert($user);
+		redirect('users');
+	}
+
+	public function store_all()
 	{
 		$user= $this->input->post('data');
 

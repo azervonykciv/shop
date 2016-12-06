@@ -10,7 +10,7 @@ class Auth extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('auth/signin_view');
+		$this->load->view('auth/login_view');
 	}
 
 	public function validation()
