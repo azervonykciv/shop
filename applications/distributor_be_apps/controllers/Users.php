@@ -16,9 +16,6 @@ class Users extends CI_Controller {
 	public function index()
 	{
 		$package = $this->Crud_model->get('package', '*');
-		// echo "<pre>";
-		// print_r($package);
-		// die();
 		$this->load->view('pages/users_view', ['package' => $package]);
 	}
 

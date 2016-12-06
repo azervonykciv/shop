@@ -41,18 +41,6 @@
 								</select>
 							</div>
 						</div>
-
-						<div class="form-group">
-							<label class="col-xs-3 control-label">Paket</label>
-							<div class="col-xs-9">
-								<select name="package" class="form-control" required>
-									<?php foreach ($package as $key): ?>
-										<option value="<?php echo $key->id ?>"><?php echo $key->name ?></option>
-									<?php endforeach ?>
-								</select>
-							</div>
-						</div>
-
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
@@ -95,27 +83,11 @@
 					<thead>
 						<tr>
 							<th style="width: 5%">#</th>
-							<th style="width: 30%">Username</th>
-							<th style="width: 25%">Item</th>
-							<th style="width: 20%">Paket</th>
+							<th style="width: 75%">Username</th>
 							<th style="width: 20%">Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Test</td>
-							<td>Test</td>
-							<td>Test</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Test</td>
-							<td>Test</td>
-							<td>Test</td>
-							<td></td>
-						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -126,6 +98,35 @@
 <?php $this->load->view('layout/script_view') ?>
 <script src="<?php echo base_url()."assets/plugins/datatables/js/datatables.min.js" ?>"></script>
 <script>
-	$('table').dataTable();
+	if(self.fetch) {
+    console.log('can use fetch');
+	} else {
+		console.log('can not use fetch');
+	}
+
+	var users;
+	fetch('<?php echo base_url().'ApiUsers?fields=*' ?>',{
+		method: 'get',  
+    headers: {  
+      "Content-type": "application/x-www-form-urlencoded",
+      "X-API-KEY": "kk4wo44w84k4kos0c0swsgsog8so8gsw0wcgscwo",
+    }, 
+	})
+	.then(function(response) {
+		  return response.json();
+	})
+	.then(function(response) {
+		  this.users = response;
+		  return;
+	})
+	.catch(function(error) {
+	  console.log('There has been a problem with your fetch operation: ' + error.message);
+	});
+
+	console.log(users)
+
+
+	$('table').dataTable({
+	});
 </script>
 <?php $this->load->view('layout/footer_view') ?>
