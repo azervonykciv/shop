@@ -26,13 +26,17 @@ class crud_model extends CI_Model
         return $this->db->get($table)->result();
     }
 
-
-    public function where($table,$id1,$id2,$stat)
+public function cek_user($Email="", $Password=""){
+        $query = $this->db->get_where("user", array('Email' => $Email , password_verify('Password',$Password)));
+        $query = $query->result_array();
+        return $query;
+    }
+    public function where($table,$id1,$id2,$stat = NULL)
     {
         if($stat == 1){
             return $this->db->where($id1,$id2)->get($table)->result();
         }
-        else if($stat == 2) {
+        else if($stat == NULL) {
             $this->db->where($id1, $id2)->get($table);
         }
     }

@@ -3,13 +3,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Front extends CI_Controller
 {
-	public function index()
+
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('crud_model');
+    }
+
+    public function index()
 	{
-		$this->template->load('frontTemp','front');
+
+        $data['status']=$this->session->userdata('Status');
+
+		$this->template->load('frontBase','front',$data);
 	}
 
-	public function login()
+	public function in_pack($data)
 	{
-		$this->template->load('frontTemp','login');
+		
 	}
 }
