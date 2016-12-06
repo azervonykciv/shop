@@ -374,7 +374,7 @@
   <div class="container">
     <header class="section-header">
       <h2>API Service Packages</h2>
-      <h3>30 day money back guarantee. No credit card required!</h3>
+      <h3>Barang per kategori pada Muslim SHop</h3>
     </header>
     <div class="row">
 
@@ -387,7 +387,7 @@
           <div class="plan-price">
             <h5>Free Plan</h5>
           </div>
-          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="<?php echo base_url()."login"; ?>" class="btn">TRY FOR FREE</a> </div>
+          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="<?php echo base_url()."front/in_pack/1"; ?>" class="btn">TRY FOR FREE</a> </div>
           <div class="plan-details">
             <ul>
               <li><strong>1</strong> Pengguna</li>

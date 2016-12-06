@@ -31,6 +31,12 @@ public function cek_user($Email="", $Password=""){
         $query = $query->result_array();
         return $query;
     }
+
+    public function check($com, $cond,$table){
+        $query = $this->db->get_where($table, array($com => $cond));
+        $query = $query->result_array();
+        return $query;
+    }
     public function where($table,$id1,$id2,$stat = NULL)
     {
         if($stat == 1){
@@ -61,10 +67,5 @@ public function cek_user($Email="", $Password=""){
     public function count()
     {
         return $this->db->count_all_results('barang',FALSE);
-    }
-
-    public function check($table,$id1,$id2)
-    {
-        return $this->db->where($id1,$id2)->count_all_results($table);
     }
 }

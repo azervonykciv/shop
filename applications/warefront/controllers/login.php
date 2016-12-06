@@ -27,12 +27,14 @@ class Login extends CI_Controller
 				$Status = $cek['Status'];
                 $Id     = $cek['ID_User'];
                 $Nama_user	= $cek['Nama_User'];
+                $Tokenize   = $cek['Tokenize'];
 			}
             $x=$this->session->set_userdata(array(
 				'isLogin'	=> TRUE,
 				'uname'		=> $Nama_user,
 				'Status'	=> $Status,
                 'id_user'   => $Id,
+                'Tokenize'  => $Tokenize,
 			));
 			redirect('front', 'refresh');
 		}else{
