@@ -41,6 +41,11 @@
 				<i class="fa fa-credit-card"></i> <span>Packages</span>
 				</a>
 			</li>
+			<li>
+				<a href="<?php echo base_url().'order' ?>">
+				<i class="fa fa-cart-arrow-down"></i> <span>Order</span>
+				</a>
+			</li>
 
 		</ul>
 	</section>

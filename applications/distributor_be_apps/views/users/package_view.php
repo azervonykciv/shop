@@ -30,7 +30,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-						<form role="form" action="<?php echo base_url().'packages/set_package_user/'.$user->id ?>" method='post'>
+						<form role="form" action="<?php echo base_url().'users/set_package_user/'.$user->id ?>" method='post'>
 							<div class="box-body">
 								<div class="form-group">
 									<label>Name :</label>
@@ -42,7 +42,7 @@
 							<div class="box-body">
 								<div class="form-group">
 									<label>Package :</label>
-									<select name="data[package_id]" class="form-control">
+									<select name="data[packages_id]" class="form-control">
 										<option></option>
 										<?php foreach ($packages as $key): ?>
 											<?php if ($user->packages->id === $key->id): ?>

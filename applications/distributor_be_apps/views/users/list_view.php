@@ -57,7 +57,7 @@
 									<td><?php echo $rowNum++; ?></td>
 									<td><?php echo $key->username; ?></td>
 									<td>
-										<a href="<?php echo base_url().'packages/user/'.$key->id ?>" class="btn btn-primary">Paket</a>
+										<a href="<?php echo base_url().'users/package/'.$key->id ?>" class="btn btn-primary">Paket</a>
 										<a href="<?php echo base_url().'users/edit/'.$key->id ?>" class="btn btn-warning">Edit</a>
 										<a href="<?php echo base_url().'users/delete/'.$key->id ?>" class="btn btn-danger"
 											onclick="return confirm('Are you sure you want to delete this item?');">delete</a>

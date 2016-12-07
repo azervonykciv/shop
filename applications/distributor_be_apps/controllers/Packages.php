@@ -57,13 +57,30 @@ class Packages extends CI_Controller {
 
 	public function user($id)
 	{
-		$data = $this->Users_model->with('packages')->get($id);
+		$data = [
+			'user' => $this->Users_model->with('packages')->get($id),
+			'packages' => $this->Crud_model->get('packages', '*'),
+		];
+		$this->load->view('packages/user_view', $data);
+	}
+
+	public function set_package_user($id)
+	{
+		$data = $this->input->post('data');
+		$data['id'] = $id;
 
 		echo "<pre>";
 		print_r($data);
 		die();
-	}
 
+		$user               = $this->input->post('data');
+		$user['password']   = password_hash($user['password'], PASSWORD_DEFAULT);
+		$user['updated_at'] = date('Y-m-d H:i:s');
+
+		$this->Crud_model->update('users', $user, ['id' => $id]);
+		$this->session->set_flashdata('success', 'anda berhasil mengubah data');
+		redirect('users');
+	}
 }
 
 /* End of file Packages.php */
