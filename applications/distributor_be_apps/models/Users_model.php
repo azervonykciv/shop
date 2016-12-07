@@ -2,7 +2,8 @@
 
 class Users_model extends MY_Model {
 
-	protected $_table = 'users';
+	public $_table = 'users';
+	public $belongs_to = ['packages'];
 
 }
 

@@ -41,7 +41,7 @@
 					<?php endif ?>
 					<div class="row">
 						<div class="col-md-12">
-							<a style="margin-bottom: 12px;" href="<?php echo base_url().'users/create' ?>" class="btn btn-success pull-right">Tambah</a>
+							<a style="margin-bottom: 12px;" href="<?php echo base_url().'packages/create' ?>" class="btn btn-success pull-right">Tambah</a>
 						</div>
 					</div>
 					<table class="table table-responsive">
@@ -52,14 +52,14 @@
 						</thead>
 						<tbody>
 							<?php $rowNum = 1; ?>
-							<?php foreach ($users as $key): ?>
+							<?php foreach ($data as $key): ?>
 								<tr>
 									<td><?php echo $rowNum++; ?></td>
-									<td><?php echo $key->username; ?></td>
+									<td><?php echo $key->name; ?></td>
 									<td>
 										<a href="<?php echo base_url().'packages/user/'.$key->id ?>" class="btn btn-primary">Paket</a>
-										<a href="<?php echo base_url().'users/edit/'.$key->id ?>" class="btn btn-warning">Edit</a>
-										<a href="<?php echo base_url().'users/delete/'.$key->id ?>" class="btn btn-danger"
+										<a href="<?php echo base_url().'packages/edit/'.$key->id ?>" class="btn btn-warning">Edit</a>
+										<a href="<?php echo base_url().'packages/delete/'.$key->id ?>" class="btn btn-danger"
 											onclick="return confirm('Are you sure you want to delete this item?');">delete</a>
 									</td>
 								</tr>

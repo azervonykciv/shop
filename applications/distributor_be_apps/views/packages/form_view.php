@@ -31,19 +31,15 @@
         </div>
         <div class="box-body">
           <?php if ($this->uri->segment(2) === 'create'): ?>
-            <form role="form" action="<?php echo base_url().'users/store' ?>" method='post'>
+            <form role="form" action="<?php echo base_url().'packages/store' ?>" method='post'>
           <?php else: ?>
-            <form role="form" action="<?php echo base_url().'users/update/'.$data->id ?>" method='post'>
+            <form role="form" action="<?php echo base_url().'packages/update/'.$data->id ?>" method='post'>
           <?php endif ?>
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Username</label>
-                  <input name="data[username]" type="text" class="form-control" placeholder="Username"
-                    value="<?php if (isset($data->username)) { echo $data->username; }   ?>" >
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input name="data[password]" type="password" class="form-control" placeholder="Password" >
+                  <label for="exampleInputEmail1">Name</label>
+                  <input name="data[name]" type="text" class="form-control" placeholder="Name"
+                    value="<?php if (isset($data->name)) { echo $data->name; }   ?>" >
                 </div>
               </div>
 

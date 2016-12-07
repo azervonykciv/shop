@@ -2,7 +2,7 @@
 
 require APPPATH . '/libraries/REST_Controller.php';
 
-class Items extends REST_Controller {
+class ApiItems extends REST_Controller {
 
 	public function __construct()
 	{

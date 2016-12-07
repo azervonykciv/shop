@@ -11,19 +11,12 @@ class Users extends CI_Controller {
 			redirect('auth');
 
 		$this->config->load('rest');
-		$this->load->model('users_model');
 	}
 
 	public function index()
 	{
-		$package = $this->Crud_model->get('package', '*');
-		$users = $this->users_model->get_all();
-
-		$data = [
-			'package' => $package,
-			'users' => $users,
-		];
-		$this->load->view('users/list_view', $data);
+		$users   = $this->Crud_model->get('users', '*');
+		$this->load->view('users/list_view', [ 'users' => $users, ]);
 	}
 
 	public function create()
@@ -38,9 +31,63 @@ class Users extends CI_Controller {
 		$user['created_at'] = date('Y-m-d H:i:s');
 		$user['updated_at'] = date('Y-m-d H:i:s');
 
-		$this->users_model->insert($user);
+		$this->Crud_model->insert('users', $user);
+		$this->session->set_flashdata('success', 'anda berhasil menambahkan data');
 		redirect('users');
 	}
+
+	public function edit($id)
+	{
+		$data = $this->Crud_model->where('users', ['id' => $id]);
+		$this->load->view('users/form_view', ['data' => $data[0]]);
+	}
+
+	public function update($id)
+	{
+		$user               = $this->input->post('data');
+		$user['password']   = password_hash($user['password'], PASSWORD_DEFAULT);
+		$user['updated_at'] = date('Y-m-d H:i:s');
+
+		$this->Crud_model->update('users', $user, ['id' => $id]);
+		$this->session->set_flashdata('success', 'anda berhasil mengubah data');
+		redirect('users');
+	}
+
+	public function delete($id)
+	{
+		$this->Crud_model->delete('users', ['id' => $id]);
+		$this->session->set_flashdata('success', 'Anda berhasil menghapus admin');
+		redirect('users');
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 	public function store_all()
 	{
