@@ -27,17 +27,12 @@ class Register extends CI_Controller
         $api_key['ignore_limits'] = 0;
         $api_key['date_created']  = date_default_timezone_set('Asia/Jakarta');
 
-        $api_access['key']        = $api_key['key'];
-        $api_access['date_created']  = date_default_timezone_set('Asia/Jakarta');
-        $api_access['date_modified'] = date_default_timezone_set('Asia/Jakarta');
-        $api_access['controller'] = $package->controller;
-
 
         $user['Nama_user'] = $this->input->post('Nama_User');
         $user['Password'] = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
         $user['created_at'] = date_default_timezone_set('Asia/Jakarta');
         $user['updated_at'] = date_default_timezone_set('Asia/Jakarta');
-        $user['Status'] = "Member";
+        $user['Status'] = "Admin";
         $user['tokenize'] = $tok;
         $access['key'] = $tok;
         $ck = $this->crud_model->check('user','Nama_user',$user['Nama_user']);
