@@ -17,15 +17,13 @@ class ApiItems extends REST_Controller {
 
 	public function index_get()
 	{
-		$items = $this->Crud_model->get('item', ['name', 'harga']);
+		$items = $this->Crud_model->get('item', ['name']);
 		$this->set_response($items, REST_Controller::HTTP_OK);
 	}
 
 	public function index_post()
 	{
 		$item = $this->input->post();
-		$item['created_at'] = Date('Y-m-d H:i:s');
-		$item['updated_at'] = Date('Y-m-d H:i:s');
 
 		$this->Crud_model->insert('item', $item);
 
@@ -40,7 +38,6 @@ class ApiItems extends REST_Controller {
 	public function index_patch()
 	{
 		$item = $this->patch();
-		$item['updated_at'] = Date('Y-m-d H:i:s');
 
 		$this->Crud_model->update('item', $item, ['id' => $item['id']]);
 

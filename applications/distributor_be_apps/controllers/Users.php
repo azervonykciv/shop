@@ -73,15 +73,6 @@ class Users extends CI_Controller {
 		$this->load->view('users/package_view', $data);
 	}
 
-	public function set_package_user($id)
-	{
-		$data               = $this->input->post('data');
-		$data['id']         = $id;
-
-		$this->Crud_model->update('users', $data, ['id' => $id]);
-		$this->session->set_flashdata('success', 'anda berhasil mengubah data');
-		redirect('users');
-	}
 
 
 
@@ -155,35 +146,6 @@ class Users extends CI_Controller {
 		$this->session->set_flashdata('msg', 'berhasil menambahkan data.');
 		redirect('users');
 	}
-
-	// for API KEYS
-		protected function _generate_key()
-		{
-				do
-				{
-						// Generate a random salt
-						$salt = base_convert(bin2hex($this->security->get_random_bytes(64)), 16, 36);
-
-						// If an error occurred, then fall back to the previous method
-						if ($salt === FALSE)
-						{
-								$salt = hash('sha256', time() . mt_rand());
-						}
-
-						$new_key = substr($salt, 0, config_item('rest_key_length'));
-				}
-				while ($this->_key_exists($new_key));
-
-				return $new_key;
-		}
-
-		private function _key_exists($key)
-		{
-			return $this->db
-					->where(config_item('rest_key_column'), $key)
-					->count_all_results(config_item('rest_keys_table')) > 0;
-		}
-
 }
 
 /* End of file Users.php */

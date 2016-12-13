@@ -30,11 +30,12 @@
 					</div>
 				</div>
 				<div class="box-body">
-						<form role="form" action="<?php echo base_url().'users/set_package_user/'.$user->id ?>" method='post'>
+						<form role="form" action="<?php echo base_url().'order/store/'?>" method='post'>
+							<input type="hidden" name="data[users_id]" value="<?php echo $user->id ?>">
 							<div class="box-body">
 								<div class="form-group">
 									<label>Name :</label>
-									<input name="data[username]" type="text" class="form-control" placeholder="Name" readonly
+									<input type="text" class="form-control" placeholder="Name" readonly
 										value="<?php if (isset($user->username)) { echo $user->username; }   ?>" >
 								</div>
 							</div>
@@ -46,9 +47,13 @@
 										<option></option>
 										<?php foreach ($packages as $key): ?>
 											<?php if ($user->packages->id === $key->id): ?>
-												<option value="<?php echo $key->id ?>" selected ><?php echo $key->name ?></option>
+												<option value="<?php echo $key->id ?>" selected >
+													<?php echo $key->name ?>
+												</option>
 											<?php else: ?>
-												<option value="<?php echo $key->id ?>" ><?php echo $key->name ?></option>
+												<option value="<?php echo $key->id ?>" >
+													<?php echo $key->name ?>
+												</option>
 											<?php endif ?>
 										<?php endforeach ?>
 									</select>

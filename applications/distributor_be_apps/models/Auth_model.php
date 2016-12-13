@@ -12,20 +12,17 @@ class Auth_model extends CI_Model {
 	{
 		$user = $this->db
 			->select('*')
-			->where([
-				'username' => $username,
-				'password' => $password,])
+			->where(['username' => $username,])
 			->get('users')
 			->result();
 
-		if ($user) {
-			return (object) [
-				'username' => $user[0]->username,
-				'level'    => $user[0]->level,
-			];
-		} else {
+		if(!password_verify($password ,$user[0]->password))
 			return false;
-		}
+
+		return (object) [
+			'username' => $user[0]->username,
+			'level'    => $user[0]->level,
+		];
 	}
 
 }
