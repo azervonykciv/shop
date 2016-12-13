@@ -16,6 +16,11 @@ class Packages extends CI_Controller {
 	public function index()
 	{
 		$data = $this->Crud_model->get('packages', '*');
+
+		// echo "<pre>";
+		// print_r($data);
+		// die();
+
 		$this->load->view('packages/list_view', [ 'data' => $data, ]);
 	}
 
@@ -51,7 +56,7 @@ class Packages extends CI_Controller {
 	public function delete($id)
 	{
 		$this->Crud_model->delete('packages', ['id' => $id]);
-		$this->session->set_flashdata('success', 'Anda berhasil menghapus admin');
+		$this->session->set_flashdata('success', 'Anda berhasil menghapus data');
 		redirect('packages');
 	}
 

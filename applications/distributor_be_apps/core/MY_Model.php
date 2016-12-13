@@ -138,7 +138,7 @@ class MY_Model extends CI_Model
             $this->_database->where($this->soft_delete_key, (bool)$this->_temporary_only_deleted);
         }
 
-		$this->_set_where($where);
+    		$this->_set_where($where);
 
         $this->trigger('before_get');
 
@@ -168,7 +168,7 @@ class MY_Model extends CI_Model
     public function get_many_by()
     {
         $where = func_get_args();
-        
+
         $this->_set_where($where);
 
         return $this->get_all();
@@ -896,7 +896,7 @@ class MY_Model extends CI_Model
                     }
                 }
             }
-        } 
+        }
         else if (count($params) == 1)
         {
             $this->_database->where($params[0]);
@@ -905,7 +905,7 @@ class MY_Model extends CI_Model
 		{
             if (is_array($params[1]))
             {
-                $this->_database->where_in($params[0], $params[1]);    
+                $this->_database->where_in($params[0], $params[1]);
             }
             else
             {
@@ -920,7 +920,7 @@ class MY_Model extends CI_Model
         {
             if (is_array($params[1]))
             {
-                $this->_database->where_in($params[0], $params[1]);    
+                $this->_database->where_in($params[0], $params[1]);
             }
             else
             {

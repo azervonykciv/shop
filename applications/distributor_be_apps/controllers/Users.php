@@ -16,7 +16,8 @@ class Users extends CI_Controller {
 
 	public function index()
 	{
-		$users   = $this->Crud_model->get('users', '*');
+		// $users   = $this->Crud_model->get('users', '*');
+		$users = $this->Users_model->get_all();
 		$this->load->view('users/list_view', [ 'users' => $users, ]);
 	}
 
@@ -29,34 +30,36 @@ class Users extends CI_Controller {
 	{
 		$user = $this->input->post('data');
 		$user['password']   = password_hash($user['password'], PASSWORD_DEFAULT);
-		$user['created_at'] = date('Y-m-d H:i:s');
-		$user['updated_at'] = date('Y-m-d H:i:s');
 
-		$this->Crud_model->insert('users', $user);
+		$this->Users_model->insert($user);
 		$this->session->set_flashdata('success', 'anda berhasil menambahkan data');
 		redirect('users');
 	}
 
 	public function edit($id)
 	{
-		$data = $this->Crud_model->where('users', ['id' => $id]);
-		$this->load->view('users/form_view', ['data' => $data[0]]);
+		$user = $this->Users_model->get($id);
+		$this->load->view('users/form_view', ['data' => $user]);
 	}
 
 	public function update($id)
 	{
 		$user               = $this->input->post('data');
 		$user['password']   = password_hash($user['password'], PASSWORD_DEFAULT);
-		$user['updated_at'] = date('Y-m-d H:i:s');
 
-		$this->Crud_model->update('users', $user, ['id' => $id]);
+		$user = $this->Users_model->update($id, $user);
 		$this->session->set_flashdata('success', 'anda berhasil mengubah data');
 		redirect('users');
 	}
 
 	public function delete($id)
 	{
-		$this->Crud_model->delete('users', ['id' => $id]);
+		if (!$this->Users_model->get($id)) {
+			$this->session->set_flashdata('warning', 'item yang ingin anda hapus tidak ada');
+			redirect('users');
+		}
+
+		$this->Crud_model->Users_model('users', ['id' => $id]);
 		$this->session->set_flashdata('success', 'Anda berhasil menghapus admin');
 		redirect('users');
 	}
@@ -74,7 +77,6 @@ class Users extends CI_Controller {
 	{
 		$data               = $this->input->post('data');
 		$data['id']         = $id;
-		$data['updated_at'] = date('Y-m-d H:i:s');
 
 		$this->Crud_model->update('users', $data, ['id' => $id]);
 		$this->session->set_flashdata('success', 'anda berhasil mengubah data');
@@ -106,7 +108,7 @@ class Users extends CI_Controller {
 
 
 
-	
+
 
 	public function store_all()
 	{

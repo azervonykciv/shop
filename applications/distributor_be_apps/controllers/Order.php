@@ -16,14 +16,19 @@ class Order extends CI_Controller {
 
 	public function index()
 	{
-		$data = $this->Orders_model
+		$orders = $this->Orders_model
 			->with('packages')
 			->with('users')
 			->get_all();
+		$this->load->view('orders/list_view', ['orders' => $orders]);
+	}
 
-		echo "<pre>";
-		print_r($data);
-		die();
+	public function store()
+	{
+		$data = $this->input->post('data');
+		$data['created_at'] = Date('Y-m-d H:i:s');
+
+		
 	}
 
 }

@@ -5,7 +5,7 @@ class Auth_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		
+
 	}
 
 	public function validation($username, $password)
@@ -24,7 +24,7 @@ class Auth_model extends CI_Model {
 				'level'    => $user[0]->level,
 			];
 		} else {
-			return;
+			return false;
 		}
 	}
 

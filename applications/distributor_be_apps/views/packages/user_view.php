@@ -37,26 +37,27 @@
 									<input name="data[username]" type="text" class="form-control" placeholder="Name" readonly
 										value="<?php if (isset($user->username)) { echo $user->username; }   ?>" >
 								</div>
-							</div>
 
-							<div class="box-body">
 								<div class="form-group">
 									<label>Package :</label>
 									<select name="data[package_id]" class="form-control">
-										<option></option>
 										<?php foreach ($packages as $key): ?>
 											<?php if ($user->packages->id === $key->id): ?>
-												<option value="<?php echo $key->id ?>" selected ><?php echo $key->name ?></option>
+												<option value="<?php echo $key->id ?>" selected >
+													<?php echo $key->name ?>
+												</option>
 											<?php else: ?>
-												<option value="<?php echo $key->id ?>" ><?php echo $key->name ?></option>
+												<option value="<?php echo $key->id ?>" >
+													<?php echo $key->name ?>
+												</option>
 											<?php endif ?>
 										<?php endforeach ?>
 									</select>
-							</div>
+								</div>
 
-							<div class="box-footer">
-								<button type="submit" class="btn btn-primary pull-right">Submit</button>
-							</div>
+								<div class="box-footer">
+									<button type="submit" class="btn btn-primary pull-right">Submit</button>
+								</div>
 						</form>
 					</div>
 				</div>
