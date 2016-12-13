@@ -21,6 +21,7 @@ class Order extends CI_Controller {
 		$orders = $this->Orders_model
 			->with('packages')
 			->with('users')
+			->order_by('created_at', 'DESC')
 			->get_all();
 		$this->load->view('orders/list_view', ['orders' => $orders]);
 	}
@@ -29,9 +30,6 @@ class Order extends CI_Controller {
 	{
 		$data = $this->input->post('data');
 		$created_at = Date('Y-m-d H:i:s');
-
-		// echo PHP_INT_MAX;
-		// die();
 
 		$user['packages_id'] = $data['packages_id'];
 

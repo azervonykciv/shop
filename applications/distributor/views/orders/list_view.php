@@ -8,23 +8,17 @@
 		<!-- Content Header (Page header) -->
 		<section class="content-header">
 			<h1>
-				Blank page
+				Order
 				<small>it all starts here</small>
 			</h1>
-			<ol class="breadcrumb">
-				<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-				<li><a href="#">Examples</a></li>
-				<li class="active">Blank page</li>
-			</ol>
 		</section>
 
 		<!-- Main content -->
 		<section class="content">
-
 			<!-- Default box -->
 			<div class="box">
 				<div class="box-header with-border">
-					<h3 class="box-title">Title</h3>
+					<h3 class="box-title">Orders</h3>
 
 					<div class="box-tools pull-right">
 						<button type="button" class="btn btn-box-tool"
@@ -41,12 +35,6 @@
 							<?php echo $this->session->flashdata('success') ?>
 						</div>
 					<?php endif ?>
-					<div class="row">
-						<div class="col-md-12">
-							<a style="margin-bottom: 12px;"
-								href="<?php echo base_url().'packages/create' ?>" class="btn btn-success pull-right">Tambah</a>
-						</div>
-					</div>
 					<table class="table table-responsive">
 						<thead>
 							<th style="width: 5%">#</th>
@@ -79,14 +67,6 @@
 		<!-- /.content -->
 	</div>
 	<!-- /.content-wrapper -->
-
-	<footer class="main-footer">
-		<div class="pull-right hidden-xs">
-			<b>Version</b> 2.3.5
-		</div>
-		<strong>Copyright &copy; 2014-2016 <a href="">Almsaeed Studio</a>.</strong> All rights
-		reserved.
-	</footer>
 
 <?php $this->load->view('layout/script_view') ?>
 <!-- DataTables -->

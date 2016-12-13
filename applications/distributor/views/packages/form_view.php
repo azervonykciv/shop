@@ -6,14 +6,9 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blank page
+        Packages
         <small>it all starts here</small>
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Blank page</li>
-      </ol>
     </section>
 
     <!-- Main content -->
@@ -56,14 +51,5 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.5
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  </footer>
-
 <?php $this->load->view('layout/script_view') ?>
 <?php $this->load->view('layout/footer_view') ?>
