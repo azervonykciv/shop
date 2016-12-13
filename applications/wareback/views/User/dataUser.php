@@ -18,8 +18,6 @@
                   <h3 class="box-title">Data User</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <a href="<?php echo base_url(); ?>User/insertUser" class="btn btn-success btn-submit">Masukan User Baru </a>
-                  &nbsp;
                   <a href="<?php echo base_url(); ?>User/resetAllPassword" class="btn btn-danger btn-submit">Reset Semua Password </a>
                   &nbsp;
                   <!--<a href="<?php echo base_url(); ?>User/insertUserFromDosen" class="btn btn-warning btn-submit">Buat User Dosen</a>-->
@@ -29,9 +27,9 @@
                     <thead>
                       <tr>
                         <th>ID User</th>
-                        <th>Nama</th>
-                        <th>Privilage</th>
-                        <th>Password</th>
+                        <th>Nama User</th>
+                        <th>Status</th>
+                        <th>API Key</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -42,7 +40,7 @@
                             <td><?php echo $d->ID_User ?></td>
                             <td><?php echo $d->Nama_User ?></td>
                             <td><?php echo $d->Status ?></td>
-                            <td><?php echo $d->Password ?></td>
+                            <td><?php echo $d->Tokenize ?></td>
                             <td>
                               <a href="<?php echo base_url(); ?>User/editUser/<?php echo $d->ID_User?>" class="btn btn-warning">Edit</a>
                               <a href="<?php echo base_url(); ?>User/deleteUser/<?php echo $d->ID_User?>/<?php echo $user['ID_User']; ?>" class="btn btn-danger">Delete</a>

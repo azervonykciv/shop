@@ -25,7 +25,7 @@ class Register extends CI_Controller
         $api_key['key']           = $tok;
         $api_key['level']         = 1;
         $api_key['ignore_limits'] = 0;
-        $api_key['date_created']  = date_default_timezone_set('Asia/Jakarta');
+        $api_key['date_created']  = date('Y-m-d H:i:s');
 
         /**$api_access['key']        = $api_key['key'];
         $api_access['date_created']  = date_default_timezone_set('Asia/Jakarta');
@@ -37,14 +37,12 @@ class Register extends CI_Controller
         $user['Nama_user'] 	= $this->input->post('Nama_User');
         $user['Password'] 	= password_hash($this->input->post('password'), PASSWORD_DEFAULT);
         $user['Email']		= $this->input->post('Email');
-        $user['created_at'] = date_default_timezone_set('Asia/Jakarta');
-        $user['updated_at'] = date_default_timezone_set('Asia/Jakarta');
+        $user['created_at'] = date('Y-m-d H:i:s');
+        $user['updated_at'] = date('Y-m-d H:i:s');
         $user['Status'] = "Member";
         $user['tokenize'] = $tok;
         $access['key'] = $tok;
-        $ck = $this->crud_model->check('user','Nama_user',$user['Nama_user']);
-
-
+        $ck = $this->crud_model->check('user','Email',$user['Email']);
 
         if($ck>0)
         {
@@ -89,6 +87,7 @@ class Register extends CI_Controller
 
         return $new_key;
     }
+
 
 
     private function _key_exists($key)

@@ -132,14 +132,13 @@
       <div class="col-md-7 col-md-offset-1">
         <div class="section-spacing row-margin">
           <header class="section-header">
-            <h2>Key features of the product</h2>
-            <h3>Everything you need</h3>
+            <h2>Fitur Muslim Shop Warehouse System</h2>
           </header>
           <div class="row"> 
             <!--features 1-->
             <div class="col-sm-6"> <img src="img/feature-1.svg" alt="feature-1">
-              <h4>Bootstrap v3</h4>
-              <p>Fusce finibus condimentum purus. Sed sagittis erat sed posuere cursus.</p>
+              <h4>API By Request</h4>
+              <p>Kami menyediakan layanan API Muslim Online Shop sesuai dengan keinginan user</p>
             </div>
             <!--features 1 end--> 
             <!--features 2-->
@@ -193,178 +192,24 @@
 
 <!--User reviews-->
 
-<div class="user-reviews section-spacing text-center" id="reviews">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9 center-block">
-        <div class="reviews-slider owl-carousel owl-theme">
-          <div class="item"> 
-            
-            <!--review 1-->
-            <blockquote>
-              <figure> <img src="img/user-review-1.jpg" alt="user" class="img-circle"> </figure>
-              <p>“Vivamus fringilla sem varius leo tempor, sed posuere nulla dapibus. Integer dapibus tortor quis libero ullamcorper rutrum neque ullamcorper convallis metus.”</p>
-              <footer> <cite>Willie Meyer, <i>Manager Facelook inc</i></cite> </footer>
-            </blockquote>
-            <!--review 1 end--> 
-            
-          </div>
-          <div class="item"> 
-            
-            <!--review 2-->
-            <blockquote>
-              <figure> <img src="img/user-review-2.jpg" alt="user" class="img-circle"> </figure>
-              <p>“Nullam pellentesque nisl nec velit tincidunt viverra. Ut ut felis mi. Mauris tristique ante non feugiat fermentum morbi nec ultricies est accumsan ligula.”</p>
-              <footer> <cite>Jessica Campbell, <i>Blogger</i></cite> </footer>
-            </blockquote>
-            <!--review 2 end--> 
-            
-          </div>
-          <div class="item"> 
-            
-            <!--review 3-->
-            <blockquote>
-              <figure> <img src="img/user-review-3.jpg" alt="user" class="img-circle"> </figure>
-              <p>“Donec ullamcorper imperdiet velit, et tincidunt lectus bibendum ut. Fusce ut nunc tortor. Donec vel tempus nisl, sed porta efficitur eu justo leo sollicitudin gravida.”</p>
-              <footer> <cite>Hannah Romero, <i>Designer at xyz</i></cite> </footer>
-            </blockquote>
-            <!--review 3 end--> 
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!--User reviews end--> 
 
 <!--learn more-->
 
-<div class="learn-more section-spacing">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-push-6">
-        <aside class="text-center">
-          <figure> <img src="img/learn-more-1.jpg" alt="learn more"> </figure>
-        </aside>
-      </div>
-      <div class="col-md-6 col-md-pull-6">
-        <article>
-          <h2><span>Bootstrap</span>Mobile first framework</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique, mauris eget dignissim posuere, turpis velit lobortis diam, in aliquam ipsum tortor non ligula. </p>
-          <a href="#" class="learn-more-link">Learn more<i class="fa fa-angle-right"></i></a> </article>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <aside class="text-center">
-          <figure> <img src="img/learn-more-2.jpg" alt="learn more"> </figure>
-        </aside>
-      </div>
-      <div class="col-md-6">
-        <article>
-          <h2><span>Responsive layout</span>Adapts to any screen size</h2>
-          <p>Maecenas nulla orci iaculis eu tortor feugiat tempor semper tortor. Integer efficitur nisl turpis, sit amet tristique dolor laoreet nec. Duis felis lectus, lacinia lectus pretium. </p>
-          <a href="#" class="learn-more-link">Learn more<i class="fa fa-angle-right"></i></a> </article>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!--learn more end--> 
 
 <!--cta-->
 
-<section class="cta section-spacing text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 center-block">
-        <h2>Signup for a 30 days <em>free</em> trial account no credit card required.</h2>
-        <a href="#cta-form" class="btn">Get Started</a> </div>
-    </div>
-  </div>
-</section>
 
 <!--cta end--> 
 
 <!--new feature-->
 
-<section class="new-feature section-spacing">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 center-block">
-        <div class="row">
-          <div class="col-md-5">
-            <h2><span>Awesome</span> New feature</h2>
-          </div>
-          <div class="col-md-7">
-            <p> We add new features to Archer frequently. You always have access to new features as soon as they're released. Check out what's planned for our next update. </p>
-            <a href="#" class="learn-more-link">Learn more<i class="fa fa-angle-right"></i></a> </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-10 center-block">
-        <figure class="new-feature-img text-center"> 
-          
-          <!--pointer 1--> 
-          <a class="pointer pointer-1" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging."> <span class="plus"><i class="fa fa-plus"></i></span> <span class="minus"><i class="fa fa-minus"></i></span></a> 
-          <!--pointer 1 end--> 
-          
-          <!--pointer 2--> 
-          <a class="pointer pointer-2" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging."> <span class="plus"><i class="fa fa-plus"></i></span> <span class="minus"><i class="fa fa-minus"></i></span></a> 
-          <!--pointer 2 end--> 
-          
-          <img src="img/new-feature-app.jpg" alt="app"> </figure>
-      </div>
-    </div>
-    <div class="row feature-list"> 
-      
-      <!--features 1-->
-      <div class="col-sm-4"> <img src="img/feature-new-1.svg" alt="feature-new-1">
-        <h3>Twitter Feed</h3>
-        <p>Fusce finibus condimentum purus. Sed sagittis erat sed posuere cursus.</p>
-      </div>
-      <!--features 1 end--> 
-      
-      <!--features 2-->
-      <div class="col-sm-4"> <img src="img/feature-new-2.svg" alt="feature-new-2">
-        <h3>Font Awesome</h3>
-        <p>Proin convallis sodales volutpat. Suspene varius mollis risus arcu.</p>
-      </div>
-      <!--features 2 end--> 
-      
-      <!--features 3-->
-      <div class="col-sm-4"> <img src="img/feature-new-3.svg" alt="feature-new-3">
-        <h3>Google Web Fonts</h3>
-        <p>Integer sit amet efficitur odio, nec varius vulputate rhoncus justo.</p>
-      </div>
-      <!--features 3 end--> 
-      
-    </div>
-  </div>
-</section>
 
 <!--new feature end--> 
 
 <!--cta info-->
-
-<section class="cta-info">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-md-push-5">
-        <figure class="hidden-md hidden-lg"> <img src="img/cta-info.jpg" alt="cta into"> </figure>
-      </div>
-      <div class="col-md-5 col-md-pull-7">
-        <div class="section-spacing">
-          <h2>Morbi fringilla</h2>
-          <p>Aenean vel turpis vitae libero imperdiet vestibulum. In orci massa lobortis non ornare quis gravida non lectus.</p>
-          <a href="signup.html" class="btn btn-secondary">Get Started</a> </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!--cta info end -->
 
@@ -379,21 +224,19 @@
     <div class="row">
 
       <!--pricing tabel 1-->
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <div class="pricing-table-container">
           <div class="plan-type">
             <h4>Basic</h4>
           </div>
           <div class="plan-price">
-            <h5>Free Plan</h5>
+            <h5>Gratis</h5>
           </div>
-          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="<?php echo base_url()."front/in_pack/1"; ?>" class="btn">TRY FOR FREE</a> </div>
+          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="#" class="btn" data-toggle="modal" data-target="#modal-form-free">Gratis</a> </div>
           <div class="plan-details">
             <ul>
-              <li><strong>1</strong> Pengguna</li>
-              <li><strong>50</strong> barang </li>
-              <li><strong>12</strong> Projects</li>
-              <li><strong>5</strong> agent per account<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
+              <li><strong>Maks 10</strong> barang<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Maksimal barang yang bisa didapatkan adalah 10 Item pada kategori yang sama"></i> </li>
+              </li>
             </ul>
           </div>
         </div>
@@ -401,7 +244,7 @@
       <!--pricing tabel 1 end--> 
       
       <!--pricing tabel 2-->
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <div class="pricing-table-container plan-popular">
           <div class="plan-type">
             <h4>Premium</h4>
@@ -409,49 +252,17 @@
           <div class="plan-price">
             <h5><span class="plan-currency">$</span>30<span class="plan-duration">P/M</span></h5>
           </div>
-          <div class="plan-cta"> <span>Limited time 10% off</span> <a href="#" class="btn">GET STARTED</a> </div>
+          <div class="plan-cta"> <span>Limited time 10% off</span> <a href="#" class="btn" data-toggle="modal" data-target="#modal-form-premium">GET STARTED</a> </div>
           <div class="plan-details">
             <ul>
-              <li><strong>5</strong> user</li>
-              <li><strong>10000</strong> Views per/m</li>
-              <li><strong>30</strong> Projects</li>
-              <li><strong>15</strong> agent per account</li>
-              <li>API access</li>
-              <li>Free Storage<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
+
+              <li><strong>Sesuaikan sendiri banyaknya</strong> barang<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Banyaknya barang yang dapat kita ambil dapat ditentukan sendiri"></i></li>
               <li>Analytics</li>
             </ul>
           </div>
         </div>
       </div>
-      <!--pricing tabel 2 end--> 
-      
-      <!--pricing tabel 3-->
-      <div class="col-sm-4">
-        <div class="pricing-table-container">
-          <div class="plan-type">
-            <h4>GOLD</h4>
-          </div>
-          <div class="plan-price">
-            <h5><span class="plan-currency">$</span>60<span class="plan-duration">P/M</span></h5>
-          </div>
-          <div class="plan-cta"> <span>Limited time 10% off</span> <a href="#" class="btn">GET STARTED</a> </div>
-          <div class="plan-details">
-            <ul>
-              <li><strong>Unlimited</strong> user</li>
-              <li><strong>Unlimited</strong> Views per/m</li>
-              <li><strong>Unlimited</strong> Projects</li>
-              <li><strong>50</strong> agent per account</li>
-              <li>API access</li>
-              <li>Free Storage</li>
-              <li>Analytics<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
-              <li>Addon security</li>
-              <li>Activity logs<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
-              <li>Priority support</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!--pricing tabel 3 end--> 
+      <!--pricing tabel 2 end-->
       
     </div>
   </div>
@@ -461,185 +272,26 @@
 
 <!--testimonial-->
 
-<div class="testimonial section-spacing">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 col-md-7">
-        <blockquote>
-          <p>“Vivamus fringilla sem varius leo tempor, sed posuere nulla dapibus. Integer dapibus tortor quis libero ullamcorper rutrum neque ullamcorper.”</p>
-          <footer> <cite>Lisa Ortiz, <i>Manager Googje inc</i></cite> </footer>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!--testimonial end--> 
 
 <!--FAQ-->
 
-<section class="faq section-spacing" id="faq">
-  <div class="container">
-    <header class="section-header text-center">
-      <h2>FAQ</h2>
-      <h3>Common questions and answers</h3>
-    </header>
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="row faq-list">
-          <li class="col-sm-6">
-            <h4>Vestibulum sapien sapien?</h4>
-            <p>Finibus nunc quis turpis quis leo volutpat id sit amet orci. Etiam nec diam tincidunt, consequat diam suscipit metus.</p>
-          </li>
-          <li class="col-sm-6">
-            <h4>Etiam porttitor sollicitudin?</h4>
-            <p>Aliquam feugiat nibh sed interdum pellentesque. Nulla et porttitor erat non commodo pellentesque orci.</p>
-          </li>
-          
-          <!--Use clearfix after every 12 columns-->
-          <li class="clearfix hidden-xs"></li>
-          <li class="col-sm-6">
-            <h4>Nulla fermentum aliquet?</h4>
-            <p>Curabitur dolor felis, lobortis eu purus in, pretium bibendum purus. Nulla quis posuere mi odio in convallis fringilla.</p>
-          </li>
-          <li class="col-sm-6">
-            <h4>Curabitur dolor felis?</h4>
-            <p>Pellentesque vestibulum, mi a viverra maximus, eros lacus rutrum leo, eget cursus sem neque at purus.</p>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <div class="faq-support text-center">
-          <h5>CAN'T FIND A SUITABLE ANSWER?</h5>
-          <p>Ask our Support team</p>
-          <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#modal-contact-form"><i class="fa fa-envelope"></i>EMAIL US</a> <a href="#" class="btn btn-secondary"><i class="fa fa-twitter"></i>TWEET US</a></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!--FAQ end--> 
 
 <!--cta signup form-->
 
-<section class="cta-form cta-dark section-spacing" id="cta-form">
-  <div class="container">
-    <header class="section-header text-center">
-      <h2>Start your 30 days free trial</h2>
-      <h3>Instant signup quick and easy</h3>
-    </header>
-    <div class="row">
-      <div class="col-sm-8 col-md-5 center-block">
-        <form id="cta-signup-form" class="cta-signup-form">
-          <div class="form-group">
-            <input type="text" class="form-control input-lg" id="input-name" placeholder="Your name" required>
-            <label for="input-name"><span class="required">*</span>First name and last name</label>
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control input-lg" id="input-email" placeholder="Email address" required>
-            <label for="input-email"><span class="required">*</span>Details will be sent to this email</label>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control input-lg" id="input-password" placeholder="Password" pattern=".{8,10}" required>
-            <label for="input-password"><span class="required">*</span>Minimum of 8 characters</label>
-          </div>
-          <div class="checkbox text-right">
-            <label>
-              <input type="checkbox">
-              Signup to our newletter </label>
-          </div>
-          <div class="form-btn">
-            <button type="submit" class="btn">GET STARTED</button>
-            <p class="form-terms">By clicking get started you agree to our <a href="#" data-toggle="modal" data-target="#modal-terms">Terms</a> and read our <a href="#" data-toggle="modal" data-target="#modal-terms">Privacy Policy</a>.</p>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-9 col-md-6 center-block text-center">
-        <div class="form-option">Or</div>
-        <div class="form-signup-google"> <a href="#" class="btn"><i class="fa fa-google"></i>Sign up with Google</a> </div>
-        <div class="form-signup-facebook"> <a href="#" class="btn"><i class="fa fa-facebook"></i>Sign up with facebook</a> </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!--cta signup form end--> 
 
 <!--Trusted clients-->
 
-<section class="trusted-clients section-spacing">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 center-block">
-        <div class="row">
-          <div class="col-md-5">
-            <h2>Trusted by <strong>Millions</strong><span>We work with businesses to do incredible things.</span></h2>
-          </div>
-          <div class="col-md-7 text-center">
-            <ul class="row clients-list">
-              <li class="col-sm-4">
-                <figure> <img src="img/client-1.svg" alt="client"> </figure>
-              </li>
-              <li class="col-sm-4">
-                <figure> <img src="img/client-2.svg" alt="client"> </figure>
-              </li>
-              <li class="col-sm-4">
-                <figure> <img src="img/client-3.svg" alt="client"> </figure>
-              </li>
-              <!--Use clearfix after every 12 columns-->
-              <li class="clearfix hidden-xs"></li>
-              <li class="col-sm-4">
-                <figure> <img src="img/client-4.svg" alt="client"> </figure>
-              </li>
-              <li class="col-sm-4">
-                <figure> <img src="img/client-5.svg" alt="client"> </figure>
-              </li>
-              <li class="col-sm-4">
-                <figure> <img src="img/client-6.svg" alt="client"> </figure>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-10 center-block">
-        <ul class="row product-statistics text-center">
-          <li class="col-sm-3"> <i class="fa fa-users"></i>
-            <h3><span class="counter-1">50</span>k+<span class="statistics-achieved">Members</span></h3>
-          </li>
-          <li class="col-sm-3"> <i class="fa fa-cloud-download"></i>
-            <h3><span class="counter-2">70</span>k+<span class="statistics-achieved">Downloads</span></h3>
-          </li>
-          <li class="col-sm-3"> <i class="fa fa-facebook-official"></i>
-            <h3><span class="counter-3">90</span>k+<span class="statistics-achieved">Facebook</span></h3>
-          </li>
-          <li class="col-sm-3"> <i class="fa fa-twitter"></i>
-            <h3><span class="counter-4">60</span>k+<span class="statistics-achieved">Twitter</span></h3>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!--trusted clients end--> 
 
 <!--video tour-->
-
-<section class="video-tour text-center">
-  <h2><em>Can’t decide?</em><a href="https://vimeo.com/109054393" class="play-btn"><i class="fa fa-play fa-2x"></i> </a><span>Take a tour</span></h2>
-  
-  <!--HTML5 Video-->
-  <video autoplay loop muted class="video-bg" poster="video/poster.jpg">
-    <source src="video/vb.mp4" type="video/mp4">
-    <source src="video/vb.webm" type="video/webm">
-  </video>
-  <!--HTML5 Video end--> 
-  
-</section>
 
 <!--video tour end--> 
 
@@ -758,124 +410,18 @@
 
 <!--CTA footer-->
 
-<section class="cta-footer section-spacing text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Signup for a 30 days <em>free</em> trial account.<a href="signup.html" class="btn btn-secondary">Get Started</a></h2>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!--CTA footer end--> 
 
 <!--Twitter reviews-->
-
-<section class="twitter-reviews section-spacing">
-  <div class="container">
-    <header class="section-header text-center">
-      <h2>Buzz on twitter</h2>
-      <h3>Share yours <a href="#">#archer</a></h3>
-    </header>
-    <div class="row">
-      <div class="twitter-reviews-slider owl-carousel owl-theme">
-        <div class="item"> 
-          
-          <!--review 1-->
-          <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
-            <p lang="en" dir="ltr">🌖🌗🌘🌑 DevTools go Dark! Plus: custom CSS var support, smarter autocomplete, <a href="https://twitter.com/Keyframe">@keyframe</a> edit.<a href="https://t.co/CnCgzcYfoK">https://t.co/CnCgzcYfoK</a> <a href="https://t.co/51hsdTCRl6">pic.twitter.com/51hsdTCRl6</a></p>
-            &mdash; Chrome Developers (@ChromiumDev) <a href="https://twitter.com/ChromiumDev/status/697415335172030464">February 10, 2016</a></blockquote>
-          <!--review 1 end--> 
-        </div>
-        <div class="item"> 
-          
-          <!--review 2-->
-          <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
-            <p lang="en" dir="ltr">So you’ve purchased an HTML template from <a href="https://twitter.com/EnvatoMarket">@EnvatoMarket</a>, but you’re not sure what’s next?<a href="https://t.co/rI6vwOdSPn">https://t.co/rI6vwOdSPn</a> <a href="https://t.co/9xpPTRUBLD">pic.twitter.com/9xpPTRUBLD</a></p>
-            &mdash; Envato Tuts+ Web (@wdtuts) <a href="https://twitter.com/wdtuts/status/706848957377466369">March 7, 2016</a></blockquote>
-          <!--review 2 end--> 
-          
-        </div>
-        <div class="item"> 
-          
-          <!--review 3-->
-          <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
-            <p lang="en" dir="ltr">Meet Resizer: a dynamic resource for testing out your responsive UI <a href="https://t.co/hjetvUm5KL">https://t.co/hjetvUm5KL</a> <a href="https://twitter.com/hashtag/materialdesign?src=hash">#materialdesign</a> <a href="https://t.co/20xIiWz30Y">pic.twitter.com/20xIiWz30Y</a></p>
-            &mdash; Google Design (@GoogleDesign) <a href="https://twitter.com/GoogleDesign/status/702208405725954055">February 23, 2016</a></blockquote>
-          <!--review 3--> 
-          
-        </div>
-        <div class="item"> 
-          
-          <!--review 4-->
-          <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
-            <p lang="en" dir="ltr">Got a question about Chrome? Tweet “Chrome” + <a href="https://twitter.com/hashtag/gHelp?src=hash">#gHelp</a> and our experts will be there to help. <a href="https://t.co/PHdlAsKU5K">pic.twitter.com/PHdlAsKU5K</a></p>
-            &mdash; Google Chrome (@googlechrome) <a href="https://twitter.com/googlechrome/status/700839313878061057">February 20, 2016</a></blockquote>
-          <!--review 4--> 
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!--Twitter reviews end--> 
 
 <!--App download-->
 
-<section class="app-download section-spacing">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-2">
-        <h2><span>OFFICIAL APP</span>Download app to get special offers</h2>
-        <div class="app-store-btn"><a href="#"><img src="img/app-store-btn.svg" alt="Apple app store"></a><a href="#"><img src="img/play-store-btn.svg" alt="Google play store"></a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!--App download end--> 
 
 <!--Features cta-->
 
-<section class="features-cta section-spacing">
-  <div class="container">
-    <header class="section-header text-center">
-      <h2>Not convinced yet?</h2>
-      <h3>Check out these awesome features</h3>
-    </header>
-    <div class="row">
-      <div class="col-md-6"> <img src="img/features-cta.jpg" alt="feature cta" class="feature-cta-big-img"> </div>
-      <div class="col-md-6">
-        <ul class="feature-cta-list">
-          
-          <!--feature 1-->
-          <li> <img src="img/feature-cta-1.svg" alt="feature cta">
-            <h4>Pellentesque varius</h4>
-            <p>Fusce finibus condimentum purus. Sed sagittis erat sed posuere cursus.</p>
-          </li>
-          <!--feature 1 end--> 
-          
-          <!--feature 2-->
-          <li> <img src="img/feature-cta-2.svg" alt="feature cta">
-            <h4>Quisque molestie</h4>
-            <p>Aenean felis odio, laoreet vitae felis ut, laoreet interdum nibh posuere nec sapien.</p>
-          </li>
-          <!--feature 2 end--> 
-          
-          <!--feature 3-->
-          <li> <img src="img/feature-cta-3.svg" alt="feature cta">
-            <h4>Maecenas fringilla</h4>
-            <p>Nulla sodales est nec purus dapibus, semper luctus velit vulputate. Quisque molestie nibh sapien.</p>
-          </li>
-          <!--feature 3 end-->
-          
-        </ul>
-        <a href="signup.html" class="btn">Start a free trial</a> </div>
-    </div>
-  </div>
-</section>
 
 <!--Features cta end--> 
 
@@ -949,7 +495,6 @@
       </div>
     </div>
   </div>
-  <a href="#" class="chat-btn" data-toggle="modal" data-target="#modal-contact-form"></a> </footer>
 
 <!--Site footer end--> 
 
@@ -1038,7 +583,7 @@
 
 <!--contact form modal-->
 
-<div class="modal fade" id="modal-contact-form" tabindex="-1" role="dialog">
+<div class="modal fade" id="modal-form-free" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -1048,26 +593,27 @@
         
         <div class="contact-form text-center">
           <header class="section-header"> <img src="img/support-icon.svg" alt="support icon">
-            <h2>Contact us</h2>
-            <h3>Have any questions? Send us a message.</h3>
+            <h2>Dapatkan API Muslim Shop Warehouse</h2>
+            <h3>Anda memilih paket API gratis</h3>
           </header>
           <form class="cta-form cta-light" action="http://csmthemes.com/themes/archer/image/php/contact.php" method="post">
             <div class="form-group">
-              <input  type="text" name="name" class="contact-name form-control input-lg" placeholder="Name *" id="contact-name">
+              <input  type="text" name="name" value="Gratis" class="contact-name form-control input-lg" placeholder="Gratis" id="contact-name" disabled>
             </div>
+
             <div class="form-group">
-              <input  type="text"  name="email" class="contact-email form-control input-lg" placeholder="Email address *" id="contact-email">
+              <label for="sel1">Pilih kategori barang</label>
+              <select class="form-control" id="sel1" name="kategori">
+                <option value="none" selected="selected">---Pilih Kategori barang yang anda inginkan----</option>
+                <?php
+                foreach ($kategori as $kat) : ?>
+                    <option><?php echo $kat->KODE_KLASIFIKASI ?></option>
+                <?php endforeach ?>
+              </select>
             </div>
-            <div class="form-group">
-              <textarea name="message" class="contact-message form-control input-lg" rows="4" placeholder="Message *" id="contact-message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="text" name="antispam" placeholder="Antispam question: 7 + 5 = ?" class="contact-antispam form-control input-lg" id="contact-antispam">
-            </div>
-            <button type="submit" class="btn">SEND MESSAGE</button>
+            <a href="" class="btn">Kirim</a>
           </form>
         </div>
-        
         <!--contact form end-->
         
         <p class="contact-form-success"><i class="fa fa-check"></i><span>Thanks for contacting us!</span> We will get back to you very soon.</p>
@@ -1075,3 +621,38 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="modal-form-premium" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+
+        <!--contact form-->
+
+        <div class="contact-form text-center">
+          <header class="section-header"> <img src="img/support-icon.svg" alt="support icon">
+            <h2>Dapatkan API Muslim Shop Warehouse</h2>
+            <h3>Anda memilih paket API Premium</h3>
+          </header>
+
+          <?php echo form_open('front/do_reg','class="cta-form cta-light"') ?>
+            <div class="form-group">
+              <input  type="text" name="name" value="Premium" class="contact-name form-control input-lg" placeholder="Gratis" id="contact-name" disabled>
+            </div>
+
+            <div class="form-group">
+              <label for="sel1">Pilih kategori barang</label>
+              <select class="form-control" id="sel1" name="kategori">
+                <option value="none" selected="selected">---Pilih Kategori barang yang anda inginkan----</option>
+                <?php
+                foreach ($kategori as $kat) : ?>
+                  <option>
+                    <?php echo $kat->KODE_KLASIFIKASI ?>
+                  </option>
+                <?php endforeach ?>
+              </select>
+            </div>
+            <a href="" class="btn">Kirim</a>
+          </form>
+        </div>

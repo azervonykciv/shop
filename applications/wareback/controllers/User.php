@@ -6,13 +6,12 @@ class User extends CI_Controller {
 		if (! ($this->session->has_userdata('Status')) ) {
 			redirect('login');
 		}
-        $this->load->model('barang_model', 'bm');
-        $this->load->model('User_model');
+        $this->load->model('crud_model');
     }
 	public function index()
 	{
-		$user1 = $this->User_model->GetUser();
-		$user  = $this->m_login->ambil_user($this->session->userdata('uname'));
+		$user1 = $this->crud_model->get_all('user');
+		$user  = $this->crud_model->get_spec('user','Nama_User',$this->session->userdata('uname'));
 		$data = array(
 			'user'  => $user,
 			'user1' => $user1,
@@ -276,45 +275,6 @@ class User extends CI_Controller {
 			}
 		} else {
 			echo "Gagal Edit Profile";
-		}
-	}
-
-	public function ubahPasswordDosen($id){
-		$user = $this->m_login->ambil_user($this->session->userdata('uname'));
-		$data = [
-			'user' 	=> $user,
-		];
-		$this->template->load('templateDosen','User/ubahPasswordDosen', $data);
-		
-	}
-
-	public function do_ubahPasswordDosen(){
-		$ID_User = $this->input->post('ID');
-		$pLama 	 = $this->input->post('PasswordLama');
-		$pBaru   = $this->input->post('PasswordBaru');
-
-		$user = $this->User_model->getUser_byid($ID_User);
-		if($pLama == $user[0]->Password){
-			$user = [
-				'Password'  => $pBaru,
-			];
-			
-			if ($this->User_model->updateUser($user, $ID_User)) {
-				$Log = [
-					'ID_User'	=> $ID_User,
-					'Tanggal'	=> date('Y-m-d H:i:s'),
-					'Aktifitas' => "Ubah Password",
-				];
-				if($this->Log_model->insertLog($Log)){
-					redirect('User/editProfileDosen/'.$ID_User);
-				}else{
-					echo "gagal insert data log";
-				}
-			} else {
-				echo "Gagal Edit Profile";
-			}
-		}else{
-			echo "Password lama anda salah";
 		}
 	}
 

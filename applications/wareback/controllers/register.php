@@ -20,24 +20,14 @@ class Register extends CI_Controller
 
     function do_reg()
     {
-
-        $tok = $this->_generate_key();
-        $api_key['key']           = $tok;
-        $api_key['level']         = 1;
-        $api_key['ignore_limits'] = 0;
-        $api_key['date_created']  = date_default_timezone_set('Asia/Jakarta');
-
-
         $user['Nama_user'] = $this->input->post('Nama_User');
         $user['Password'] = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
-        $user['created_at'] = date_default_timezone_set('Asia/Jakarta');
-        $user['updated_at'] = date_default_timezone_set('Asia/Jakarta');
+        $user['created_at'] = date('Y-m-d H:i:s');
+        $user['updated_at'] = date('Y-m-d H:i:s');
         $user['Status'] = "Admin";
         $user['tokenize'] = $tok;
         $access['key'] = $tok;
         $ck = $this->crud_model->check('user','Nama_user',$user['Nama_user']);
-
-
 
         if($ck>0)
         {
@@ -53,7 +43,6 @@ class Register extends CI_Controller
 
             //var($dump);
             $this->crud_model->insert($user,'user');
-            $this->crud_model->insert($api_key,'keys');
             //$this->crud_model->insert($api_access,'access');
 
             redirect('login');
