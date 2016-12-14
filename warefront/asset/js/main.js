@@ -276,7 +276,7 @@ $(function() {
         var postdata = $('.contact-form form').serialize();
         $.ajax({
             type: 'POST',
-            url: 'php/contact.php',
+            url: 'front/in_pack/1',
             data: postdata,
             dataType: 'json',
             success: function(json) {

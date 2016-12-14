@@ -34,7 +34,7 @@
       <file leaf-file-name="insert_barang.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/barang/insert_barang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="660">
               <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
               <folding />
             </state>
@@ -44,7 +44,7 @@
       <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="915">
               <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
               <folding />
             </state>
@@ -74,7 +74,7 @@
       <file leaf-file-name="Admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="2550">
               <caret line="170" column="68" selection-start-line="170" selection-start-column="27" selection-end-line="170" selection-end-column="68" />
               <folding />
             </state>
@@ -84,8 +84,8 @@
       <file leaf-file-name="api_server.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api_server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4080">
-              <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,7 +104,7 @@
       <file leaf-file-name="rest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/rest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
+            <state relative-caret-position="6420">
               <caret line="428" column="37" selection-start-line="428" selection-start-column="37" selection-end-line="428" selection-end-column="37" />
               <folding />
             </state>
@@ -156,8 +156,8 @@
         <option value="$PROJECT_DIR$/views/templateSuperAdmin.php" />
         <option value="$PROJECT_DIR$/config/rest.php" />
         <option value="$PROJECT_DIR$/models/crud_model.php" />
-        <option value="$PROJECT_DIR$/controllers/register.php" />
         <option value="$PROJECT_DIR$/controllers/api_server.php" />
+        <option value="$PROJECT_DIR$/controllers/register.php" />
       </list>
     </option>
   </component>
@@ -201,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -315,6 +314,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,17 +419,18 @@
       <workItem from="1480423272938" duration="3901000" />
       <workItem from="1480431285916" duration="2791000" />
       <workItem from="1480467677361" duration="2557000" />
+      <workItem from="1481036557434" duration="371000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80952000" />
+    <option name="totallyTimeSpent" value="81323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="709" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1078125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1078125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -726,7 +727,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/rest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
+        <state relative-caret-position="6420">
           <caret line="428" column="37" selection-start-line="428" selection-start-column="37" selection-end-line="428" selection-end-column="37" />
           <folding />
         </state>
@@ -742,7 +743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="2550">
           <caret line="170" column="68" selection-start-line="170" selection-start-column="27" selection-end-line="170" selection-end-column="68" />
           <folding />
         </state>
@@ -750,8 +751,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api_server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -774,7 +775,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/barang/insert_barang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="660">
           <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
           <folding />
         </state>
@@ -782,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="915">
           <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
           <folding />
         </state>

@@ -38,7 +38,6 @@
                             <th>KODE KURS</th>
                             <th>KATEGORI</th>
                             <th>STOK</th>
-                            <th>NOMOR SERIAL</th>
                             <th>TANGGAL PRODUKSI</th>
                             <th>ACTION</th>
                         </tr>
@@ -53,7 +52,6 @@
                                 <td><?php echo $key->KODE_KURS ?></td>
                                 <td><?php echo $key->KODE_KLASIFIKASI ?></td>
                                 <td><?php echo $key->QTY ?></td>
-                                <td><?php echo $key->NOMORSERIAL ?></td>
                                 <td><?php echo $key->TGLPRODUKSI ?></td>
 
                                 <td>

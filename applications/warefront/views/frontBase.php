@@ -68,6 +68,21 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
 <script src="<?php echo base_url('asset/js/gmap.js') ?>"></script> 
 <script src="<?php echo base_url('asset/js/retina.min.js') ?>"></script>
+
+<script type="text/javascript">
+    $('#submit').click(function() {
+        var form_data = {
+            paket: $('#paket').val(),
+            kategori: $('#kategori').val()
+        };
+        $.ajax({
+            url: "<?php echo base_url('front/in_pack/1'); ?>",
+            type: 'POST',
+            data: form_data,
+        });
+        return false;
+    });
+</script>
 </body>
 
 <!-- Mirrored from csmthemes.com/themes/archer/image/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2016 22:04:12 GMT -->

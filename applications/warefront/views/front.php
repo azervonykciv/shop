@@ -232,7 +232,7 @@
           <div class="plan-price">
             <h5>Gratis</h5>
           </div>
-          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="#" class="btn" data-toggle="modal" data-target="#modal-form-free">Gratis</a> </div>
+          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="<?php echo base_url()."front/in_pack/1"; ?>" class="btn">Gratis</a> </div>
           <div class="plan-details">
             <ul>
               <li><strong>Maks 10</strong> barang<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Maksimal barang yang bisa didapatkan adalah 10 Item pada kategori yang sama"></i> </li>
@@ -252,7 +252,7 @@
           <div class="plan-price">
             <h5><span class="plan-currency">$</span>30<span class="plan-duration">P/M</span></h5>
           </div>
-          <div class="plan-cta"> <span>Limited time 10% off</span> <a href="#" class="btn" data-toggle="modal" data-target="#modal-form-premium">GET STARTED</a> </div>
+          <div class="plan-cta"> <span>Limited time 10% off</span> <a href="<?php echo base_url()."front/in_pack/2"; ?>" class="btn">GET STARTED</a> </div>
           <div class="plan-details">
             <ul>
 
@@ -583,8 +583,50 @@
 
 <!--contact form modal-->
 
+  <!-- modal form -->
+  <div id="myModal" class="modal fade" aria-labelledby="myModalLabel" aria-hidden="true" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <?php echo form_open('front/in_pack/1','class="cta-form cta-light"') ?>
+
+        <div class="contact-form text-center">
+          <header class="section-header"> <img src="img/support-icon.svg" alt="support icon">
+            <h2>Dapatkan API Muslim Shop Warehouse</h2>
+            <h3>Anda memilih paket API gratis</h3>
+          </header>
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body" id="myModalBody">
+          <div class="form-group">
+            <label for="name">Paket</label>
+            <input disabled class="form-control" id="paket" name="paket" placeholder="Paket API" type="text" value="Gratis" />
+          </div>
+
+          <div class="form-group">
+            <label for="sel1">Pilih kategori barang</label>
+            <select class="form-control" id="kategori" name="kategori">
+              <option value="none" selected="selected">---Pilih Kategori barang yang anda inginkan----</option>
+              <?php
+              foreach ($kategori as $kat) : ?>
+                <option><?php echo $kat->KODE_KLASIFIKASI ?></option>
+              <?php endforeach ?>
+            </select>
+          </div>
+
+          <div id="alert-msg"></div>
+        </div>
+        <div class="modal-footer">
+          <input class="btn btn-default" id="submit" name="submit" type="button" value="Send Mail" />
+        </div>
+        <?php echo form_close(); ?>
+      </div>
+    </div>
+  </div>
+
 <div class="modal fade" id="modal-form-free" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog">
     <div class="modal-content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <div class="modal-body"> 
@@ -596,14 +638,14 @@
             <h2>Dapatkan API Muslim Shop Warehouse</h2>
             <h3>Anda memilih paket API gratis</h3>
           </header>
-          <form class="cta-form cta-light" action="http://csmthemes.com/themes/archer/image/php/contact.php" method="post">
+          <?php echo form_open('front/in_pack/1','class="cta-form cta-light"') ?>
             <div class="form-group">
-              <input  type="text" name="name" value="Gratis" class="contact-name form-control input-lg" placeholder="Gratis" id="contact-name" disabled>
+              <input  type="text" name="paket" value="Gratis" class="contact-name form-control input-lg" placeholder="Gratis" id="paket" disabled>
             </div>
 
             <div class="form-group">
               <label for="sel1">Pilih kategori barang</label>
-              <select class="form-control" id="sel1" name="kategori">
+              <select class="form-control" id="kategori" name="kategori">
                 <option value="none" selected="selected">---Pilih Kategori barang yang anda inginkan----</option>
                 <?php
                 foreach ($kategori as $kat) : ?>
@@ -611,7 +653,7 @@
                 <?php endforeach ?>
               </select>
             </div>
-            <a href="" class="btn">Kirim</a>
+          <input class="btn " id="submit" name="submit" type="button" value="Kirim" />
           </form>
         </div>
         <!--contact form end-->
@@ -636,9 +678,9 @@
             <h3>Anda memilih paket API Premium</h3>
           </header>
 
-          <?php echo form_open('front/do_reg','class="cta-form cta-light"') ?>
+          <?php echo form_open('front/in_pack/2','class="cta-form cta-light"') ?>
             <div class="form-group">
-              <input  type="text" name="name" value="Premium" class="contact-name form-control input-lg" placeholder="Gratis" id="contact-name" disabled>
+              <input  type="text" name="paket" value="Premium" class="contact-name form-control input-lg" placeholder="Gratis" id="contact-name" disabled>
             </div>
 
             <div class="form-group">
