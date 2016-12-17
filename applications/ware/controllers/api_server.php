@@ -12,16 +12,12 @@ class api_server extends REST_Controller
 
     public function index_get()
     {
-
-
         $tab = $this->get('tab');
         $id_user = $this->get('id_user');
         $kat1 = $this->get('kat1');
         $kat2 = $this->get('kat2');
-        $cond = $this->get('cond');
-        // 100 = Gratis, 101 = Premium API
 
-        $identifier = $this->crud_model->where('packages','ID_User',$id_user);
+        $identifier = $this->crud_model->match('packages','ID_User',$id_user)->row();
 
         /**echo "paket gratisan";
         echo "<pre>";
@@ -32,12 +28,10 @@ class api_server extends REST_Controller
         print_r($cond);
         print_r($identifier->jml_brng);
         die();**/
-
-        //$barang = $this->crud_model->($tab,$kat1,$kat2,$identifier->jml_brng)->result_array();
-
-        $barang = $this->crud_model->get_all('barang');
-
-        $this->response($barang,200);
+        $barang = $this->crud_model->match($tab,$kat1,$kat2,$identifier->jml_brng)->result();
+        if($barang){
+            $this->response($barang,200);
+        }
 
     }
 
@@ -60,6 +54,5 @@ class api_server extends REST_Controller
         //{
           //  $this->response(array('status' => 'fail',502));
         //}
-
     }
 }

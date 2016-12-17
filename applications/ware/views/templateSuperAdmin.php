@@ -5,23 +5,23 @@
     <title>Ware System | Administrator</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
-    <link href="<?php echo base_url('asset/AdminLTE-2.0.5/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('asset/back/AdminLTE-2.0.5/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
-    <link href="<?php echo base_url('asset/font-awesome-4.3.0/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('asset/back/font-awesome-4.3.0/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css" />
     <!-- Ionicons -->
-    <link href="<?php echo base_url('asset/ionicons-2.0.1/css/ionicons.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('asset/back/ionicons-2.0.1/css/ionicons.min.css') ?>" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="<?php echo base_url('asset/AdminLTE-2.0.5/dist/css/AdminLTE.min.css') ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url('asset/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('asset/back/AdminLTE-2.0.5/dist/css/AdminLTE.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.css') ?>" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link href="<?php echo base_url('asset/AdminLTE-2.0.5/dist/css/skins/_all-skins.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('asset/back/AdminLTE-2.0.5/dist/css/skins/_all-skins.min.css') ?>" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="<?php echo base_url()?>asset/js/html5shiv.min.js"></script>
-    <script src="<?php echo base_url()?>asset/js/respond.min.js"></script>
+    <script src="<?php echo base_url()?>asset/back/js/html5shiv.min.js"></script>
+    <script src="<?php echo base_url()?>asset/back/js/respond.min.js"></script>
     <![endif]-->
 </head>
 <body class="hold-transition skin-red sidebar-mini">
@@ -148,19 +148,19 @@
 <!-- jQuery 2.1.4 -->
 
 <!-- jQuery 2.1.3 -->
-<script src="<?php echo base_url('asset/AdminLTE-2.0.5/plugins/jQuery/jQuery-2.1.3.min.js') ?>"></script>
-<script src="<?php echo base_url('asset/AdminLTE-2.0.5/plugins/datatables/jquery.dataTables.js') ?>"></script>
-<script src="<?php echo base_url('asset/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.js') ?>"></script>
+<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/jQuery/jQuery-2.1.3.min.js') ?>"></script>
+<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/datatables/jquery.dataTables.js') ?>"></script>
+<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.js') ?>"></script>
 <!-- Bootstrap 3.3.2 JS -->
-<script src="<?php echo base_url('asset/AdminLTE-2.0.5/bootstrap/js/bootstrap.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/bootstrap/js/bootstrap.min.js') ?>" type="text/javascript"></script>
 <!-- bootstrap datepicker -->
-<script src="<?php echo base_url('asset/AdminLTE-2.0.5/plugins/datepicker/bootstrap-datepicker.js')?>"></script>
+<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/datepicker/bootstrap-datepicker.js')?>"></script>
 <!-- SlimScroll -->
-<script src="<?php echo base_url('asset/AdminLTE-2.0.5/plugins/slimScroll/jquery.slimScroll.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/slimScroll/jquery.slimScroll.min.js') ?>" type="text/javascript"></script>
 <!-- FastClick -->
-<script src='<?php echo base_url('asset/AdminLTE-2.0.5/plugins/fastclick/fastclick.min.js') ?>'></script>
+<script src='<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/fastclick/fastclick.min.js') ?>'></script>
 <!-- AdminLTE App -->
-<script src="<?php echo base_url('asset/AdminLTE-2.0.5/dist/js/app.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/dist/js/app.min.js') ?>" type="text/javascript"></script>
 
 <script>
     $(function () {

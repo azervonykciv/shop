@@ -1,96 +1,163 @@
-<!DOCTYPE html>
-<!-- saved from url=(0071)https://almsaeedstudio.com/themes/AdminLTE/pages/examples/register.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--content wrapper-->
+<div class="content-wrapper">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Registration Page</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="<?php echo base_url('asset/AdminLTE-2.0.5/bootstrap.min.css') ?>">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php echo base_url('asset/AdminLTE-2.0.5/font-awesome.min.css') ?>">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="<?php echo base_url('asset/AdminLTE-2.0.5/ionicons.min.css') ?>">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="<?php echo base_url('asset/AdminLTE-2.0.5/AdminLTE.min.css') ?>">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="<?php echo base_url('asset/AdminLTE-2.0.5/blue.css') ?>">
+    <!--logo-->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body class="hold-transition register-page">
-<div class="register-box">
-    <div class="register-logo">
-        <a href="https://almsaeedstudio.com/themes/AdminLTE/index2.html"><b>Admin</b>LTE</a>
-    </div>
+    <div class="logo-sl-page text-center"> <a href="#"><img src="img/logo.svg" alt="logo"></a> </div>
 
-    <div class="register-box-body">
-        <p class="login-box-msg">Register a new membership</p>
+    <!--logo end-->
 
-        <?php echo form_open('register/do_reg') ?>
-            <div class="form-group has-feedback">
-                <input type="text" class="form-control" name="Nama_User" placeholder="Nama User">
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" name="Password" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Retype password">
-                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-            </div>
+    <!--cta signup form-->
+
+    <section class="cta-form cta-light section-spacing">
+        <div class="container">
             <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label class="">
-                            <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> I agree to the <a href="https://almsaeedstudio.com/themes/AdminLTE/pages/examples/register.html#">terms</a>
-                        </label>
+                <div class="col-sm-8 col-md-5 center-block">
+                    <?php echo form_open('register/do_reg','id="cta-signup-form" class="cta-signup-form"') ?>
+
+                    <header class="section-header text-center">
+                        <h2>Buat Akun Anda</h2>
+                    </header>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" id="input-name" name="Nama_User" placeholder="Nama Anda" required>
+                        <label for="input-name"><span class="required">*</span>Nama Anda</label>
                     </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control input-lg" id="input-email" name="Email" placeholder="Email" required>
+                        <label for="input-email"><span class="required">*</span>Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-lg" id="input-password" placeholder="Password" pattern=".{8,10}" required>
+                        <label for="input-password"><span class="required">*</span>Minimal 8 Karakter</label>
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit" class="btn">Daftar</button>
+                        <p class="form-terms">Dengan mengklik Daftar maka anda menyetujui <a href="#" data-toggle="modal" data-target="#modal-terms">Terms</a> dan read our <a href="#" data-toggle="modal" data-target="#modal-terms">Privacy Policy</a>.</p>
+                    </div>
+                    <h3 class="text-center">Sudah Memiliki Akun? <a href="signin.html">Masuk</a></h3>
+                    </form>
                 </div>
-                <!-- /.col -->
-                <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
-                </div>
-                <!-- /.col -->
             </div>
-        </form>
-
-        <div class="social-auth-links text-center">
-            <p>- OR -</p>
-            <a href="https://almsaeedstudio.com/themes/AdminLTE/pages/examples/register.html#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using
-                Facebook</a>
-            <a href="https://almsaeedstudio.com/themes/AdminLTE/pages/examples/register.html#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign up using
-                Google+</a>
         </div>
+    </section>
 
-        <a href="https://almsaeedstudio.com/themes/AdminLTE/pages/examples/login.html" class="text-center">I already have a membership</a>
-    </div>
-    <!-- /.form-box -->
+    <!--cta signup form end-->
+
+    <!--chat btn-->
+    <a href="#" class="chat-btn" data-toggle="modal" data-target="#modal-contact-form"></a>
+    <!--chat btn-->
+
+    <!--Copyright terms-->
+
+    <footer class="copyright-terms">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6"> <small> &copy; 2016 Muslim Shop Warehouse System. All rights reserved.</small> </div>
+                <div class="col-sm-7 col-md-6">
+                    <ul class="terms-privacy">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modal-terms">Terms</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modal-terms">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Copyright terms end-->
+
 </div>
-<!-- /.register-box -->
 
-<!-- jQuery 2.2.3 -->
-<script src="./AdminLTE 2 _ Registration Page_files/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="./AdminLTE 2 _ Registration Page_files/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="./AdminLTE 2 _ Registration Page_files/icheck.min.js"></script>
-<script>
-    $(function () {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' // optional
-        });
-    });
-</script>
+<!--content wrapper end-->
+
+<!--Site policy modal -->
+<div class="modal fade site-policy" id="modal-terms" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-header">
+                <h2 class="modal-title text-center" id="ModalLabel">Terms of Use</h2>
+            </div>
+            <div class="modal-body">
+                <p>This privacy policy discloses the privacy practices for (website address). This privacy policy applies solely to information collected by this web site. It will notify you of the following: </p>
+                <ul>
+                    <li>What personally identifiable information is collected from you through the web site, how it is used and with whom it may be shared.</li>
+                    <li>What choices are available to you regarding the use of your data.</li>
+                    <li>The security procedures in place to protect the misuse of your information.</li>
+                    <li>How you can correct any inaccuracies in the information.</li>
+                </ul>
+                <h3>Information Collection, Use, and Sharing </h3>
+                <p>We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone.</p>
+                <p>We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, e.g. to ship an order.</p>
+                <p>Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.</p>
+                <h3>Your Access to and Control Over Information </h3>
+                <p>You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website:</p>
+                <ul>
+                    <li>See what data we have about you, if any.</li>
+                    <li>Change/correct any data we have about you.</li>
+                    <li>Have us delete any data we have about you.</li>
+                    <li>Express any concern you have about our use of your data.</li>
+                </ul>
+                <h3>Security </h3>
+                <p>We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.</p>
+                <p>Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon at the bottom of your web browser, or looking for "https" at the beginning of the address of the web page.</p>
+                <p>While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.</p>
+                <h3>Registration </h3>
+                <p>In order to use this website, a user must first complete the registration form. During registration a user is required to give certain information (such as name and email address). This information is used to contact you about the products/services on our site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required.</p>
+                <h3>Orders </h3>
+                <p>We request information from you on our order form. To buy from us, you must provide contact information (like name and shipping address) and financial information (like credit card number, expiration date). This information is used for billing purposes and to fill your orders. If we have trouble processing an order, we'll use this information to contact you.</p>
+                <h3>Cookies </h3>
+                <p>We use "cookies" on this site. A cookie is a piece of data stored on a site visitor's hard drive to help us improve your access to our site and identify repeat visitors to our site. For instance, when we use a cookie to identify you, you would not have to log in a password more than once, thereby saving time while on our site. Cookies can also enable us to track and target the interests of our users to enhance the experience on our site. Usage of a cookie is in no way linked to any personally identifiable information on our site.</p>
+                <h3>Updates</h3>
+                <p>Our Privacy Policy may change from time to time and all updates will be posted on this page.</p>
+                <p>If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at <a href="tel:+1856-236-1853">+1856-236-1853</a> or via email <a href="mailto:Contact@archer.com">Contact@archer.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Site policy modal end-->
+
+<!--contact form modal-->
+
+<div class="modal fade" id="modal-contact-form" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+                <!--contact form-->
+
+                <div class="contact-form text-center">
+                    <header class="section-header"> <img src="img/support-icon.svg" alt="support icon">
+                        <h2>Contact us</h2>
+                        <h3>Have any questions? Send us a message.</h3>
+                    </header>
+                    <form class="cta-form cta-light" action="http://csmthemes.com/themes/archer/image/php/contact.php" method="post">
+                        <div class="form-group">
+                            <input  type="text" name="name" class="contact-name form-control input-lg" placeholder="Name *" id="contact-name">
+                        </div>
+                        <div class="form-group">
+                            <input  type="text"  name="email" class="contact-email form-control input-lg" placeholder="Email address *" id="contact-email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="contact-message form-control input-lg" rows="4" placeholder="Message *" id="contact-message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="antispam" placeholder="Antispam question: 7 + 5 = ?" class="contact-antispam form-control input-lg" id="contact-antispam">
+                        </div>
+                        <button type="submit" class="btn">SEND MESSAGE</button>
+                    </form>
+                </div>
+
+                <!--contact form end-->
+
+                <p class="contact-form-success"><i class="fa fa-check"></i><span>Thanks for contacting us!</span> We will get back to you very soon.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-</body></html>
+
+<!--contact form modal end-->

@@ -44,40 +44,49 @@ class Front extends CI_Controller
 
 	public function pack_store($index)
     {
-        if($index == 1)
-        {
+        if($index == 1) {
             $packages['ID_User'] = $this->session->userdata('id_user');
             $packages['Nama_User'] = $this->session->userdata('uname');
-            $packages['Package']   = $this->input->post('kategori');
+            $packages['Package'] = $this->input->post('kategori');
             $packages['jml_brng'] = 20;
-            $packages['type']     = 1;
-            $packages['url']      = base_url()."apiserver/?tab=barang&kat=".$this->input->post('kategori')."&100";
+            $packages['type'] = 1;
+            $packages['url'] = base_url()."api_server/?tab=barang&id_user=" . $packages['ID_User'] . "&kat1=KODE_KLASIFIKASI&kat2=".urlencode($this->input->post('kategori'));
 
 
-
-            $api_access['key']= $this->session->userdata('Tokenize');
-            $api_access['date_created']  = date_default_timezone_set('Asia/Jakarta');
-            $api_access['date_modified'] = date_default_timezone_set('Asia/Jakarta');
+            date_default_timezone_set('Asia/Jakarta');
+            $api_access['key'] = $this->session->userdata('Tokenize');
+            $api_access['date_created'] = date('Y-m-d H:i:s');
+            $api_access['date_modified'] = date('Y-m-d H:i:s');
             $api_access['controller'] = "/api_server";
 
             /**echo "paket gratisan";
-                echo "<pre>";
-                print_r($packages);
-                print_r($api_access);
-            die();**/
+             * echo "<pre>";
+             * print_r($packages);
+             * print_r($api_access);
+             * die();**/
 
-            $cek1 = $this->crud_model->check('key',$api_access['key'],'access');
-            $cek2 = $this->crud_model->check('Package',$packages['Package'],'packages');
+            $cek1 = $this->crud_model->check('access','key',$api_access['key']);
+            $cek2 = $this->crud_model->check('packages','Package',$packages['Package']);
+            $cek3 = $this->crud_model->check('packages','type',$packages['type']);
 
-            if(count($cek1) >0 && count($cek2) == 0)
-            {
-                $this->crud_model->insert($packages);
+            if ($cek1>0){
+
+                if($cek2 == 0 || $cek3 == 0) {
+                    $this->crud_model->insert($packages,'packages');
+                    $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
+                    redirect('front','refresh');
+
             }
-            else{
-                $this->crud_model->insert($api_access,'access');
-                $this->crud_model->insert($packages,'packages');
-            }
+            }elseif($cek1==0){
+                $this->crud_model->insert($api_access, 'access');
+                $this->crud_model->insert($packages, 'packages');
+                $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
+                redirect('front','refresh');
 
+            }else{
+                $this->session->set_flashdata('error', 'Pengambilan Paket API gagal');
+                redirect('front','refresh');
+            }
         }
         elseif($index == 2)
         {
@@ -86,36 +95,40 @@ class Front extends CI_Controller
             $packages['Package']    = $this->input->post('kategori');
             $packages['jml_brng']   = $this->input->post('jml');
             $packages['type']       = 2;
-            $packages['url']        = base_url()."apiserver/?tab=barang&id_user=".$packages['ID_User']."&kat1=KODE_KLASIFIKASI&kat2=".$this->input->post('kategori')."&cond=101";
+            $packages['url']        = base_url()."api_server/?tab=barang&id_user=".$packages['ID_User']."&kat1=KODE_KLASIFIKASI&kat2=".urlencode($this->input->post('kategori'));
 
 
-
+            date_default_timezone_set('Asia/Jakarta');
             $api_access['key']= $this->session->userdata('Tokenize');
-            $api_access['date_created']  = date_default_timezone_set('Asia/Jakarta');
-            $api_access['date_modified'] = date_default_timezone_set('Asia/Jakarta');
+            $api_access['date_created']  = date('Y-m-d H:i:s');
+            $api_access['date_modified'] = date('Y-m-d H:i:s');
             $api_access['controller'] = "/api_server";
 
-            echo "paket gratisan";
+            /**echo "paket gratisan";
             echo "<pre>";
             print_r($packages);
             print_r($api_access);
-            die();
+            die();**/
 
             $cek1 = $this->crud_model->check('access','key',$api_access['key']);
             $cek2 = $this->crud_model->check('packages','Package',$packages['Package']);
             $cek3 = $this->crud_model->check('packages','type',$packages['type']);
 
-            if(count($cek1)>0)
-            {
-                if(count($cek2)>0 || count($cek3)>0)
-                {
-                    $this->crud_model->insert($packages,'packages');
-                }
+            if ($cek1>0){
 
-            }
-            else{
-                $this->crud_model->insert($api_access,'access');
-                $this->crud_model->insert($packages,'packages');
+                if($cek2 == 0 || $cek3 == 0) {
+                    $this->crud_model->insert($packages,'packages');
+                    $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
+                    redirect('front','refresh');
+
+                }
+            }elseif($cek1==0){
+                $this->crud_model->insert($api_access, 'access');
+                $this->crud_model->insert($packages, 'packages');
+                $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
+                redirect('front','refresh');
+            }else{
+                $this->session->set_flashdata('error', 'Pengambilan Paket API Gagal');
             }
         }
     }

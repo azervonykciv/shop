@@ -1,16 +1,28 @@
 <body>
 
-<header class="hero-section"> 
-  
+<header class="hero-section">
   <!--navigation-->
   
   <nav class="navbar navbar-default" data-spy="affix" data-offset-top="450">
     <div class="container">
+
+      <?php if($this->session->flashdata('success')):?>
+      <div class="alert alert-success alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong><?php echo $this->session->flashdata('success');?> !</strong>
+      </div>
+      <?php endif ?>
+
+      <?php if($this->session->flashdata('error')) :?>
+      <div class="alert alert-danger alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Danger!</strong> <?php $this->session->flashdata('error');?>
+      </div>
+      <?php endif ?>
       <div class="navbar-header"> <a class="navbar-brand" href="#"><img class="logo" alt="logo" src="img/logo.svg"><img class="logo-nav" alt="logo-nav" src="img/logo-nav.svg"></a> </div>
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden-xs hidden-sm"><a href="#features">Features</a></li>
         <li class="hidden-xs hidden-sm"><a href="#pricing">Api Service</a></li>
-        <li class="hidden-xs hidden-sm"><a href="#reviews">Reviews</a></li>
         <?php if($status === 'Member'):?>
         <li class="hidden-xs"><a href="<?php echo base_url()."login/logout"; ?>">Keluar</a></li>
           <?php else:?>
@@ -31,8 +43,6 @@
       <ul>
         <li><a href="#features">Features</a></li>
         <li><a href="#pricing">API Service</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#faq">FAQ</a></li>
         <li><a href="#team">Team</a></li>
         <?php if($status === 'Member'):?>
         <li class="hidden-sm"><a href="<?php echo base_url()."login/logout"; ?>">Sign Out</a></li>
@@ -41,22 +51,21 @@
       </ul>
     </nav>
   </div>
-  
   <!--mobile navigation end--> 
   
   <!--welcome message-->
+
+
   
   <section class="container text-center welcome-message">
     <div class="row">
       <div class="col-md-12">
         <h1>Welcome To Warehouse System Muslim Shop</h1>
         <h2>Use this template to promote and describe the benefits of your product.</h2>
-        <a href="signup.html" class="btn btn-cta-hero">GET STARTED</a> </div>
+        <a href="<?php echo base_url()."register"; ?>" class="btn btn-cta-hero">DAFTAR</a> </div>
     </div>
   </section>
-  
-  <!--welcome message end--> 
-  
+  <!--welcome message end-->
 </header>
 
 <!--hero section end--> 
@@ -65,6 +74,8 @@
 
 <section class="how-it-works section-spacing">
   <div class="container">
+
+
     <header class="section-header text-center">
       <h2>How it works</h2>
       <h3>Understanding our easy to use product</h3>
@@ -168,10 +179,8 @@
   </div>
 </section>
 
-<!--features end--> 
-
+<!--features end-->
 <!--video intro-->
-
 <div class="video-intro section-spacing">
   <div class="container">
     <div class="row">
