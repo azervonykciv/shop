@@ -6,6 +6,7 @@
 *.xml
 
 applications/wareback/.idea/workspace.xml
+/applications/wareback/
 
 *.xml
 
