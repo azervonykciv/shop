@@ -21,11 +21,19 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Distributor</b> Admin</a>
+    <a href="#"><b>Distributor</b> API</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
+
+    <?php if ($this->session->flashdata('msg')): ?>
+      <div class="alert alert-warning alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-info"></i> Info!</h4>
+        <?php echo $this->session->flashdata('msg') ?>
+      </div>
+    <?php endif ?>
 
     <form action="<?php echo base_url()."auth/validation" ?>" method="post">
       <div class="form-group has-feedback">

@@ -16,6 +16,9 @@ class Auth_model extends CI_Model {
 			->get('users')
 			->result();
 
+		if($user == [])
+			return false;
+
 		if(!password_verify($password ,$user[0]->password))
 			return false;
 

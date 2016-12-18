@@ -140,17 +140,21 @@
               <h4 class="modal-title">Free</h4>
             </div>
             <div class="modal-body">
-              <form>
+              <form action="<?php echo base_url().'home/transaction/free' ?>" method="post">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Merk</label>
-                  <select class="" name="">
-                    <option value=""></option>
+                  <label for="">Merk</label>
+                  <select class="" name="selection">
+										<?php foreach ($selection as $key): ?>
+											<option value="<?php echo $key ?>">
+												<?php echo $key ?>
+											</option>
+										<?php endforeach; ?>
                   </select>
                 </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="button" data-dismiss="modal">Close</button>
-              <button type="button" class="button">Save changes</button>
+              <button type="submit" class="button">submit</button>
             </div>
           </form>
           </div><!-- /.modal-content -->
@@ -165,17 +169,21 @@
               <h4 class="modal-title">Premium</h4>
             </div>
             <div class="modal-body">
-              <form>
+              <form action="<?php echo base_url().'home/transaction/free' ?>" method="post">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Merk</label>
-                  <select class="" name="">
-                    <option value=""></option>
+                  <label for="">Merk</label>
+                  <select class="" name="selection">
+										<?php foreach ($selection as $key): ?>
+											<option value="<?php echo $key ?>">
+												<?php echo $key ?>
+											</option>
+										<?php endforeach; ?>
                   </select>
                 </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="button" data-dismiss="modal">Close</button>
-              <button type="button" class="button">Save changes</button>
+              <button type="submit" class="button">submit</button>
             </div>
           </form>
           </div><!-- /.modal-content -->

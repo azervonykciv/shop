@@ -11,6 +11,7 @@ class Order extends CI_Controller {
 			redirect('auth');
 
 		$this->config->load('rest');
+		$this->load->library('Curl');
 		$this->load->model('Orders_model');
 		$this->load->model('Api_keys_model');
 		$this->load->model('Users_model');
@@ -44,10 +45,27 @@ class Order extends CI_Controller {
 		$order['created_at']  = $created_at;
 
 		$dump = [
+			'data'    => $data,
 			'api_key' => $api_key,
-			'user' => $user,
-			'order' => $order,
+			'user'    => $user,
+			'order'   => $order,
 		];
+
+		$url = 'http://localhost/shop/distributor/index.php/ApiItems';
+		$headers = [
+			'X-API-KEY: 1234567890',
+		];
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		$res = curl_exec($ch);
+		echo $res;
+		die('end');
+
+		echo "<pre>";
+		print_r($dump);
+		die();
 
 		$this->Users_model->update('10', $user);
 		$this->Api_keys_model->insert($api_key);

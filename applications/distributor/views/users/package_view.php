@@ -57,7 +57,25 @@
 											<?php endif ?>
 										<?php endforeach ?>
 									</select>
-							</div>
+								</div>
+
+								<div class="form-group">
+									<label>Pilihan :</label>
+									<select name="data[selection]" class="form-control">
+										<option></option>
+										<?php foreach ($selection as $key): ?>
+											<?php if ($user->packages->id === $key): ?>
+												<option value="<?php echo $key ?>" selected >
+													<?php echo $key ?>
+												</option>
+											<?php else: ?>
+												<option value="<?php echo $key ?>" >
+													<?php echo $key ?>
+												</option>
+											<?php endif ?>
+										<?php endforeach ?>
+									</select>
+								</div
 
 							<div class="box-footer">
 								<button type="submit" class="btn btn-primary pull-right">Submit</button>

@@ -16,19 +16,20 @@ class Auth extends CI_Controller {
 	public function validation()
 	{
 		$username = $this->input->post('username');
-		$passowrd = $this->input->post('password');
+		$password = $this->input->post('password');
 
-		$user = $this->Auth_model->validation($username, $passowrd);
+		$user = $this->Auth_model->validation($username, $password);
 
 		if ($user->level === 'super_admin') {
 			$this->session->set_userdata('user_level', $user->level);
 			$this->session->set_userdata('username', $user->username);
 			redirect('dashboard');
-		} elseif ($user->level === 'pelanggan') {
+		} elseif ($user->level === 'customer') {
 			$this->session->set_userdata('user_level', $user->level);
 			$this->session->set_userdata('username', $user->username);
-			echo "yo";
+			redirect('home');
 		} else {
+			$this->session->set_flashdata('msg', 'anda salah memasukan username/password');
 			redirect('Auth');
 		}
 	}

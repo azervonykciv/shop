@@ -12,6 +12,7 @@ class Users extends CI_Controller {
 
 		$this->config->load('rest');
 		$this->load->model('Users_model');
+		$this->load->helper('mycons');
 	}
 
 	public function index()
@@ -66,8 +67,9 @@ class Users extends CI_Controller {
 	public function package($id)
 	{
 		$data = [
-			'user' => $this->Users_model->with('packages')->get($id),
+			'user'     => $this->Users_model->with('packages')->get($id),
 			'packages' => $this->Crud_model->get('packages', '*'),
+			'selection'=> getSelection(),
 		];
 		$this->load->view('users/package_view', $data);
 	}
