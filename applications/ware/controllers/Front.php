@@ -14,9 +14,7 @@ class Front extends CI_Controller
 	{
 
         $data['status']=$this->session->userdata('Status');
-
-
-		$this->template->load('frontBase','front',$data);
+        $this->template->load('frontBase','front',$data);
 	}
 
 	public function in_pack($data)
@@ -69,11 +67,16 @@ class Front extends CI_Controller
 
             if ($cek1>0){
 
-                if($cek2 == 0 || $cek3 == 0) {
+                if($cek2>0 && $cek3==0) {
                     $this->crud_model->insert($packages,'packages');
                     $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
                     redirect('front','refresh');
 
+                }elseif($cek2=0 && $cek3>0)
+                {
+                    $this->crud_model->insert($packages,'packages');
+                    $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
+                    redirect('front','refresh');
                 }
                 else
                 {
@@ -119,16 +122,22 @@ class Front extends CI_Controller
 
             if ($cek1>0){
 
-                if($cek2 == 0 || $cek3 == 0) {
-                    $this->crud_model->insert($packages,'packages');
-                    $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
-                    redirect('front','refresh');
-                }
-                else
-                {
+              if($cek2>0 && $cek3==0) {
+                  $this->crud_model->insert($packages,'packages');
+                  $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
+                  redirect('front','refresh');
+
+              }elseif($cek2=0 && $cek3>0)
+              {
+                  $this->crud_model->insert($packages,'packages');
+                  $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
+                  redirect('front','refresh');
+              }
+              else
+              {
                   $this->session->set_flashdata('erPack', 'Paket API telah diambil, silahkan mengambil paket yang lain');
                   redirect('front/in_pack/2','refresh');
-                }
+              }
             }elseif($cek1==0){
                 $this->crud_model->insert($api_access, 'access');
                 $this->crud_model->insert($packages, 'packages');
