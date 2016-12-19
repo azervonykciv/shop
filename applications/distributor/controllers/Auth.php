@@ -27,6 +27,7 @@ class Auth extends CI_Controller {
 		} elseif ($user->level === 'customer') {
 			$this->session->set_userdata('user_level', $user->level);
 			$this->session->set_userdata('username', $user->username);
+			$this->session->set_userdata('id', $user->id);
 			redirect('home');
 		} else {
 			$this->session->set_flashdata('msg', 'anda salah memasukan username/password');

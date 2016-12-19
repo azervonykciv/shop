@@ -3,7 +3,7 @@
 class Users_model extends MY_Model {
 
 	public $_table = 'users';
-	public $belongs_to = ['packages'];
+	public $belongs_to = ['packages', ];
 
 }
 

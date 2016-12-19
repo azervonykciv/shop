@@ -69,7 +69,7 @@ class Users extends CI_Controller {
 		$data = [
 			'user'     => $this->Users_model->with('packages')->get($id),
 			'packages' => $this->Crud_model->get('packages', '*'),
-			'selection'=> getSelection(),
+			'selection'=> getSelectionHerbal(),
 		];
 		$this->load->view('users/package_view', $data);
 	}

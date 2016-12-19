@@ -18,11 +18,13 @@
 			<header id="header">
 				<div class="inner">
 					<a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
-					<!-- <nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="generic.html">Generic</a>
-						<a href="elements.html">Elements</a>
-					</nav> -->
+					<?php if ($this->session->has_userdata('username')): ?>
+						<nav id="nav">
+							<a href="<?php echo base_url().'home' ?>">Home</a>
+							<a href="<?php echo base_url().'home/profile' ?>">My Profile</a>
+							<a href="<?php echo base_url().'auth/logout' ?>">Logout</a>
+						</nav>
+			    <?php endif ?>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
@@ -31,7 +33,7 @@
 			<section id="banner">
 				<div class="inner">
 					<header>
-						<h1>Welcome to API Distributtor</h1>
+						<h1>API Distributtor Herbal</h1>
 					</header>
 
 					<div class="flex ">
@@ -77,7 +79,11 @@
                 consequat  egestas augue vulputate.
               </p>
 							<footer>
-								<a href="#" class="button" data-toggle="modal" data-target="#free-modal">Learn More</a>
+								<?php if ($this->session->has_userdata('username')): ?>
+									<a href="#" class="button" data-toggle="modal" data-target="#free-modal">Learn More</a>
+								<?php else: ?>
+									<a href="<?php echo base_url().'auth' ?>" class="button">Learn More</a>
+						    <?php endif ?>
 							</footer>
 						</article>
 
@@ -91,7 +97,11 @@
                 blandit ellenste egestagus commodo.
               </p>
 							<footer>
-								<a href="#" class="button" data-toggle="modal" data-target="#premium-modal">Learn More</a>
+								<?php if ($this->session->has_userdata('username')): ?>
+									<a href="#" class="button" data-toggle="modal" data-target="#premium-modal">Learn More</a>
+								<?php else: ?>
+									<a href="<?php echo base_url().'auth' ?>" class="button">Learn More</a>
+						    <?php endif ?>
 							</footer>
 						</article>
 					</div>
@@ -101,25 +111,22 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
+					<h3>Daftar</h3>
 
-					<h3>Get in touch</h3>
-
-					<form action="#" method="post">
-
+					<form action="<?php echo base_url().'home/daftar' ?>" method="post">
 						<div class="field half first">
-							<label for="name">Name</label>
-							<input name="name" id="name" type="text" placeholder="Name">
+							<label for="name">Username</label>
+							<input name="data[username]" type="text" placeholder="Name" required>
 						</div>
 						<div class="field half">
-							<label for="email">Email</label>
-							<input name="email" id="email" type="email" placeholder="Email">
+							<label for="email">Password</label>
+							<input name="data[password]" type="password" required>
 						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-						</div>
+						<input type="hidden" name="data[level]" value="customer">
 						<ul class="actions">
-							<li><input value="Send Message" class="button alt" type="submit"></li>
+							<li>
+								<input class="button alt" type="submit">
+							</li>
 						</ul>
 					</form>
 
@@ -140,10 +147,10 @@
               <h4 class="modal-title">Free</h4>
             </div>
             <div class="modal-body">
-              <form action="<?php echo base_url().'home/transaction/free' ?>" method="post">
+              <form action="<?php echo base_url().'home/order/1' ?>" method="post">
                 <div class="form-group">
                   <label for="">Merk</label>
-                  <select class="" name="selection">
+                  <select class="" name="data[selection]">
 										<?php foreach ($selection as $key): ?>
 											<option value="<?php echo $key ?>">
 												<?php echo $key ?>
@@ -169,10 +176,10 @@
               <h4 class="modal-title">Premium</h4>
             </div>
             <div class="modal-body">
-              <form action="<?php echo base_url().'home/transaction/free' ?>" method="post">
+              <form action="<?php echo base_url().'home/order/2' ?>" method="post">
                 <div class="form-group">
                   <label for="">Merk</label>
-                  <select class="" name="selection">
+                  <select class="" name="data[selection]">
 										<?php foreach ($selection as $key): ?>
 											<option value="<?php echo $key ?>">
 												<?php echo $key ?>

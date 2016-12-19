@@ -25,6 +25,7 @@ class Auth_model extends CI_Model {
 		return (object) [
 			'username' => $user[0]->username,
 			'level'    => $user[0]->level,
+			'id'       => $user[0]->id,
 		];
 	}
 

@@ -11,7 +11,6 @@ class Order extends CI_Controller {
 			redirect('auth');
 
 		$this->config->load('rest');
-		$this->load->library('Curl');
 		$this->load->model('Orders_model');
 		$this->load->model('Api_keys_model');
 		$this->load->model('Users_model');
@@ -24,6 +23,7 @@ class Order extends CI_Controller {
 			->with('users')
 			->order_by('created_at', 'DESC')
 			->get_all();
+
 		$this->load->view('orders/list_view', ['orders' => $orders]);
 	}
 
@@ -31,8 +31,6 @@ class Order extends CI_Controller {
 	{
 		$data = $this->input->post('data');
 		$created_at = Date('Y-m-d H:i:s');
-
-		$user['packages_id'] = $data['packages_id'];
 
 		$api_key['id']           = rand(0, 21474836);
 		$api_key['users_id']     = $data['users_id'];
@@ -44,6 +42,10 @@ class Order extends CI_Controller {
 		$order['api_keys_id'] = $api_key['id'];
 		$order['created_at']  = $created_at;
 
+		$user['packages_id'] = $data['packages_id'];
+		$user['token']       = $api_key['key'];
+		$user['selection']   = $data['selection'];
+
 		$dump = [
 			'data'    => $data,
 			'api_key' => $api_key,
@@ -51,23 +53,25 @@ class Order extends CI_Controller {
 			'order'   => $order,
 		];
 
-		$url = 'http://localhost/shop/distributor/index.php/ApiItems';
-		$headers = [
-			'X-API-KEY: 1234567890',
-		];
 
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-		$res = curl_exec($ch);
-		echo $res;
-		die('end');
 
-		echo "<pre>";
-		print_r($dump);
-		die();
+		// $url = 'http://localhost/shop/distributor/index.php/ApiItems';
+		// $headers = [
+		// 	'X-API-KEY: 1234567890',
+		// ];
+		//
+		// $ch = curl_init();
+		// curl_setopt($ch, CURLOPT_URL, $url);
+		// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		// $res = curl_exec($ch);
+		// echo $res;
+		// die('end');
 
-		$this->Users_model->update('10', $user);
+		// echo "<pre>";
+		// print_r($dump);
+		// die();
+
+		$this->Users_model->update($data['users_id'], $user);
 		$this->Api_keys_model->insert($api_key);
 		$this->Orders_model->insert($order);
 

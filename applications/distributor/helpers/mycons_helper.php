@@ -12,4 +12,14 @@
       'ZAITUN',
     ];
   }
+
+  function getSelectionHerbal()
+  {
+    return
+    [
+      'JADIED',
+      'MADU',
+      'ZAITUN',
+    ];
+  }
  ?>
