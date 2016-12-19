@@ -17,7 +17,7 @@ class ApiItems extends REST_Controller {
 
 	public function index_get()
 	{
-		$items = $this->Crud_model->get('item', ['name']);
+		$items = $this->Crud_model->get('barang', '*');
 		$this->set_response($items, REST_Controller::HTTP_OK);
 	}
 

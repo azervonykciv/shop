@@ -2,6 +2,8 @@
 
 require APPPATH . '/libraries/REST_Controller.php';
 
+use GuzzleHttp\Client;
+
 class ApiHerbal extends REST_Controller {
 
 	public function __construct()
@@ -19,13 +21,24 @@ class ApiHerbal extends REST_Controller {
 
 	public function index_get()
 	{
-    // $data = $this->Users_model->get_by('token', )
-    $header = $this->head();
-    $user = $this->Users_model->get_by('token', $header['X-API-KEY']);
-
-    print_r($user);
+		// make a request to ware change X-API-KEY
+		$url      = 'http://localhost/shop/distributor/index.php/ApiItems';
+		$client   = new GuzzleHttp\Client();
+		$response = $client->request('GET', $url, ['headers' => ['X-API-KEY' => '1234567890']]);
+		$response = json_decode($response->getBody());
+		// Filtering with NAMA_BARANG
+    $header  = $this->head();
+    $user    = $this->Users_model->get_by('token', $header['X-API-KEY']);
+		$pattern = '/'.$user->selection.'/';
+		$result  = [];
+		foreach ($response as $key) {
+			if (preg_match($pattern, $key->NAMA_BARANG)) {
+				$result[] = $key;
+			}
+		}
+		// send response
+		$this->set_response($result, REST_Controller::HTTP_OK);
 	}
-
 }
 
 /* End of file Items.php */
