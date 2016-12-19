@@ -11,29 +11,38 @@ class ApiHerbal extends REST_Controller {
 		parent::__construct();
 
     $this->load->model('Users_model');
-
-		// Configure limits on our controller methods
-		// Ensure you have created the 'limits' table and enabled 'limits' within application/config/rest.php
-		$this->methods['users_get']['limit'] = 500; // 500 requests per hour per user/key
-		$this->methods['users_post']['limit'] = 100; // 100 requests per hour per user/key
-		$this->methods['users_delete']['limit'] = 50; // 50 requests per hour per user/key
 	}
 
 	public function index_get()
 	{
+		// get my setting
+		$setting = $this->Crud_model->get('setting', '*');
+		$url     = $setting[0]->url;
+		$api_key = $setting[0]->token;
 		// make a request to ware change X-API-KEY
-		$url      = 'http://localhost/shop/distributor/index.php/ApiItems';
 		$client   = new GuzzleHttp\Client();
-		$response = $client->request('GET', $url, ['headers' => ['X-API-KEY' => '1234567890']]);
+		$response = $client->request('GET', $url, ['headers' => ['X-API-KEY' => $api_key]]);
 		$response = json_decode($response->getBody());
 		// Filtering with NAMA_BARANG
     $header  = $this->head();
     $user    = $this->Users_model->get_by('token', $header['X-API-KEY']);
 		$pattern = '/'.$user->selection.'/';
+		$package = $user->packages_id;
 		$result  = [];
-		foreach ($response as $key) {
-			if (preg_match($pattern, $key->NAMA_BARANG)) {
-				$result[] = $key;
+		// free or premium
+		if ($package == 1) {
+			$count = 0;
+			foreach ($response as $key) {
+				if (preg_match($pattern, $key->NAMA_BARANG) && $count < 5) {
+					$result[] = $key;
+					$count++;
+				}
+			}
+		} else {
+			foreach ($response as $key) {
+				if (preg_match($pattern, $key->NAMA_BARANG)) {
+					$result[] = $key;
+				}
 			}
 		}
 		// send response
