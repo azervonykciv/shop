@@ -26,10 +26,14 @@ class Crud_model extends CI_Model
         return $this->db->get($table)->result();
     }
 
-    public function cek_user($Email="", $Password=""){
-        $query = $this->db->get_where("user", array('Email' => $Email , password_verify('Password',$Password)));
-        $query = $query->result_array();
-        return $query;
+    public function cek_user($Email, $Password){
+
+      $chk = $this->db
+  			->select('*')
+  			->where(['Email' => $Email,])
+  			->get('user')->row();
+        if(password_verify($Password,$chk->Password))
+            return $this->db->get_where('user',array('Email' => $Email))->result_array();
     }
 
     public function get_only($table,$kolom)
@@ -37,7 +41,6 @@ class Crud_model extends CI_Model
         $query = $this->db->query("SELECT count(*), $kolom FROM $table GROUP BY $kolom HAVING COUNT(*) > 1;");
         return $query->result();
     }
-
 
     public function check($table,$id1,$id2)
     {

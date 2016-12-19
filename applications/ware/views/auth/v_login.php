@@ -3,6 +3,8 @@
 <!--content wrapper-->
 <div class="content-wrapper">
 
+
+
 	<!--logo-->
 
 	<div class="logo-sl-page text-center"> <a href="#"><img src="img/logo.svg" alt="logo"></a> </div>
@@ -29,7 +31,7 @@
 					<div class="form-btn">
 						<button type="submit" class="btn">Masuk</button>
 					</div>
-					<h3 class="text-center">Belum menjadi member ?<a href="signup.html">Daftar</a></h3>
+					<h3 class="text-center">Belum menjadi member ?<a href="<?php echo base_url()."register"; ?>">Daftar</a></h3>
 					</form>
 				</div>
 			</div>

@@ -41,18 +41,17 @@
 <link href="<?php echo base_url('asset/front/css/main.css') ?>" rel="stylesheet">
 </head>
 
-
-<?php if($this->session->flashdata('errReg')) :?>
+<?php if($this->session->flashdata('eReg')) :?>
 <div class="modal fade" id="helloModal" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">Muslim Shop Warehouse System</h4>
             </div>
             <div class="modal-body">
-                <p></p>
+                <p><?php echo $this->session->flashdata('eReg'); ?></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
@@ -69,7 +68,7 @@
 
 
 
-<!--contact form modal end--> 
+<!--contact form modal end-->
 
 <script src="<?php echo base_url('asset/front/js/jquery-2.2.1.min.js') ?>"></script>
 <script src="<?php echo base_url('asset/front/js/bootstrap.min.js') ?>"></script>
@@ -81,10 +80,10 @@
 <script src="<?php echo base_url('asset/front/js/tweetie.min.js') ?>"></script>
 <!--[if IE 9]>
 <script src="js/placeholders.min.js"></script>
-<![endif]--> 
+<![endif]-->
 <script src="<?php echo base_url('asset/front/js/main.js') ?>"></script>
-<script async src="../../../../platform.twitter.com/widgets.js"></script> 
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+<script async src="../../../../platform.twitter.com/widgets.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="<?php echo base_url('asset/front/js/gmap.js') ?>"></script>
 <script src="<?php echo base_url('asset/front/js/retina.min.js') ?>"></script>
 </body>

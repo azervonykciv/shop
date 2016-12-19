@@ -3,6 +3,26 @@
 <!--content wrapper-->
 <div class="content-wrapper">
 
+  <?php if($this->session->flashdata('erPack')) :?>
+  <div class="modal fade" id="helloModal" role="dialog">
+      <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Muslim Shop Warehouse System</h4>
+              </div>
+              <div class="modal-body">
+                  <p><?php echo $this->session->flashdata('erPack'); ?></p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <?php endif ?>
+
     <!--logo-->
 
     <div class="logo-sl-page text-center"> <a href="#"><img src="img/logo.svg" alt="logo"></a> </div>
@@ -52,7 +72,7 @@
                 <div class="col-sm-5 col-md-6"> <small> &copy; 2016 Muslim Shop. All rights reserved.</small> </div>
                 <div class="col-sm-7 col-md-6">
                     <ul class="terms-privacy">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="<?php echo base_url()."front"; ?>">Home</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#modal-terms">Terms</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#modal-terms">Privacy</a></li>
                     </ul>

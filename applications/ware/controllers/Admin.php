@@ -43,23 +43,6 @@ class Admin extends CI_Controller
 
     **/
 
-    public function get_scheduleOnNotif($id_notif, $id)
-    {
-        $mk = $this->ModelJadwal->GetMatakuliah();
-        $this->nm->delete($id_notif);
-        $data = $this->ModelJadwal->getJadwalByDosen($id);
-        $user = $this->m_login->ambil_user($this->session->userdata('uname'));
-        $dosen = $this->dm->GetDosen("where ID_Dosen = '$id'");
-        $jadwal = [
-            'dosen' => $dosen,
-            'data' => $data,
-            'mk' => $mk,
-            'user' => $user,
-            'ID' => $id,
-        ];
-        $this->template->load('template', 'penjadwalan/tampilPenjadwalan', $jadwal);
-    }
-
 
     public function listBarang()
     {

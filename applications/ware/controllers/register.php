@@ -17,54 +17,69 @@ class Register extends CI_Controller
         $this->template->load('frontBase','auth/register');
     }
 
-    function do_reg()
+    function reg_ad()
     {
+      $this->template->load('frontbase','auth/reg_ad');
+    }
 
-        $role = $this->input->post('status');
+    function do_reg($role)
+    {
         $tok = $this->_generate_key();
+        date_default_timezone_set('Asia/Jakarta');
 
-        if($role == "Admin") {
 
-            date_default_timezone_set('Asia/Jakarta');
+        // Register Admin
+
+        if($role == "1") {
+
             $api_key['key'] = $tok;
             $api_key['level'] = 1;
             $api_key['ignore_limits'] = 0;
             $api_key['date_created'] = date('Y-m-d H:i:s');
 
-            $user['Nama_user'] = $this->input->post('Nama_User');
-            $user['Password'] = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
-            $user['created_at'] = date('Y-m-d H:i:s');
-            $user['updated_at'] = date('Y-m-d H:i:s');
-            $user['Status'] = $this->input->post('status');
-            $user['tokenize'] = $tok;
+            date_default_timezone_set('Asia/Jakarta');
+            $user['Nama_user']    = $this->input->post('Nama_User');
+            $user['Password']     = password_hash($this->input->post('Password'), PASSWORD_DEFAULT);
+            $user['Email']        = $this->input->post('Email');
+            $user['created_at']   = date('Y-m-d H:i:s');
+            $user['updated_at']           = date('Y-m-d H:i:s');
+            $user['Status']              = "Admin";
+            $user['tokenize']            = $tok;
 
-            $api_access['key'] = $tok;
-            $api_access['date_created'] = date('Y-m-d H:i:s');
+            $api_access['key']           = $tok;
+            $api_access['date_created']  = date('Y-m-d H:i:s');
             $api_access['date_modified'] = date('Y-m-d H:i:s');
-            $api_access['controller'] = "/api_server";
-            
-            $ck = $this->crud_model->check('user', 'Nama_user', $user['Nama_user']);
+            $api_access['controller']    = "/api_server";
+
+            $ck = $this->crud_model->check('user', 'Email', $user['Email']);
 
             if ($ck > 0) {
-                $this->session->set_flashdata('err', 'Username sudah ada');
-                redirect('register');
+                $this->session->set_flashdata('eReg', 'Username sudah ada');
+                redirect('register/reg_ad','refresh');
             } else {
 
                 //$dump = [
                 //  'user'       => $user,
                 //'api_key'    => $api_key,
                 //];
-
                 //var($dump);
                 $this->crud_model->insert($user, 'user');
+                $this->crud_model->insert($api_key, 'keys');
                 $this->crud_model->insert($api_access, 'access');
                 redirect('login');
             }
-        }elseif($role == "Member")
+
+        // Register Member
+        }elseif($role == "2")
         {
 
+          $api_key['key'] = $tok;
+          $api_key['level'] = 1;
+          $api_key['ignore_limits'] = 0;
+          $api_key['date_created'] = date('Y-m-d H:i:s');
+
             $user['Nama_user']          = $this->input->post('Nama_User');
-            $user['Password']           = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+            $user['Password']           = password_hash($this->input->post('Password'), PASSWORD_DEFAULT);
             $user['Email']              = $this->input->post('Email');
             $user['created_at']         = date('Y-m-d H:i:s');
             $user['updated_at']         = date('Y-m-d H:i:s');
@@ -74,7 +89,7 @@ class Register extends CI_Controller
             $ck = $this->crud_model->check('user', 'Email', $user['Email']);
 
             if ($ck > 0) {
-                $this->session->set_flashdata('err', 'Username sudah ada');
+                $this->session->set_flashdata('eReg', 'Username sudah ada');
                 redirect('register');
             } else {
 
@@ -82,14 +97,10 @@ class Register extends CI_Controller
                  * 'user'       => $user,
                  * 'api_key'    => $api_key,
                  * ];**/
-
-
                 //var_dump($dump);
-
                 $this->crud_model->insert($user, 'user');
                 $this->crud_model->insert($api_key, 'keys');
                 //$this->crud_model->insert($api_access,'access');
-
                 redirect('login');
             }
         }

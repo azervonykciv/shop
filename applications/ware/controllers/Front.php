@@ -38,8 +38,6 @@ class Front extends CI_Controller
             }
             $this->template->load('frontBase','packages/premium',$data2);
         }
-
-
 	}
 
 	public function pack_store($index)
@@ -76,7 +74,12 @@ class Front extends CI_Controller
                     $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
                     redirect('front','refresh');
 
-            }
+                }
+                else
+                {
+                    $this->session->set_flashdata('erPack', 'Paket API telah diambil, silahkan mengambil paket yang lain');
+                    redirect('front/in_pack/1','refresh');
+                }
             }elseif($cek1==0){
                 $this->crud_model->insert($api_access, 'access');
                 $this->crud_model->insert($packages, 'packages');
@@ -84,7 +87,7 @@ class Front extends CI_Controller
                 redirect('front','refresh');
 
             }else{
-                $this->session->set_flashdata('error', 'Pengambilan Paket API gagal');
+                $this->session->set_flashdata('erPack', 'Pengambilan Paket API gagal');
                 redirect('front','refresh');
             }
         }
@@ -120,7 +123,11 @@ class Front extends CI_Controller
                     $this->crud_model->insert($packages,'packages');
                     $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
                     redirect('front','refresh');
-
+                }
+                else
+                {
+                  $this->session->set_flashdata('erPack', 'Paket API telah diambil, silahkan mengambil paket yang lain');
+                  redirect('front/in_pack/2','refresh');
                 }
             }elseif($cek1==0){
                 $this->crud_model->insert($api_access, 'access');
@@ -128,7 +135,9 @@ class Front extends CI_Controller
                 $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
                 redirect('front','refresh');
             }else{
-                $this->session->set_flashdata('error', 'Pengambilan Paket API Gagal');
+                $this->session->set_flashdata('erPack', 'Pengambilan Paket API Gagal');
+                redirect('front','refresh');
+
             }
         }
     }

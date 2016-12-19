@@ -38,7 +38,7 @@ class api_server extends REST_Controller
     public function index_put()
     {
         $id2 = $this->put('id1');
-        $barang = $this->crud_model->where('barang','KODE_BARANG',$id2,1);
+        $barang = $this->crud_model->match('barang','KODE_BARANG',$id2,1);
         //$stok = $barang->QTY - 1;
         //$data['QTY'] = $stok;
 
