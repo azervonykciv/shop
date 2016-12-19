@@ -48,7 +48,12 @@
 								Paket
 							</td>
               <td>
-								: <?php echo $data->packages->name ?>
+								:
+								<?php
+									if ($data->packages != []) {
+										echo $data->packages->name;
+									}
+								 ?>
 							</td>
             </tr>
             <tr>
