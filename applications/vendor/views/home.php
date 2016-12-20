@@ -383,7 +383,7 @@
  					<div class="filter-results">
  					
  						<div class="row illustration-v2 margin-bottom-30">
- 						<?php foreach($product as $p) :?>
+ 						<?php foreach($products as $p) :?>
  							<div class="col-md-4">
  								<div class="product-img product-img-brd">
  									<a href="#"><img class="full-width img-responsive" src="<?php echo base_url()."uploads/".$p->image;?>" alt=""></a>

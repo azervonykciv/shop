@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data['products'] = $this->model_products->all();
-		$this->load->view('welcome_message', $data);
+		$this->load->view('home', $data);
 	}
 
 	public function add_to_cart($product_id){
