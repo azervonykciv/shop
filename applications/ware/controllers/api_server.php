@@ -13,10 +13,7 @@ class api_server extends REST_Controller
 //For get barang by request
     public function index_get()
     {
-      $idf = $this->get('idf');
 // 01 standard req - 02 spesific req
-      if($idf == "01")
-      {
           $tab = $this->get('tab');
           $id_user = $this->get('id_user');
           $kat1 = $this->get('kat1');
@@ -24,14 +21,9 @@ class api_server extends REST_Controller
 
           $identifier = $this->crud_model->match('packages','ID_User',$id_user)->row();
           $barang = $this->crud_model->match($tab,$kat1,$kat2,$identifier->jml_brng)->result();
-          if($barang){
-              $this->response($barang,200);
+          if($barang) {
+              $this->response($barang, 200);
           }
-      }elseif($idf == "02")
-      {
-        $tab = $this->get('tab');
-        $
-      }
     }
 
     public function index_put()
