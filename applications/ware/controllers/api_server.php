@@ -1,6 +1,6 @@
 <?php
 include(APPPATH.'libraries/REST_Controller.php');
-class api_server extends REST_Controller
+class Api_server extends REST_Controller
 {
 
     public function __construct($config = 'rest')
