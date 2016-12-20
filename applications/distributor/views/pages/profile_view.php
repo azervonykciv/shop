@@ -69,7 +69,7 @@
 								URL
 							</td>
               <td>
-								: /ApiHerbal
+								: http://localhost/shop/distributor/ApiHerbal
 							</td>
             </tr>
           </table>
