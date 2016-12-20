@@ -74,7 +74,6 @@ class Admin extends CI_Controller
             'KODE_UNIT'         => $this->input->post('KODE_UNIT'),
             'HARGA_JUAL'        => $this->input->post('HARGA_JUAL'),
             'KODE_KURS'         => $this->input->post('KODE_KURS'),
-            'KODE_DEPT'         => $this->input->post('KODE_DEPT'),
             'KODE_KLASIFIKASI'  => $this->input->post('KODE_KLASIFIKASI'),
             'QTY'               => $this->input->post('QTY'),
             'NOMORSERIAL'       => $this->input->post('NOMORSERIAL'),

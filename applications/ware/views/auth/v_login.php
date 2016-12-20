@@ -48,7 +48,7 @@
 				<div class="col-sm-5 col-md-6"> <small> &copy; 2016 Muslim Shop. All rights reserved.</small> </div>
 				<div class="col-sm-7 col-md-6">
 					<ul class="terms-privacy">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="<?php echo base_url()."front"; ?>">Home</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#modal-terms">Terms</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#modal-terms">Privacy</a></li>
 					</ul>

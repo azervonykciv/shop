@@ -24,6 +24,9 @@
         <li class="hidden-xs hidden-sm"><a href="#features">Features</a></li>
         <li class="hidden-xs hidden-sm"><a href="#pricing">Api Service</a></li>
         <?php if($status === 'Member'):?>
+        <li class="hidden-xs"><a href="<?php echo base_url()."front/profile/".$this->session->userdata('id_user'); ?>">Profile</a></li>
+        <?php endif ?>
+        <?php if($status === 'Member'):?>
         <li class="hidden-xs"><a href="<?php echo base_url()."login/logout"; ?>">Keluar</a></li>
           <?php else:?>
           <li class="hidden-xs"><a href="<?php echo base_url()."login"; ?>">Masuk</a></li>
@@ -60,8 +63,7 @@
   <section class="container text-center welcome-message">
     <div class="row">
       <div class="col-md-12">
-        <h1>Welcome To Warehouse System Muslim Shop</h1>
-        <h2>Use this template to promote and describe the benefits of your product.</h2>
+        <h1>Selamat Datang di Sistem Warehouse Muslim Shop</h1>
         <a href="<?php echo base_url()."register"; ?>" class="btn btn-cta-hero">DAFTAR</a> </div>
     </div>
   </section>
@@ -145,19 +147,19 @@
           <header class="section-header">
             <h2>Fitur Muslim Shop Warehouse System</h2>
           </header>
-          <div class="row"> 
+          <div class="row">
             <!--features 1-->
             <div class="col-sm-6"> <img src="img/feature-1.svg" alt="feature-1">
               <h4>API By Request</h4>
               <p>Kami menyediakan layanan API Muslim Online Shop sesuai dengan keinginan user</p>
             </div>
-            <!--features 1 end--> 
+            <!--features 1 end-->
             <!--features 2-->
             <div class="col-sm-6"> <img src="img/feature-2.svg" alt="feature-2">
               <h4>HTML 5 & CSS3</h4>
               <p>Proin convallis sodales volutpat. Suspene varius mollis risus arcu.</p>
             </div>
-            <!--features 2 end--> 
+            <!--features 2 end-->
           </div>
           <div class="row"> 
             <!--features 3-->
@@ -591,119 +593,3 @@
 <!--Site policy modal end--> 
 
 <!--contact form modal-->
-
-  <!-- modal form -->
-  <div id="myModal" class="modal fade" aria-labelledby="myModalLabel" aria-hidden="true" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <?php echo form_open('front/in_pack/1','class="cta-form cta-light"') ?>
-
-        <div class="contact-form text-center">
-          <header class="section-header"> <img src="img/support-icon.svg" alt="support icon">
-            <h2>Dapatkan API Muslim Shop Warehouse</h2>
-            <h3>Anda memilih paket API gratis</h3>
-          </header>
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        </div>
-        <div class="modal-body" id="myModalBody">
-          <div class="form-group">
-            <label for="name">Paket</label>
-            <input disabled class="form-control" id="paket" name="paket" placeholder="Paket API" type="text" value="Gratis" />
-          </div>
-
-          <div class="form-group">
-            <label for="sel1">Pilih kategori barang</label>
-            <select class="form-control" id="kategori" name="kategori">
-              <option value="none" selected="selected">---Pilih Kategori barang yang anda inginkan----</option>
-              <?php
-              foreach ($kategori as $kat) : ?>
-                <option><?php echo $kat->KODE_KLASIFIKASI ?></option>
-              <?php endforeach ?>
-            </select>
-          </div>
-
-          <div id="alert-msg"></div>
-        </div>
-        <div class="modal-footer">
-          <input class="btn btn-default" id="submit" name="submit" type="button" value="Send Mail" />
-        </div>
-        <?php echo form_close(); ?>
-      </div>
-    </div>
-  </div>
-
-<div class="modal fade" id="modal-form-free" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <div class="modal-body"> 
-        
-        <!--contact form-->
-        
-        <div class="contact-form text-center">
-          <header class="section-header"> <img src="img/support-icon.svg" alt="support icon">
-            <h2>Dapatkan API Muslim Shop Warehouse</h2>
-            <h3>Anda memilih paket API gratis</h3>
-          </header>
-          <?php echo form_open('front/in_pack/1','class="cta-form cta-light"') ?>
-            <div class="form-group">
-              <input  type="text" name="paket" value="Gratis" class="contact-name form-control input-lg" placeholder="Gratis" id="paket" disabled>
-            </div>
-
-            <div class="form-group">
-              <label for="sel1">Pilih kategori barang</label>
-              <select class="form-control" id="kategori" name="kategori">
-                <option value="none" selected="selected">---Pilih Kategori barang yang anda inginkan----</option>
-                <?php
-                foreach ($kategori as $kat) : ?>
-                    <option><?php echo $kat->KODE_KLASIFIKASI ?></option>
-                <?php endforeach ?>
-              </select>
-            </div>
-          <input class="btn " id="submit" name="submit" type="button" value="Kirim" />
-          </form>
-        </div>
-        <!--contact form end-->
-        
-        <p class="contact-form-success"><i class="fa fa-check"></i><span>Thanks for contacting us!</span> We will get back to you very soon.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modal-form-premium" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <div class="modal-body">
-
-        <!--contact form-->
-
-        <div class="contact-form text-center">
-          <header class="section-header"> <img src="img/support-icon.svg" alt="support icon">
-            <h2>Dapatkan API Muslim Shop Warehouse</h2>
-            <h3>Anda memilih paket API Premium</h3>
-          </header>
-
-          <?php echo form_open('front/in_pack/2','class="cta-form cta-light"') ?>
-            <div class="form-group">
-              <input  type="text" name="paket" value="Premium" class="contact-name form-control input-lg" placeholder="Gratis" id="contact-name" disabled>
-            </div>
-
-            <div class="form-group">
-              <label for="sel1">Pilih kategori barang</label>
-              <select class="form-control" id="sel1" name="kategori">
-                <option value="none" selected="selected">---Pilih Kategori barang yang anda inginkan----</option>
-                <?php
-                foreach ($kategori as $kat) : ?>
-                  <option>
-                    <?php echo $kat->KODE_KLASIFIKASI ?>
-                  </option>
-                <?php endforeach ?>
-              </select>
-            </div>
-            <a href="" class="btn">Kirim</a>
-          </form>
-        </div>

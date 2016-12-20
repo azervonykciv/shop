@@ -127,7 +127,7 @@ class Front extends CI_Controller
                   $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
                   redirect('front','refresh');
 
-              }elseif($cek2=0 && $cek3>0)
+              }elseif($cek2==0 && $cek3>0)
               {
                   $this->crud_model->insert($packages,'packages');
                   $this->session->set_flashdata('success', 'Pengambilan Paket API berhasil');
@@ -149,5 +149,13 @@ class Front extends CI_Controller
 
             }
         }
+    }
+
+
+    public function profile($id)
+    {
+        $data['profile'] = $this->crud_model->match('user','ID_User',$id)->row();
+        $data['package'] = $this->crud_model->match('packages','ID_User',$id)->result();
+        $this->template->load('frontbase','profile/view-profile',$data);
     }
 }
