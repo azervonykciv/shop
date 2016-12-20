@@ -29,6 +29,10 @@ class Model_products extends CI_Model {
 		$this->db->insert('products', $data_product);
 	}
 
+	public function datadiri($data){
+		$this->db->insert('billing', $data);
+	}
+
 	public function update ($id, $data_products){
 		//Query UPDATE FROM .... WHERE id=...
 		$this->db->where('id', $id)

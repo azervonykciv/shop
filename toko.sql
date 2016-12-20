@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2016 at 09:03 AM
+-- Generation Time: Dec 20, 2016 at 02:13 PM
 -- Server version: 5.6.31
 -- PHP Version: 5.5.38
 
@@ -23,6 +23,46 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `billing`
+--
+
+CREATE TABLE IF NOT EXISTS `billing` (
+  `bilid` int(3) NOT NULL,
+  `bilfirst_name` varchar(35) NOT NULL,
+  `billast_name` varchar(35) NOT NULL,
+  `bilemail` varchar(35) NOT NULL,
+  `bilphone` int(15) NOT NULL,
+  `biladd1` varchar(50) NOT NULL,
+  `biladd2` varchar(50) NOT NULL,
+  `bilcity` varchar(35) NOT NULL,
+  `bilzip` int(9) NOT NULL,
+  `shipfirst_name` varchar(35) NOT NULL,
+  `shiplast_name` varchar(35) NOT NULL,
+  `shipemail` varchar(35) NOT NULL,
+  `shipphone` int(15) NOT NULL,
+  `shipadd1` varchar(50) NOT NULL,
+  `shipadd2` varchar(50) NOT NULL,
+  `shipcity` varchar(50) NOT NULL,
+  `shipzip` int(9) NOT NULL,
+  `cardholder` varchar(35) NOT NULL,
+  `card_number` int(50) NOT NULL,
+  `expyear` int(2) NOT NULL,
+  `expmount` int(2) NOT NULL,
+  `csc` int(6) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `billing`
+--
+
+INSERT INTO `billing` (`bilid`, `bilfirst_name`, `billast_name`, `bilemail`, `bilphone`, `biladd1`, `biladd2`, `bilcity`, `bilzip`, `shipfirst_name`, `shiplast_name`, `shipemail`, `shipphone`, `shipadd1`, `shipadd2`, `shipcity`, `shipzip`, `cardholder`, `card_number`, `expyear`, `expmount`, `csc`) VALUES
+(1, 'ert', 'cvb', 'haha@yahoo.com', 567, 'vb', 'rty', 'cv', 4567, ' fgh', 'cvb', 'haha@yahoo.com', 0, 'cvf', ' nfvgbh', 'vgbhn', 67, 'cvb', 567, 47, 47, 56),
+(2, 'ert', 'cvb', 'haha@yahoo.com', 567, 'vb', 'rty', 'cv', 4567, ' fgh', 'cvb', 'haha@yahoo.com', 0, 'cvf', ' nfvgbh', 'vgbhn', 67, 'cvb', 567, 47, 47, 56),
+(3, 'erty', 'gyhj', 'eek@yahoo.com', 56, 'cvb', 'tgh', 'rfg', 34, 'cfvg', 'rvt', 'eek@yahoo.com', 567, 'cvb', 'rtgh', 'cvb', 456, 'cvb', 456, 87, 26, 12);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
@@ -33,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price` int(9) NOT NULL,
   `stock` int(3) NOT NULL,
   `image` varchar(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `products`
@@ -45,7 +85,10 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `stock`, `image`) 
 (5, 'Topi', 'Topi Casual', 80000, 5, 'adidaswhite.jpg'),
 (10, 'sepatu', 'Sepatu Casual', 240000, 12, 'sepatu.jpg'),
 (11, 'Dasi', 'Dasi formal', 72000, 7, 'tie-01.jpg'),
-(12, 'Gamis Putih', 'Gamis yang Maa syaa Allah', 150000, 15, '1.jpg');
+(12, 'Gamis Putih', 'Gamis yang Maa syaa Allah', 150000, 15, '1.jpg'),
+(13, 'sorban', 'Sorban Bagus dan nyaman', 65000, 5, 'sorban.jpg'),
+(14, 'Igal', 'Igal kuat dan menawan', 40000, 9, 'igal.jpg'),
+(15, 'Bisht', 'Bisht hitam mewah', 75000, 9, 'blackbisht.jpg');
 
 -- --------------------------------------------------------
 
@@ -66,15 +109,17 @@ CREATE TABLE IF NOT EXISTS `toko_sessions` (
 --
 
 INSERT INTO `toko_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('27fb45ff63745a9fc2dc4ef5191352ca', '::1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36', 1481695931, 'a:1:{s:13:"cart_contents";a:4:{s:32:"c81e728d9d4c2f636f067f89cc14862c";a:6:{s:5:"rowid";s:32:"c81e728d9d4c2f636f067f89cc14862c";s:2:"id";s:1:"2";s:3:"qty";s:1:"1";s:5:"price";s:5:"35000";s:4:"name";s:13:"Sandal Casual";s:8:"subtotal";i:35000;}s:32:"e4da3b7fbbce2345d7772b0674a318d5";a:6:{s:5:"rowid";s:32:"e4da3b7fbbce2345d7772b0674a318d5";s:2:"id";s:1:"5";s:3:"qty";s:1:"1";s:5:"price";s:5:"80000";s:4:"name";s:4:"Topi";s:8:"subtotal";i:80000;}s:11:"total_items";i:2;s:10:"cart_total";i:115000;}}'),
-('378a204f5ec8ca5ced62ff60436ebb0f', '::1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36', 1481705780, ''),
-('4c2c15b9fda66f09023735ddee44c9bc', '::1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36', 1481687485, 'a:2:{s:9:"user_data";s:0:"";s:13:"cart_contents";a:3:{s:32:"c4ca4238a0b923820dcc509a6f75849b";a:6:{s:5:"rowid";s:32:"c4ca4238a0b923820dcc509a6f75849b";s:2:"id";s:1:"1";s:3:"qty";s:1:"1";s:5:"price";s:5:"79000";s:4:"name";s:4:"Baju";s:8:"subtotal";i:79000;}s:11:"total_items";i:1;s:10:"cart_total";i:79000;}}'),
-('93499312e602a6a60e4eae01db090fa1', '::1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36', 1481701294, ''),
-('95ffb18a62409406c619359a36226807', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36', 1481738356, 'a:2:{s:9:"user_data";s:0:"";s:13:"cart_contents";a:4:{s:32:"e4da3b7fbbce2345d7772b0674a318d5";a:6:{s:5:"rowid";s:32:"e4da3b7fbbce2345d7772b0674a318d5";s:2:"id";s:1:"5";s:3:"qty";s:1:"1";s:5:"price";s:5:"80000";s:4:"name";s:4:"Topi";s:8:"subtotal";i:80000;}s:32:"c81e728d9d4c2f636f067f89cc14862c";a:6:{s:5:"rowid";s:32:"c81e728d9d4c2f636f067f89cc14862c";s:2:"id";s:1:"2";s:3:"qty";s:1:"1";s:5:"price";s:5:"35000";s:4:"name";s:13:"Sandal Casual";s:8:"subtotal";i:35000;}s:11:"total_items";i:2;s:10:"cart_total";i:115000;}}');
+('6e1a63a71bfc553edd6965f6e7465c7c', '::1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36', 1482243057, '');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `billing`
+--
+ALTER TABLE `billing`
+  ADD PRIMARY KEY (`bilid`);
 
 --
 -- Indexes for table `products`
@@ -94,10 +139,15 @@ ALTER TABLE `toko_sessions`
 --
 
 --
+-- AUTO_INCREMENT for table `billing`
+--
+ALTER TABLE `billing`
+  MODIFY `bilid` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

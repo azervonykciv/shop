@@ -3,6 +3,26 @@
 <!--content wrapper-->
 <div class="content-wrapper">
 
+	<?php if($this->session->flashdata('erLog')) :?>
+		<div class="modal fade" id="helloModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Muslim Shop Warehouse System</h4>
+					</div>
+					<div class="modal-body">
+						<p><?php echo $this->session->flashdata('erLog'); ?></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php endif ?>
+
 
 
 	<!--logo-->

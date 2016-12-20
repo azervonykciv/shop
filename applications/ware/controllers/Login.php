@@ -3,7 +3,6 @@
 class Login extends CI_Controller {
 	function __construct(){
 		parent::__construct();
-		$this->load->helper(array('form','url'));
 		$this->load->model('crud_model');
 	}
 
@@ -19,7 +18,7 @@ class Login extends CI_Controller {
 
         $cek = $this->crud_model->cek_user($Email, $Password);
 				
-				if (count($cek) == 1) {
+        if (count($cek) == 1) {
             foreach ($cek as $c) {
                 $Status = $c['Status'];
                 $Id = $c['ID_User'];
@@ -27,7 +26,8 @@ class Login extends CI_Controller {
                 $Tokenize = $c['Tokenize'];
             }
         }else{
-            redirect('login');
+            $this->session->set_flashdata('erLog','Maaf Username/Password anda salah');
+            redirect('login','refresh');
         }
         if ($Status == "Admin") {
             $x = $this->session->set_userdata(array(
@@ -48,9 +48,6 @@ class Login extends CI_Controller {
                     'Tokenize' => $Tokenize,
                 ));
                 redirect('front', 'refresh');
-        } else
-        {
-            echo "Login Gagal";
         }
 	}
 

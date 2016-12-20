@@ -14,6 +14,7 @@ class Register extends CI_Controller
 
     function index()
     {
+        $this->session->sess_destroy();
         $this->template->load('frontBase','auth/register');
     }
 

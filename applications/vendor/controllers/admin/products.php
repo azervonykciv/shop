@@ -13,6 +13,43 @@ class Products extends CI_Controller {
 		$this->load->view('backend/view_all_products',$data);
 	}
 
+	public function cek(){
+		
+	}
+
+	 public function storebilling()
+    {
+        $data = [
+            'bilfirst_name'       => $this->input->post('bilfirstname'),
+            'billast_name'         => $this->input->post('billastname'),
+            'bilemail'      	  => $this->input->post('bilemail'),
+            'bilphone'         	=> $this->input->post('bilphone'),
+            'biladd1'			=> $this->input->post('biladd1'),
+            'biladd2' 			 => $this->input->post('biladd2'),
+            'bilcity'               => $this->input->post('bilcity'),
+            'bilzip'      		 => $this->input->post('bilzip'),
+
+			'shipfirst_name'       => $this->input->post('shipfirstname'),
+            'shiplast_name'         => $this->input->post('shiplastname'),
+            'shipemail'      	  => $this->input->post('shipemail'),
+            'shipphone'         	=> $this->input->post('shipphone'),
+            'shipadd1'			=> $this->input->post('shipadd1'),
+            'shipadd2' 			 => $this->input->post('shipadd2'),
+            'shipcity'               => $this->input->post('shipcity'),
+            'shipzip'      		 => $this->input->post('shipzip'),
+
+            'cardholder'      		 => $this->input->post('cardholder'),
+            'card_number'      		 => $this->input->post('card_number'),
+            'expyear'      		 => $this->input->post('expyear'),
+            'expmount'      		 => $this->input->post('expmount'),
+            'csc'      		 => $this->input->post('csc'),
+        
+        ];
+        $this->model_products->datadiri($data);
+        redirect('welcome/clear_cart/');
+        redirect('welcome/cek/');
+    }
+
 	public function create (){
 		//form validation sebelum mengeksekusi QUERY INSERT
 		$this->form_validation->set_rules('name','Product Name', 'required');

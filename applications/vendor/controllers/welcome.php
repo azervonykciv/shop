@@ -12,6 +12,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('home',$data);
 	}
 
+	public function cek2(){
+		$data['product'] = $this->model_products->all();
+		$this->load->view('checkout',$data);
+	}
+
 	public function index()
 	{
 		$data['products'] = $this->model_products->all();
@@ -25,10 +30,11 @@ class Welcome extends CI_Controller {
 			'qty'		=> 1,
 			'price'		=> $product->price,
 			'name'		=> $product->name,
+			'image'		=> $product->image,
 		);
 
 		$this->cart->insert($data);
-		redirect(base_url());
+		redirect('welcome/cek');
 	}
 
 	public function cart(){
@@ -39,7 +45,7 @@ class Welcome extends CI_Controller {
 
 	public function clear_cart(){
 		$this->cart->destroy();
-		redirect(base_url());
+		redirect('welcome/cek');
 	}
 }
 
