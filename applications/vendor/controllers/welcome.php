@@ -15,6 +15,10 @@ class Welcome extends CI_Controller {
 	public function cek2(){
 		$data['product'] = $this->model_products->all();
 		$this->load->view('checkout',$data);
+
+	}public function cek3(){
+		$data['produk'] = $this->model_products->all();
+		$this->load->view('herbal',$data);
 	}
 
 	public function index()
@@ -34,7 +38,7 @@ class Welcome extends CI_Controller {
 		);
 
 		$this->cart->insert($data);
-		redirect('welcome/cek');
+		redirect('welcome/cek3');
 	}
 
 	public function cart(){
