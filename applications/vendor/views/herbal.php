@@ -495,7 +495,7 @@
  					<a href="http://htmlstream.com/preview/unify-v1.9.6/index.html" class="btn-u btn-u-xs btn-u-dark btn-block">Unify Main <small class="dp-block">Template</small></a>
  				</div>
  				<div class="col-xs-6">
- 					<a href="http://htmlstream.com/preview/unify-v1.9.6/One-Pages/Classic/index.html" class="btn-u btn-u-xs btn-u-dark btn-block">One Page <small class="dp-block">Template</small></a>
+ 					<a href="http://htmlstream.com/preview/unify-v1.9.6/One-Pages/Classic/index.html" class="btn-u btn-u-xs btn-u-dark btn-block">One Page pool<small class="dp-block">Template</small></a>
  				</div>
  			</div>
 
