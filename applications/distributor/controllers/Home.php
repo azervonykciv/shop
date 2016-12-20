@@ -53,6 +53,12 @@ class Home extends CI_Controller{
 		$api_key['key']          = $this->_generate_key();
 		$api_key['date_created'] = $created_at;
 
+    $api_access['key']           = $api_key['key'];
+    $api_access['controller']    = '/ApiHerbal';
+    $api_access['date_created']  = $created_at;
+    $api_access['date_modified'] = $created_at;
+
+
 		$order['users_id']    = $data['users_id'];
 		$order['packages_id'] = $packages_id;
 		$order['api_keys_id'] = $api_key['id'];
@@ -63,14 +69,16 @@ class Home extends CI_Controller{
 		$user['selection']   = $data['selection'];
 
 		$dump = [
-			'data'    => $data,
-			'api_key' => $api_key,
-			'user'    => $user,
-			'order'   => $order,
+			'data'       => $data,
+			'api_key'    => $api_key,
+			'api_access' => $api_access,
+			'user'       => $user,
+			'order'      => $order,
 		];
 
     $this->Users_model->update($data['users_id'], $user);
 		$this->Api_keys_model->insert($api_key);
+		$this->Crud_model->insert('api_access', $api_access);
 		$this->Orders_model->insert($order);
 
     redirect('home/profile');

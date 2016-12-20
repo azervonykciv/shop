@@ -156,6 +156,6 @@ class Front extends CI_Controller
     {
         $data['profile'] = $this->crud_model->match('user','ID_User',$id)->row();
         $data['package'] = $this->crud_model->match('packages','ID_User',$id)->result();
-        $this->template->load('frontbase','profile/view-profile',$data);
+        $this->template->load('frontBase','profile/view-profile',$data);
     }
 }

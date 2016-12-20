@@ -9,7 +9,6 @@ class ApiHerbal extends REST_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-
     $this->load->model('Users_model');
 	}
 
@@ -21,7 +20,11 @@ class ApiHerbal extends REST_Controller {
 		$api_key = $setting[0]->token;
 		// make a request to ware change X-API-KEY
 		$client   = new GuzzleHttp\Client();
-		$response = $client->request('GET', $url, ['headers' => ['X-API-KEY' => $api_key]]);
+		$response = $client->request(
+				'GET',
+				$url,
+				['headers' => ['X-API-KEY' => $api_key]]
+		);
 		$response = json_decode($response->getBody());
 		// Filtering with NAMA_BARANG
     $header  = $this->head();
