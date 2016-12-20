@@ -440,7 +440,7 @@
 
 						<div class="header-tags">
 							<div class="overflow-h">
-								<h2>Billing info</h2>
+								<h2>Billing infoo</h2>
 								<p>Shipping and address infot</p>
 								<i class="rounded-x fa fa-home"></i>
 							</div>
