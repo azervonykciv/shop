@@ -46,7 +46,7 @@ class Front extends CI_Controller
             $packages['Package'] = $this->input->post('kategori');
             $packages['jml_brng'] = 20;
             $packages['type'] = 1;
-            $packages['url'] = base_url()."api_server/?tab=barang&id_user=" . $packages['ID_User'] . "&kat1=KODE_KLASIFIKASI&kat2=".urlencode($this->input->post('kategori'));
+            $packages['url'] = base_url()."Api_server/?tab=barang&id_user=" . $packages['ID_User'] . "&kat1=KODE_KLASIFIKASI&kat2=".urlencode($this->input->post('kategori'));
 
 
             date_default_timezone_set('Asia/Jakarta');
@@ -101,7 +101,7 @@ class Front extends CI_Controller
             $packages['Package']    = $this->input->post('kategori');
             $packages['jml_brng']   = $this->input->post('jml');
             $packages['type']       = 2;
-            $packages['url']        = base_url()."api_server/?tab=barang&id_user=".$packages['ID_User']."&kat1=KODE_KLASIFIKASI&kat2=".urlencode($this->input->post('kategori'));
+            $packages['url']        = base_url()."Api_server/?tab=barang&id_user=".$packages['ID_User']."&kat1=KODE_KLASIFIKASI&kat2=".urlencode($this->input->post('kategori'));
 
 
             date_default_timezone_set('Asia/Jakarta');
