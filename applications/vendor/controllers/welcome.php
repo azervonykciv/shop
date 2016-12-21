@@ -8,12 +8,12 @@ class Welcome extends CI_Controller {
 	}
 
 	public function cek(){
-		$data['product'] = $this->model_products->all();
+		$data['products'] = $this->model_products->all();
 		$this->load->view('home',$data);
 	}
 
 	public function cek2(){
-		$data['product'] = $this->model_products->all();
+		$data['products'] = $this->model_products->all();
 		$this->load->view('checkout',$data);
 
 	}public function cek3(){
