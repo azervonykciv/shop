@@ -8,8 +8,13 @@ class Welcome extends CI_Controller {
 		$this->load->model('Crud_model');
 	}
 
+	public function cek(){
+		$data['products'] = $this->model_products->all();
+		$this->load->view('home',$data);
+	}
+
 	public function cek2(){
-		$data['product'] = $this->model_products->all();
+		$data['products'] = $this->model_products->all();
 		$this->load->view('checkout',$data);
 
 	}
