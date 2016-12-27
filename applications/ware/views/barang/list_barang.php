@@ -1,9 +1,9 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        <?php if ($user['Status'] === 'Admin'):?>
+        <?php if ($Status === 'Admin'):?>
             Manajemen Data Barang
-        <?php elseif ($user['Status'] === 'Member') :?>
+        <?php elseif ($Status === 'Member') :?>
             Daftar Barang
         <?php endif ?>
         <small>table</small>
@@ -55,10 +55,8 @@
                                 <td><?php echo $key->TGLPRODUKSI ?></td>
 
                                 <td>
-                                    <?php if($user['Status'] === 'Admin'):?>
                                         <a class="btn btn-warning" href="<?php echo base_url()."admin/editBarang/".$key->KODE_BARANG; ?>">Edit</a>
-                                        <a class="btn btn-danger" href="<?php echo base_url()."admin/deleteBarang/".$key->KODE_BARANG."/".$user['ID_User']; ?>">Delete</a>
-                                    <?php endif ?>
+                                        <a class="btn btn-danger" href="<?php echo base_url()."admin/deleteBarang/".$key->KODE_BARANG."/".$id_user; ?>">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach ?>

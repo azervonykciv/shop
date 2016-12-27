@@ -6,16 +6,14 @@ class User extends CI_Controller {
 		if (! ($this->session->has_userdata('Status')) ) {
 			redirect('login');
 		}
-        $this->load->model('crud_model');
+        $this->load->model('Crud_model');
     }
 	public function index()
 	{
-		$user1 = $this->crud_model->get_all('user');
-		$user  = $this->crud_model->get_spec('user','Nama_User',$this->session->userdata('uname'));
-		$data = array(
-			'user'  => $user,
-			'user1' => $user1,
-		);
+		$data['user1'] = $this->Crud_model->get_all('user');
+		$data['user'] = $this->session->userdata('uname');
+		$data['Status'] = $this->session->userdata('Status');
+		$data['id_user'] = $this->session->userdata('id_user');
 		$this->template->load('templateSuperAdmin','User/dataUSer', $data);
 	}
 
@@ -52,12 +50,11 @@ class User extends CI_Controller {
 
 	public function editUser($id)
 	{
-		$user1 = $this->User_model->getUser_byid($id);
-		$user = $this->m_login->ambil_user($this->session->userdata('uname'));
-		$data = [
-			'user' 	=> $user,
-			'user1'	=> $user1,
-		];
+		$data['user'] = $this->session->userdata('uname');
+		$data['Status'] = $this->session->userdata('Status');
+		$data['id_user'] = $this->session->userdata('id_user');
+		$data['user1'] = $this->Crud_model->match('user','ID_User',$id)->result();
+		$data['user'] = $this->session->userdata('uname');
 		$this->template->load('templateSuperAdmin','User/editUser', $data);
 	}
 	public function updateUser()
@@ -68,7 +65,7 @@ class User extends CI_Controller {
 			'Nama_User'  => $this->input->post('Nama_User'),
 			'Status' 	 => $this->input->post('Status'),
 		];
-		
+
 		if ($this->User_model->updateUser($user, $id)) {
 			$Log = [
 				'ID_User'	=> $User,
@@ -104,7 +101,7 @@ class User extends CI_Controller {
 		$user = [
 			'Password'  => "123456",
 		];
-		
+
 		if ($this->User_model->updateUser($user, $id)) {
 			$Log = [
 				'ID_User'	=> $ID_User,
@@ -175,7 +172,7 @@ class User extends CI_Controller {
 		$user = [
 			'Nama_User'  => $this->input->post('Nama_User'),
 		];
-		
+
 		if ($this->User_model->updateUser($user, $id)) {
 			$Log = [
 				'ID_User'	=> $id,
@@ -202,7 +199,7 @@ class User extends CI_Controller {
 		}else{
 			$this->template->load('templateSuperAdmin','User/ubahPasswordAdmin', $data);
 		}
-		
+
 	}
 
 	public function do_ubahPasswordAdmin(){
@@ -216,7 +213,7 @@ class User extends CI_Controller {
 			$user = [
 				'Password'  => $pBaru,
 			];
-			
+
 			if ($this->User_model->updateUser($user, $ID_User)) {
 				$Log = [
 					'ID_User'	=> $ID_User,
@@ -261,7 +258,7 @@ class User extends CI_Controller {
 			'alamat_malang'     => $this->input->post('alamat_malang'),
 			'ref_aktivasiDosen' => $this->input->post('ref_aktivasiDosen'),
 		];
-		
+
 		if ($this->User_model->updateUser($user, $id) && $this->dm->update($dosen, $id)) {
 			$Log = [
 				'ID_User'	=> $id,
@@ -278,7 +275,7 @@ class User extends CI_Controller {
 		}
 	}
 
-	//code di bawah ini hanya untuk keperluan programmer 
+	//code di bawah ini hanya untuk keperluan programmer
 	public function insertUserFromDosen(){
 		$dosen = $this->dm->get_all();
 		foreach ($dosen as $d) {

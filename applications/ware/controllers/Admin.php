@@ -10,8 +10,7 @@ class Admin extends CI_Controller
             redirect('login');
         }
         $this->load->model('Log_model');
-        $this->load->model('m_login');
-        $this->load->model('crud_model');
+        $this->load->model('Crud_model');
     }
 
     public function index()
@@ -46,14 +45,10 @@ class Admin extends CI_Controller
 
     public function listBarang()
     {
-        $barang = $this->crud_model->get_all('barang');
-        $user = $this->m_login->ambil_user($this->session->userdata('uname'));
-        $data = [
-            'barang' => $barang,
-            'user' => $user,
-        ];
-
-        $data['user'] = $this->m_login->ambil_user($this->session->userdata('uname'));
+        $data['barang'] = $this->Crud_model->get_all('barang');
+        $data['user'] = $this->session->userdata('uname');
+        $data['Status'] = $this->session->userdata('Status');
+        $data['id_user'] = $this->session->userdata('id_user');
         $this->template->load('templateSuperAdmin', 'barang/list_barang', $data);
     }
 
@@ -101,12 +96,11 @@ class Admin extends CI_Controller
 
 	public function editBarang($id_barang)
 	{
-		$user = $this->m_login->ambil_user($this->session->userdata('uname'));
-		$barang = $this->crud_model->where('barang','KODE_BARANG',$id_barang,1);
-		$data = [
-			'barang' 	=> $barang,
-			'user'		=> $user,
-		];
+
+    $data['user'] = $this->session->userdata('uname');
+    $data['Status'] = $this->session->userdata('Status');
+    $data['id_user'] = $this->session->userdata('id_user');
+		$data['barang'] = $this->Crud_model->match('barang','KODE_BARANG',$id_barang,1)->result();
 		$this->template->load('templateSuperAdmin','barang/edit_barang', $data);
 	}
 
@@ -119,25 +113,13 @@ class Admin extends CI_Controller
 			'NAMA_BARANG'       => $this->input->post('NAMA_BARANG'),
 			'KODE_UNIT'         => $this->input->post('KODE_UNIT'),
 			'HARGA_JUAL'        => $this->input->post('HARGA_JUAL'),
-			'KODE_KURS'         => $this->input->post('KODE_KURS'),
-			'KODE_DEPT'         => $this->input->post('KODE_DEPT'),
-            'KODE_KLASIFIKASI'  => $this->input->post('KODE_KLASIFIKASI'),
-            'QTY'               => $this->input->post('QTY'),
-            'NOMORSERIAL'       => $this->input->post('NOMORSERIAL'),
-            'TGLPRODUKSI'       => $this->input->post('TGLPRODUKSI'),
+      'KODE_KLASIFIKASI'  => $this->input->post('KODE_KLASIFIKASI'),
+      'QTY'               => $this->input->post('QTY'),
+      'TGLPRODUKSI'       => $this->input->post('TGLPRODUKSI'),
 		];
 
-		if ($this->crud_model->update('barang',$barang, 'KODE_BARANG',$id)) {
-				$Log = [
-					'ID_User'	=> $User,
-					'Tanggal'	=> date('Y-m-d H:i:s'),
-					'Aktifitas' => "Update data barang ".$this->session->userdata('uname'),
-				];
-				if($this->crud_model->insert('Log',$Log)){
+		if ($this->Crud_model->update('barang',$barang, 'KODE_BARANG',$id)) {
 					redirect('admin/listBarang');
-				}else{
-					echo "gagal insert data log";
-				}
 			}else{
 			echo "Gagal update";
 		}
