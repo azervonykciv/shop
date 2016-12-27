@@ -28,8 +28,12 @@ class Users extends CI_Controller {
 
 	public function store()
 	{
-		$user = $this->input->post('data');
-		$user['password']   = password_hash($user['password'], PASSWORD_DEFAULT);
+		$user                = $this->input->post('data');
+		$user['password']    = password_hash($user['password'], PASSWORD_DEFAULT);
+		$user['level']       = 'super_admin';
+		$user['packages_id'] = 2;
+		$user['token']       = '1234567890';
+		$user['selection']   = 'MADU';
 
 		$this->Users_model->insert($user);
 		$this->session->set_flashdata('success', 'anda berhasil menambahkan data');
@@ -59,7 +63,7 @@ class Users extends CI_Controller {
 			redirect('users');
 		}
 
-		$this->Crud_model->Users_model('users', ['id' => $id]);
+		$this->Crud_model->delete('users', ['id' => $id]);
 		$this->session->set_flashdata('success', 'Anda berhasil menghapus admin');
 		redirect('users');
 	}

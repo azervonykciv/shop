@@ -19,13 +19,12 @@ class Dashboard extends CI_Controller {
 		if($setting == []){
 			$setting = [
 				0 => (object) [
-					'id' => 0,
+					'id'    => 0,
 					'token' => '1234567890',
-					'url' => 'http://localhost/shop/distributor/index.php/ApiItems',
+					'url'   => 'http://localhost/shop/distributor/index.php/ApiItems',
 				]
 			];
 			$this->Crud_model->insert('setting', $setting[0]);
-			die();
 		}
 
 		$this->load->view('pages/dashboard_view', ['setting' => $setting[0]]);
