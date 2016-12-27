@@ -15,7 +15,7 @@ class Home extends CI_Controller
 
 	public function index(){
 		$url     = 'http://localhost/shop/distributor/ApiHerbal';
-		$api_key = '8kkk4gs4k0kcg8wwsoook004sggg4sgk4o4s4kgg';
+		$api_key = 's0w8o4os0swgwcksk0cs8co0ss8w000gkkoo8cgs';
 		// make a request to ware change X-API-KEY
 		$client   = new GuzzleHttp\Client();
 		$response = $client->request(
