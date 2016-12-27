@@ -41,16 +41,21 @@
 							<?php echo $this->session->flashdata('warning') ?>
 						</div>
 					<?php endif ?>
-					<div class="row">
+					<div class="row table-responsive">
 						<div class="col-md-12">
-							<a style="margin-bottom: 12px;" href="<?php echo base_url().'users/create' ?>" class="btn btn-success pull-right">Tambah</a>
+							<a style="margin-bottom: 12px;"
+								href="<?php echo base_url().'users/create' ?>"
+								class="btn btn-success pull-right">
+								Tambah Admin
+							</a>
 						</div>
 					</div>
-					<table class="table table-responsive">
+					<table class="table">
 						<thead>
 							<th style="width: 5%">#</th>
 							<th style="width: 55%">Username</th>
-							<th style="width: 40%">Action</th>
+							<th style="width: 20%">Level</th>
+							<th style="width: 20%">Action</th>
 						</thead>
 						<tbody>
 							<?php $rowNum = 1; ?>
@@ -58,8 +63,8 @@
 								<tr>
 									<td><?php echo $rowNum++; ?></td>
 									<td><?php echo $key->username; ?></td>
+									<td><?php echo $key->level; ?></td>
 									<td>
-										<a href="<?php echo base_url().'users/package/'.$key->id ?>" class="btn btn-primary">Paket</a>
 										<a href="<?php echo base_url().'users/edit/'.$key->id ?>" class="btn btn-warning">Edit</a>
 										<a href="<?php echo base_url().'users/delete/'.$key->id ?>" class="btn btn-danger"
 											onclick="return confirm('Are you sure you want to delete this item?');">delete</a>

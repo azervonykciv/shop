@@ -24,6 +24,10 @@
 							<a href="<?php echo base_url().'home/profile' ?>">My Profile</a>
 							<a href="<?php echo base_url().'auth/logout' ?>">Logout</a>
 						</nav>
+			    <?php else: ?>
+						<nav id="nav">
+							<a href="<?php echo base_url().'auth' ?>">Login</a>
+						</nav>
 			    <?php endif ?>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -41,19 +45,21 @@
 						<div>
 							<span class="icon fa-user"></span>
 							<h3>Siapa</h3>
-							<p>Suspendisse amet ullamco</p>
+							<p>vendor yang menjual produk herbal</p>
 						</div>
 
 						<div>
 							<span class="icon fa-server"></span>
 							<h3>Apa</h3>
-							<p>Class aptent taciti ad litora</p>
+							<p>Info barang herbal</p>
 						</div>
 
 						<div>
 							<span class="icon fa-question"></span>
-							<h3>Berapa</h3>
-							<p>Nulla vitae mauris non felis</p>
+							<h3>Bagaimana</h3>
+							<p>
+								Daftarkan vendor anda
+							</p>
 						</div>
 
 					</div>

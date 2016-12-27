@@ -7,7 +7,7 @@
     <section class="content-header">
       <h1>
         Users
-        <small>it all starts here</small>
+        <small>Admin</small>
       </h1>
     </section>
 
@@ -40,17 +40,6 @@
                   <label for="exampleInputPassword1">Password</label>
                   <input name="data[password]" type="password" class="form-control" placeholder="Password" >
                 </div>
-                <div class="form-group">
-									<label>Package :</label>
-									<select name="data[level]" class="form-control">
-											<option value="customer" <?php if (isset($data->level)){
-                        if ($data->level === 'customer') echo "selected"; }?> >
-                        customer</option>
-											<option value="super admin" <?php if (isset($data->level)){
-                        if ($data->level === 'super admin') echo "selected"; }?> >
-                        super admin</option>
-									</select>
-								</div>
               </div>
 
               <div class="box-footer">

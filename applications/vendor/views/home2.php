@@ -191,7 +191,6 @@
 								</div> 
 
 									<div class="preview-item_header">
-										<img src="<?php echo base_url()."uploads/".$p->image;?>" alt="App">
 										<div class="preview-item_hover whiteTxtColor robotoLight">
 											<?php echo $p->description ;?>
 										</div>

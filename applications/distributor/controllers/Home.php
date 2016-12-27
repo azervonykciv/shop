@@ -39,6 +39,10 @@ class Home extends CI_Controller{
       ->with('packages')
       ->get($this->session->userdata('id'));
 
+     // echo "asd <pre>";
+     // print_r($user);
+     // die();
+
     $this->load->view('pages/profile_view', ['data' => $user]);
   }
 

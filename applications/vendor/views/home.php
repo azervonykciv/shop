@@ -1,4 +1,5 @@
  <!DOCTYPE html>
+
  <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
  <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
  <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
@@ -383,7 +384,7 @@
  					<div class="filter-results">
  					
  						<div class="row illustration-v2 margin-bottom-30">
- 						<?php foreach($products as $p) :?>
+ 						<?php foreach($product as $p) :?>
  							<div class="col-md-4">
  								<div class="product-img product-img-brd">
  									<a href="#"><img class="full-width img-responsive" src="<?php echo base_url()."uploads/".$p->image;?>" alt=""></a>
