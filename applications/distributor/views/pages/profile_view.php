@@ -69,7 +69,7 @@
 								URL
 							</td>
               <td>
-								: http://localhost/shop/distributor/ApiHerbal
+								: <?php echo base_url() ?>ApiHerbal
 							</td>
             </tr>
           </table>
