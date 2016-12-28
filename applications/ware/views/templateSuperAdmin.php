@@ -5,17 +5,17 @@
     <title>Ware System | Administrator</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
-    <link href="<?php echo base_url('asset/back/AdminLTE-2.0.5/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('assets/back/AdminLTE-2.0.5/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
-    <link href="<?php echo base_url('asset/back/font-awesome-4.3.0/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('assets/back/font-awesome-4.3.0/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css" />
     <!-- Ionicons -->
-    <link href="<?php echo base_url('asset/back/ionicons-2.0.1/css/ionicons.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('assets/back/ionicons-2.0.1/css/ionicons.min.css') ?>" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="<?php echo base_url('asset/back/AdminLTE-2.0.5/dist/css/AdminLTE.min.css') ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('assets/back/AdminLTE-2.0.5/dist/css/AdminLTE.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('assets/back/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.css') ?>" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link href="<?php echo base_url('asset/back/AdminLTE-2.0.5/dist/css/skins/_all-skins.min.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('assets/back/AdminLTE-2.0.5/dist/css/skins/_all-skins.min.css') ?>" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,23 +47,23 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="<?php echo base_url('asset/AdminLTE-2.0.5/') ?>/dist/img/avatar.png" class="user-image" alt="User Image">
-                            <span class="hidden-xs"><?php echo $user['Nama_User']; ?></span>
+                            <span class="hidden-xs"><?php echo $user; ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
                                 <img src="<?php echo base_url('asset/AdminLTE-2.0.5/') ?>/dist/img/avatar.png" class="img-circle" alt="User Image">
                                 <p>
-                                    <?php echo $user['Nama_User']; ?> - <?php echo $user['Status']; ?>
+                                    <?php echo $user; ?> - <?php echo $Status; ?>
                                 </p>
                             </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="<?php echo base_url(); ?>User/editProfileAdmin/<?php echo $user['ID_User'];?>/<?php echo $user['Status'];?>" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="<?php echo base_url(); ?>User/editProfileAdmin/<?php echo $id_user;?>/<?php echo $Status;?>" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="<?php echo base_url()."index.php/Dashboard/logout";?>" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="<?php echo base_url()."login/logout";?>" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -83,7 +83,7 @@
                     <img src="<?php echo base_url('asset/AdminLTE-2.0.5/') ?>/dist/img/avatar.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p><?php echo $user['Nama_User']; ?></p>
+                    <p><?php echo $user; ?></p>
                 </div>
             </div>
             <!-- /.search form -->
@@ -137,19 +137,19 @@
 <!-- jQuery 2.1.4 -->
 
 <!-- jQuery 2.1.3 -->
-<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/jQuery/jQuery-2.1.3.min.js') ?>"></script>
-<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/datatables/jquery.dataTables.js') ?>"></script>
-<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.js') ?>"></script>
+<script src="<?php echo base_url('assets/back/AdminLTE-2.0.5/plugins/jQuery/jQuery-2.1.3.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/back/AdminLTE-2.0.5/plugins/datatables/jquery.dataTables.js') ?>"></script>
+<script src="<?php echo base_url('assets/back/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.js') ?>"></script>
 <!-- Bootstrap 3.3.2 JS -->
-<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/bootstrap/js/bootstrap.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/back/AdminLTE-2.0.5/bootstrap/js/bootstrap.min.js') ?>" type="text/javascript"></script>
 <!-- bootstrap datepicker -->
-<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/datepicker/bootstrap-datepicker.js')?>"></script>
+<script src="<?php echo base_url('assets/back/AdminLTE-2.0.5/plugins/datepicker/bootstrap-datepicker.js')?>"></script>
 <!-- SlimScroll -->
-<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/slimScroll/jquery.slimScroll.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/back/AdminLTE-2.0.5/plugins/slimScroll/jquery.slimScroll.min.js') ?>" type="text/javascript"></script>
 <!-- FastClick -->
-<script src='<?php echo base_url('asset/back/AdminLTE-2.0.5/plugins/fastclick/fastclick.min.js') ?>'></script>
+<script src='<?php echo base_url('assets/back/AdminLTE-2.0.5/plugins/fastclick/fastclick.min.js') ?>'></script>
 <!-- AdminLTE App -->
-<script src="<?php echo base_url('asset/back/AdminLTE-2.0.5/dist/js/app.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/back/AdminLTE-2.0.5/dist/js/app.min.js') ?>" type="text/javascript"></script>
 
 <script>
     $(function () {

@@ -2,7 +2,7 @@
 
 <header class="hero-section">
   <!--navigation-->
-  
+
   <nav class="navbar navbar-default" data-spy="affix" data-offset-top="450">
     <div class="container">
 
@@ -36,11 +36,11 @@
       </ul>
     </div>
   </nav>
-  
-  <!--navigation end--> 
-  
+
+  <!--navigation end-->
+
   <!--mobile navigation-->
-  
+
   <div class="mobile-nav-overlay hidden-md hidden-lg" id="mobile-nav-overlay">
     <nav class="mobile-nav">
       <ul>
@@ -54,12 +54,12 @@
       </ul>
     </nav>
   </div>
-  <!--mobile navigation end--> 
-  
+  <!--mobile navigation end-->
+
   <!--welcome message-->
 
 
-  
+
   <section class="container text-center welcome-message">
     <div class="row">
       <div class="col-md-12">
@@ -70,7 +70,7 @@
   <!--welcome message end-->
 </header>
 
-<!--hero section end--> 
+<!--hero section end-->
 
 <!--How it works-->
 
@@ -79,69 +79,68 @@
 
 
     <header class="section-header text-center">
-      <h2>How it works</h2>
-      <h3>Understanding our easy to use product</h3>
+      <h2>Tahapan menggunakan sistem warehouse Muslim Shop</h2>
+      <h3>4 Tahapan</h3>
     </header>
     <div class="row">
-      <div class="col-md-11 center-block"> 
-        
+      <div class="col-md-11 center-block">
+
         <!--step 1-->
         <div class="row">
-          <div class="col-md-6 col-md-push-6 text-center"> <img src="img/step-1.svg" alt="step-1"> </div>
+          <div class="col-md-6 col-md-push-6 text-center"></div>
           <div class="col-md-6 col-md-pull-6">
             <div class="step-number"><span>1</span></div>
-            <h4>Planning</h4>
-            <p>Duis suscipit, eros vel tincidunt mollis, sapien ligula mollismi, ac hendrerit ante tellus sit amet eros.</p>
+            <h4>Registrasi</h4>
+            <p>User melakukan registrasi terlebih dahulu</p>
           </div>
         </div>
-        <!--step 1 end--> 
-        
+        <!--step 1 end-->
+
         <!--step 2-->
         <div class="row">
-          <div class="col-md-6 text-center"> <img src="img/step-2.svg" alt="step-2"> </div>
+          <div class="col-md-6 text-center"></div>
           <div class="col-md-6">
             <div class="step-number"><span>2</span></div>
-            <h4>Prototyping</h4>
-            <p>Maecenas vel congue velit. Cras odio nunc, pellentesque vitae libero id, dapibus egestas justo.</p>
+            <h4>Dapatkan API Key</h4>
+            <p>Dapatkan API Key setelah melakukan registrasi</p>
           </div>
         </div>
-        <!--step 2 end--> 
-        
+        <!--step 2 end-->
+
         <!--step 3-->
         <div class="row">
-          <div class="col-md-6 col-md-push-6 text-center"> <img src="img/step-3.svg" alt="step-3"> </div>
+          <div class="col-md-6 col-md-push-6 text-center"></div>
           <div class="col-md-6 col-md-pull-6">
             <div class="step-number"><span>3</span></div>
-            <h4>Visual Design</h4>
-            <p>Tiam vel pellentesque sapien. Donec eleifend sagittis lacus. Praesent in quam nec mi malesuada laoreet.</p>
+            <h4>Pilih paket barang yang diinginkan</h4>
+            <p>Pilihlah paket barang yang diperlukan sesuai dengan dua pilihan paket yaitu gratis atau premium</p>
           </div>
         </div>
-        <!--step 3 end--> 
-        
+        <!--step 3 end-->
+
         <!--step 4-->
         <div class="row">
-          <div class="col-md-6 text-center"> <img src="img/step-4.svg" alt="step-4"> </div>
+          <div class="col-md-6 text-center"></div>
           <div class="col-md-6">
             <div class="step-number"><span>4</span></div>
-            <h4>Production</h4>
-            <p>Nulla tincidunt finibus dignissim. In sit amet rutrum eros. Nulla accumsan rutrum nisl vitae, semper nunc.</p>
+            <h4>Masukkan URL pada website anda</h4>
+            <p>Masukkan URL yang telah anda dapatkan pada website anda</p>
           </div>
         </div>
-        <!--step 4 end--> 
-        
+        <!--step 4 end-->
+
       </div>
     </div>
   </div>
 </section>
 
-<!--How it works end--> 
+<!--How it works end-->
 
 <!--features-->
 
 <section class="features" id="features">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4 text-center feature-bg"> <img src="img/features.jpg" alt="feature" class="hidden-md hidden-lg"> </div>
       <div class="col-md-7 col-md-offset-1">
         <div class="section-spacing row-margin">
           <header class="section-header">
@@ -149,31 +148,17 @@
           </header>
           <div class="row">
             <!--features 1-->
-            <div class="col-sm-6"> <img src="img/feature-1.svg" alt="feature-1">
               <h4>API By Request</h4>
               <p>Kami menyediakan layanan API Muslim Online Shop sesuai dengan keinginan user</p>
             </div>
             <!--features 1 end-->
             <!--features 2-->
-            <div class="col-sm-6"> <img src="img/feature-2.svg" alt="feature-2">
-              <h4>HTML 5 & CSS3</h4>
-              <p>Proin convallis sodales volutpat. Suspene varius mollis risus arcu.</p>
+              <h4>Security</h4>
+              <p>API Service kami menggunakan unique key yang didapatkan ketika user melakukan registrasi</p>
             </div>
             <!--features 2 end-->
           </div>
-          <div class="row"> 
-            <!--features 3-->
-            <div class="col-sm-6"> <img src="img/feature-3.svg" alt="feature-3">
-              <h4>Fully Responsive</h4>
-              <p>Integer sit amet efficitur odio, nec varius vulputate rhoncus justo. </p>
-            </div>
-            <!--features 3 end--> 
-            <!--features 4-->
-            <div class="col-sm-6"> <img src="img/feature-4.svg" alt="feature-4">
-              <h4>Google Maps</h4>
-              <p>Nullam pellentesque nisl nec tincidunt viverra hendrerit felis mi. </p>
-            </div>
-            <!--features 4 end--> 
+            <!--features 4 end-->
           </div>
         </div>
       </div>
@@ -183,42 +168,27 @@
 
 <!--features end-->
 <!--video intro-->
-<div class="video-intro section-spacing">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 col-md-push-6">
-        <aside class="text-center"> <img src="img/video-intro.jpg" alt="video intro"> <a href="https://vimeo.com/109054393" class="play-btn"><i class="fa fa-play fa-2x"></i> </a> </aside>
-      </div>
-      <div class="col-md-5 col-md-offset-2 col-md-pull-6">
-        <article>
-          <h2>Video about the product</h2>
-          <p>Brief introduction demo video highlighting the important advantages of the product and explaining the working.</p>
-        </article>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!--video intro end--> 
+<!--video intro end-->
 
 <!--User reviews-->
 
 
-<!--User reviews end--> 
+<!--User reviews end-->
 
 <!--learn more-->
 
-<!--learn more end--> 
+<!--learn more end-->
 
 <!--cta-->
 
 
-<!--cta end--> 
+<!--cta end-->
 
 <!--new feature-->
 
 
-<!--new feature end--> 
+<!--new feature end-->
 
 <!--cta info-->
 
@@ -252,8 +222,8 @@
           </div>
         </div>
       </div>
-      <!--pricing tabel 1 end--> 
-      
+      <!--pricing tabel 1 end-->
+
       <!--pricing tabel 2-->
       <div class="col-sm-6">
         <div class="pricing-table-container plan-popular">
@@ -274,167 +244,54 @@
         </div>
       </div>
       <!--pricing tabel 2 end-->
-      
+
     </div>
   </div>
 </section>
 
-<!--Pricing end--> 
+<!--Pricing end-->
 
 <!--testimonial-->
 
-<!--testimonial end--> 
+<!--testimonial end-->
 
 <!--FAQ-->
 
 
-<!--FAQ end--> 
+<!--FAQ end-->
 
 <!--cta signup form-->
 
 
 
-<!--cta signup form end--> 
+<!--cta signup form end-->
 
 <!--Trusted clients-->
 
 
 
-<!--trusted clients end--> 
+<!--trusted clients end-->
 
 <!--video tour-->
 
-<!--video tour end--> 
-
-<!--About us -->
-
-<section class="about-us section-spacing" id="team">
-  <div class="container">
-    <header class="section-header text-center">
-      <h2>About us</h2>
-      <h3>Creative team behind this product</h3>
-    </header>
-    <div class="row about-us-img-grid text-center">
-      <div class="col-md-3"> <img src="img/about-us-grid-1-mobile.jpg" alt="about us" class="visible-xs-inline-block"> <img src="img/about-us-grid-1-tablet.jpg" alt="about us" class="visible-sm-inline-block"> <img src="img/about-us-grid-1.jpg" alt="about us" class="hidden-xs hidden-sm"> </div>
-      <div class="col-md-9">
-        <div class="row">
-          <div class="col-sm-6"> <img src="img/about-us-grid-2.jpg" alt="about us"> </div>
-          <div class="col-sm-6"> <img src="img/about-us-grid-3.jpg" alt="about us"> </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4"> <img src="img/about-us-grid-4.jpg" alt="about us"> </div>
-          <div class="col-xs-4"> <img src="img/about-us-grid-5.jpg" alt="about us"> </div>
-          <div class="col-xs-4"> <img src="img/about-us-grid-6.jpg" alt="about us"> </div>
-        </div>
-      </div>
-    </div>
-    <div class="row about-us-into">
-      <div class="col-md-10 center-block">
-        <div class="row">
-          <div class="col-md-6">
-            <article>
-              <h4>About archer</h4>
-              <p>Consectetur adipiscing elit. Donec luctus at augue id tincidunt. Proin nulla risus, pharetra id aliquet quis, cursus interdum orci cras ullamcorper tellus a massa ornare, non ornare arcu cursus.</p>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article>
-              <h4>Our mission</h4>
-              <p>Nam tristique diam quis ex venenatis lobortis. Vivamus dapibus tincidunt commodo. Praesent a euismod risus. Morbi condimentum ut turpis lobortis aliquet. Aliquam eget diam lorem. </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row text-center team-details">
-      <div class="col-md-11 center-block">
-        <h4>The team</h4>
-        <div class="team-slider owl-carousel owl-theme"> 
-          
-          <!--Team 1-->
-          <div class="item"> <img src="img/team-1.jpg" alt="team member" class="img-circle">
-            <h5>Hi, i’m <span class="bold">Nicole Ortega</span><span class="team-position">Founder</span></h5>
-            <ul class="social">
-              <li><a href="#" class="a-facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" class="a-twitter"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#" class="a-google-plus"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-            <p>Fusce laoreet lectus tellus, aliquam maximus magna auctor suscipit. Praesent sed lacinia lectus. Ut laoreet finibus odio quis laoreet.</p>
-          </div>
-          <!--Team 1 end--> 
-          
-          <!--Team 2-->
-          <div class="item"> <img src="img/team-2.jpg" alt="team member" class="img-circle">
-            <h5>Hi, i’m <span class="bold">Diana Oliver</span><span class="team-position">Co-founder</span></h5>
-            <ul class="social">
-              <li><a href="#" class="a-facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" class="a-twitter"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#" class="a-google-plus"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-            <p>Morbi condimentum ut turpis lobortis aliquet. Aliquam eget diam lorem. Aliquam erat volutpat. Pellentesque vulputate placerat pharetra.</p>
-          </div>
-          <!--Team 2 end--> 
-          
-          <!--Team 3-->
-          <div class="item"> <img src="img/team-3.jpg" alt="team member" class="img-circle">
-            <h5>Hi, i’m <span class="bold">Alan Garrett</span><span class="team-position">CEO</span></h5>
-            <ul class="social">
-              <li><a href="#" class="a-facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" class="a-twitter"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#" class="a-google-plus"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-            <p>Aliquam maximus magna fusce laoreet lectus tellus, auctor suscipit. Praesent sed lacinia lectus. Ut laoreet finibus odio quis laoreet.</p>
-          </div>
-          <!--Team 3 end--> 
-          
-          <!--Team 4-->
-          <div class="item"> <img src="img/team-4.jpg" alt="team member" class="img-circle">
-            <h5>Hi, i’m <span class="bold">Brenda Payne</span><span class="team-position">Manager</span></h5>
-            <ul class="social">
-              <li><a href="#" class="a-facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" class="a-twitter"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#" class="a-google-plus"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-            <p>Onec mattis ac dui eget fringilla. Sed vitae nisl sit amet dui dapibus lacinia. Etiam facilisis, nunc eu fringilla lacus augue felis luctus libero. </p>
-          </div>
-          <!--Team 4 end--> 
-          
-          <!--Team 5-->
-          <div class="item"> <img src="img/team-5.jpg" alt="team member" class="img-circle">
-            <h5>Hi, i’m <span class="bold">Ethan Smith</span><span class="team-position">Designer</span></h5>
-            <ul class="social">
-              <li><a href="#" class="a-facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" class="a-twitter"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#" class="a-google-plus"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-            <p> Vivamus sed lectus placerat, tristique faucibus , pellentesque odio. Duis ut luctus eros pellentesque a urna et, feugiat blandit quam.</p>
-          </div>
-          <!--Team 5 end--> 
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--About us end--> 
+<!--video tour end-->
 
 <!--CTA footer-->
 
-<!--CTA footer end--> 
+<!--CTA footer end-->
 
 <!--Twitter reviews-->
 
-<!--Twitter reviews end--> 
+<!--Twitter reviews end-->
 
 <!--App download-->
 
-<!--App download end--> 
+<!--App download end-->
 
 <!--Features cta-->
 
 
-<!--Features cta end--> 
+<!--Features cta end-->
 
 <!--Site footer-->
 
@@ -507,14 +364,14 @@
     </div>
   </div>
 
-<!--Site footer end--> 
+<!--Site footer end-->
 
 <!--Copyright terms-->
 
 <footer class="copyright-terms">
   <div class="container">
     <div class="row">
-      <div class="col-sm-5 col-md-6"> <small> &copy; 2016 Archer. All rights reserved.</small> </div>
+      <div class="col-sm-5 col-md-6"> <small> &copy; 2016 Muslim Online Shop. All rights reserved.</small> </div>
       <div class="col-sm-7 col-md-6">
         <ul class="terms-privacy">
           <li><a href="#" data-toggle="modal" data-target="#modal-terms">Terms</a></li>
@@ -526,7 +383,7 @@
   </div>
 </footer>
 
-<!--Copyright terms end--> 
+<!--Copyright terms end-->
 
 <!-- Google map modal -->
 <div class="modal fade" id="modal-google-map" tabindex="-1" role="dialog">
@@ -542,7 +399,7 @@
   </div>
 </div>
 
-<!-- Google map modal end--> 
+<!-- Google map modal end-->
 
 <!--Site policy modal -->
 <div class="modal fade site-policy" id="modal-terms" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
@@ -590,6 +447,6 @@
   </div>
 </div>
 
-<!--Site policy modal end--> 
+<!--Site policy modal end-->
 
 <!--contact form modal-->

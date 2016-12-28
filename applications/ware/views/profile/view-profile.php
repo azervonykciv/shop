@@ -25,8 +25,6 @@
 
     <!--logo-->
 
-    <div class="logo-sl-page text-center"> <a href="#"><img src="img/logo.svg" alt="logo"></a> </div>
-
     <!--logo end-->
 
     <!--cta signin form-->
@@ -36,7 +34,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="box">
-                    <header class="section-header"> <img src="img/support-icon.svg" alt="support icon">
+                    <header class="section-header">
                         <h2>Profile Anda</h2>
                     </header>
                     <div class="panel panel-default">
@@ -69,9 +67,9 @@
                         </table>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn">Kirim</button>
-                        </form>
+                        <a href="<?php echo base_url()."Front"; ?>" class="btn">Kembali</a>
                     </div>
+                  </div>
                 </div>
             </div>
     </section>

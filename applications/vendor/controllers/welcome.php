@@ -5,6 +5,7 @@ class Welcome extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('model_products');
+		$this->load->model('Crud_model');
 	}
 
 	public function cek(){
@@ -16,9 +17,6 @@ class Welcome extends CI_Controller {
 		$data['products'] = $this->model_products->all();
 		$this->load->view('checkout',$data);
 
-	}public function cek3(){
-		$data['produk'] = $this->model_products->all();
-		$this->load->view('herbal',$data);
 	}
 
 	public function index()
@@ -38,7 +36,35 @@ class Welcome extends CI_Controller {
 		);
 
 		$this->cart->insert($data);
-		redirect('welcome/cek3');
+		redirect('welcome/cek');
+	}
+
+	public function addtocart($KODE_BARANG){
+		$setting = $this->Crud_model->get('setting','*');
+		$url     = $setting[0]->url;
+		$api_key = $setting[0]->token;
+		// make a request to ware change X-API-KEY
+		$client   = new GuzzleHttp\Client();
+		$response = $client->request(
+				'GET',
+				$url,
+				['headers' => ['X-API-KEY' => $api_key]]
+		);
+		$response = json_decode($response->getBody());
+		foreach ($response as $res) {
+		
+			if($res->KODE_BARANG == $KODE_BARANG){
+					$data = array(
+								'id'		=> $res->KODE_BARANG,
+								'qty'		=> 1,
+								'price'		=> $res->HARGA_JUAL,
+								'name'		=> $res->NAMA_BARANG,
+					);
+			}
+		}
+
+		$this->cart->insert($data);
+		redirect('home');
 	}
 
 	public function cart(){
@@ -49,7 +75,7 @@ class Welcome extends CI_Controller {
 
 	public function clear_cart(){
 		$this->cart->destroy();
-		redirect('welcome/cek');
+		redirect('home');
 	}
 }
 

@@ -411,7 +411,6 @@
 										<tr>
 											<td><?= $i ?></td>
 											<td class="product-in-table">
-												<img class="img-responsive" src="<?php echo base_url()."uploads/".$items['image'];?>" alt="">
 												<div class="product-it-in">
 													<h3><?= $items['name'] ?></h3>
 													<h3> </h3>
@@ -434,7 +433,7 @@
 							</div>
 							<div align="center">
 							<?= anchor('welcome/clear_cart','Clear Cart',['class'=>'btn btn-danger']) ?>
-							<?= anchor('welcome/cek','Continues Shopping',['class'=>'btn btn-primary']) ?>
+							<?= anchor('Home','Continues Shopping',['class'=>'btn btn-primary']) ?>
 		</div>
 						</section>
 

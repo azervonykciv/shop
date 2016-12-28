@@ -87,7 +87,7 @@
 										foreach ($this->cart->contents() as $items):
 										$i++; 	?>
  								<li>
- 									<img src="<?php echo base_url()."uploads/".$items['image'];?>" alt="">
+ 									
  									<button type="button" class="close">×</button>
  									<div class="overflow-h">
  										<span><?= $items['name'] ?></span>
@@ -99,14 +99,14 @@
  							<div class="subtotal">
  								<div class="overflow-h margin-bottom-10">
  									<span>Subtotal</span>
- 									<span class="pull-right subtotal-cost">$1200.00</span>
+ 									<span class="pull-right subtotal-cost">$0.00</span>
  								</div>
  								<div class="row">
  									<div class="col-xs-6">
  										
  									</div>
- 									<div class="col-xs-6">
- 										<a href="cek2" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+ 									<div class="col-xs-6"> 	
+ 										<a href="welcome/cek2" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
  									</div>
  								</div>
  							</div>
@@ -378,14 +378,13 @@
  				
 
  				<div class="col-md-9">
- 					
-<!-- <a class="add-to-cart" href=" <?php echo base_url()."index.php/welcome/add_to_cart/".$p->id ?> "><i class="fa fa-shopping-cart"></i>Add to cart</a> -->
  					<div class="filter-results">
  					
  						<div class="row illustration-v2 margin-bottom-30">
  						<table class="table">
  							<thead>
  								<tr>
+ 									<th>KODE_BARANG</th>
  									<th>NAMA_BARANG</th>
  									<th>HARGA_JUAL</th>
  									<th>QTY</th>
@@ -395,12 +394,13 @@
  							<tbody>
 		 						<?php foreach($produk as $p) :?>
 									<tr>
+										<td><?php echo $p->KODE_BARANG ?></td>
 										<td><?php echo $p->NAMA_BARANG ?></td>
 										<td><?php echo $p->HARGA_JUAL ?></td>
 										<td><?php echo $p->QTY ?></td>
 										<td>
-										<!-- <?php echo base_url()."index.php/welcome/add_to_cart/".$p->KODE_BARANG ?> -->
-										<a class="btn btn-success" href="<?php echo base_url()."index.php/welcome/add_to_cart/".$p->KODE_BARANG ?>">Add to cart</a>
+										<!-- <?php echo base_url()."index.php/welcome/addtocart/".$p->KODE_BARANG ?> -->
+										<a class="btn btn-success" href="<?php echo base_url()."index.php/welcome/addtocart/".$p->KODE_BARANG ?>">Add to cart</a>
 										</td>
 									</tr>		 							
 		 						<?php endforeach ?>

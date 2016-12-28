@@ -24,6 +24,20 @@ class Model_products extends CI_Model {
 		}
 	}
 
+	public function finds ($KODE_BARANG){
+		//query mencari record barang berdasarkan ID-nya
+		$hasil = $this->db->where('KODE_BARANG', $KODE_BARANG)
+					      ->limit(1)
+					      ->get('barang');
+		if($hasil->num_rows() > 0){
+			return $hasil->row();
+		} else {
+			return array();
+		}
+	}
+
+
+
 	public function create ($data_product){
 		//Query INSERT INTO
 		$this->db->insert('products', $data_product);

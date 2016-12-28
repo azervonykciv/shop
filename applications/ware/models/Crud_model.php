@@ -51,15 +51,11 @@ class Crud_model extends CI_Model
             return $this->db->where($id1,$id2)->get($table,$lim);
     }
 
-    public function get_wr($table,$id1,$id2)
-    {
-        return $this->db->where($id1,$id2)->get($table);
-    }
-
     public function update($table,$data,$id1,$id2)
     {
         $this->db->where($id1,$id2);
         $this->db->update($table,$data);
+        return true;
     }
 
 

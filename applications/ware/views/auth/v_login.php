@@ -27,8 +27,6 @@
 
 	<!--logo-->
 
-	<div class="logo-sl-page text-center"> <a href="#"><img src="img/logo.svg" alt="logo"></a> </div>
-
 	<!--logo end-->
 
 	<!--cta signin form-->
@@ -47,7 +45,6 @@
 					<div class="form-group">
 						<input type="password" class="form-control input-lg" name="Password" id="input-password" placeholder="Password" required>
 					</div>
-					<div class="text-right forgot-password"> <a href="#">Lupa Password?</a> </div>
 					<div class="form-btn">
 						<button type="submit" class="btn">Masuk</button>
 					</div>

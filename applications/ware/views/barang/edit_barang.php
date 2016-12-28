@@ -23,8 +23,8 @@
                     <h3 class="box-title">Edit Barang</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                    <form action="<?php echo base_url(); ?>admin/updateBarang" method="POST">
-                        <input name="ID_User" type="hidden" value="<?php echo $user['ID_User']; ?>">
+                    <form action="<?php echo base_url(); ?>Admin/updateBarang" method="POST">
+                        <input name="ID_User" type="hidden" value="<?php echo $id_user; ?>">
                         <div class="input-group">
                             <label>Kode Barang</label>
                             <input name="KODE_BARANG" value="<?php echo $barang[0]->KODE_BARANG; ?>" type="text" class="form-control" placeholder="Id Barang" readonly>
@@ -32,6 +32,10 @@
                         <div class="input-group">
                             <label>Nama Barang</label>
                             <input name="NAMA_BARANG" value="<?php echo $barang[0]->NAMA_BARANG; ?>" type="text" class="form-control" placeholder="Nama Barang">
+                        </div>
+                        <div class="input-group">
+                            <label>Kode Unit</label>
+                            <input name="KODE_UNIT" value="<?php echo $barang[0]->KODE_UNIT; ?>" type="text" class="form-control" placeholder="Kode Unit">
                         </div>
                         <div class="input-group">
                             <label>Kategori</label>
@@ -45,6 +49,9 @@
                             <label>Harga</label>
                             <input name="HARGA_JUAL" value="<?php echo $barang[0]->HARGA_JUAL; ?>" type="text" class="form-control" placeholder="Harga">
                         </div>
+                        <div class="input-group">
+                            <label>Tanggal Produksi</label>
+                            <input type="text" name="TGLPRODUKSI" value="<?php echo $barang[0]->TGLPRODUKSI; ?>" type="text" class="form-control pull-right" id="datepicker">
                         <div class="input-group">
                             <input class="btn btn-primary" type="submit" value="Submit">
                         </div>

@@ -14,21 +14,13 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
-        $ambil_akun = $this->m_login->ambil_user($this->session->userdata('uname'));
-        $data = array(
-            'user' => $ambil_akun,
-        );
-
-        $stat = $this->session->userdata('Status');
-        //if($stat == "Dosen"){
-        //	$this->homeDosen();
-        if ($stat == "Admin") {
             $this->homeSuperAdmin();
-        }
     }
 
 	public function homeSuperAdmin(){
-		$data['user'] = $this->m_login->ambil_user($this->session->userdata('uname'));
+		$data['user'] = $this->session->userdata('uname');
+    $data['Status'] = $this->session->userdata('Status');
+    $data['id_user'] = $this->session->userdata('id_user');
 		$this->template->load('templateSuperAdmin', 'Home/homeSuperAdmin',$data);
 	}
 }
