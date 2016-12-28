@@ -27,11 +27,11 @@
         <li class="hidden-xs"><a href="<?php echo base_url()."front/profile/".$this->session->userdata('id_user'); ?>">Profile</a></li>
         <?php endif ?>
         <?php if($status === 'Member'):?>
-        <li class="hidden-xs"><a href="<?php echo base_url()."login/logout"; ?>">Keluar</a></li>
+        <li class="hidden-xs"><a href="<?php echo base_url()."Auth/logout"; ?>">Keluar</a></li>
           <?php else:?>
-          <li class="hidden-xs"><a href="<?php echo base_url()."login"; ?>">Masuk</a></li>
+          <li class="hidden-xs"><a href="<?php echo base_url()."Auth"; ?>">Masuk</a></li>
         <?php endif ?>
-        <li><a href="<?php echo base_url()."register"; ?>" class="btn btn-nav">Daftar</a></li>
+        <li><a href="<?php echo base_url()."Auth/register"; ?>" class="btn btn-nav">Daftar</a></li>
         <li class="hidden-md hidden-lg"><a id="toggle"><i class="fa fa-bars fa-2x"></i><i class="fa fa-times fa-2x"></i></a></li>
       </ul>
     </div>
@@ -48,9 +48,9 @@
         <li><a href="#pricing">API Service</a></li>
         <li><a href="#team">Team</a></li>
         <?php if($status === 'Member'):?>
-        <li class="hidden-sm"><a href="<?php echo base_url()."login/logout"; ?>">Sign Out</a></li>
+        <li class="hidden-sm"><a href="<?php echo base_url()."Auth/logout"; ?>">Sign Out</a></li>
         <?php endif ?>
-        <li class="hidden-sm"><a href="<?php echo base_url()."login"; ?>">Sign In</a></li>
+        <li class="hidden-sm"><a href="<?php echo base_url()."Auth"; ?>">Sign In</a></li>
       </ul>
     </nav>
   </div>
@@ -64,7 +64,7 @@
     <div class="row">
       <div class="col-md-12">
         <h1>Selamat Datang di Sistem Warehouse Muslim Shop</h1>
-        <a href="<?php echo base_url()."register"; ?>" class="btn btn-cta-hero">DAFTAR</a> </div>
+        <a href="<?php echo base_url()."Auth/register"; ?>" class="btn btn-cta-hero">DAFTAR</a> </div>
     </div>
   </section>
   <!--welcome message end-->

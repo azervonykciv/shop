@@ -35,7 +35,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-md-5 center-block">
-					<?php echo form_open('login/do_login','id="cta-signup-form" class="cta-signup-form"') ?>
+					<?php echo form_open('Auth/do_login','id="cta-signup-form" class="cta-signup-form"') ?>
 					<header class="section-header text-center">
 						<h2>Muslim Shop Warehouse System</h2>
 					</header>

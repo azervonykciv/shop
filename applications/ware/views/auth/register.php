@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-md-5 center-block">
-                    <?php echo form_open('register/do_reg/2','id="cta-signup-form" class="cta-signup-form"') ?>
+                    <?php echo form_open('Auth/do_reg/2','id="cta-signup-form" class="cta-signup-form"') ?>
 
                     <header class="section-header text-center">
                         <h2>Buat Akun Anda</h2>
