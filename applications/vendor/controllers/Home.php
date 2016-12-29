@@ -18,6 +18,8 @@ class Home extends CI_Controller
 		$setting = $this->Crud_model->get('setting','*');
 		$url     = $setting[0]->url;
 		$api_key = $setting[0]->token;
+
+
 		// make a request to ware change X-API-KEY
 		$client   = new GuzzleHttp\Client();
 		$response = $client->request(
