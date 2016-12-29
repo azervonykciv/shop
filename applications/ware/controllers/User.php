@@ -14,7 +14,7 @@ class User extends CI_Controller {
 		$data['user'] = $this->session->userdata('uname');
 		$data['Status'] = $this->session->userdata('Status');
 		$data['id_user'] = $this->session->userdata('id_user');
-		$this->template->load('templateSuperAdmin','User/dataUSer', $data);
+		$this->template->load('templateSuperAdmin','User/dataUser', $data);
 	}
 
 	public function insertUser()
