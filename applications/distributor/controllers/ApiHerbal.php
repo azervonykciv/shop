@@ -51,6 +51,24 @@ class ApiHerbal extends REST_Controller {
 		// send response
 		$this->set_response($result, REST_Controller::HTTP_OK);
 	}
+
+	public function stok_get()
+	{
+		$setting   = $this->Crud_model->get('setting', '*');
+		$api_key   = $setting[0]->token;
+		$id_barang = $this->get('id1');
+		$url       = 'http://localhost/shop/ware/api_server?id1='.$id_barang;
+
+		$client   = new GuzzleHttp\Client();
+		$response = $client->request(
+				'put',
+				$url,
+				['headers' => ['X-API-KEY' => $api_key]]
+		);
+		$response = json_decode($response->getBody());
+		$response['url'] = $url;
+		$this->set_response($response, REST_Controller::HTTP_OK);
+	}
 }
 
 /* End of file Items.php */
