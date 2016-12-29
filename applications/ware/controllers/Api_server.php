@@ -32,12 +32,5 @@ class Api_server extends REST_Controller
 
       $data['QTY'] = $barang->QTY - 1;
       $update = $this->crud_model->update('barang',$data,'KODE_BARANG',$id2);
-        if($update)
-        {
-            $this->response($data,200);
-        }
-        //{
-          //  $this->response(array('status' => 'fail',502));
-        //}
     }
 }
