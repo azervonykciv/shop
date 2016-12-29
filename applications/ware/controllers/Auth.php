@@ -21,7 +21,7 @@ class Auth extends CI_Controller {
 
 	function reg_ad()
 	{
-		$this->template->load('frontbase','auth/reg_ad');
+		$this->template->load('frontBase','auth/reg_ad');
 	}
 
   function do_login()

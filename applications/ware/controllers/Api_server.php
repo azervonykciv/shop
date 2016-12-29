@@ -13,7 +13,6 @@ class Api_server extends REST_Controller
 //For get barang by request
     public function index_get()
     {
-// 01 standard req - 02 spesific req
           $tab = $this->get('tab');
           $id_user = $this->get('id_user');
           $kat1 = $this->get('kat1');
@@ -26,19 +25,12 @@ class Api_server extends REST_Controller
           }
     }
 
-    public function index_put()
+    public function stock_get()
     {
-        $id2 = $this->put('id1');
-        $barang = $this->crud_model->match('barang','KODE_BARANG',$id2)->row();
-        $data['QTY'] = $barang->QTY - 1;
+      $id2 = $this->get('id1');
+      $barang = $this->crud_model->match('barang','KODE_BARANG',$id2)->row();
 
-        $update = $this->crud_model->update('barang',$data,'KODE_BARANG',$id2);
-        if($update)
-        {
-           $this->response($data,200);
-        }
-        //{
-          //  $this->response(array('status' => 'fail',502));
-        //}
+      $data['QTY'] = $barang->QTY - 1;
+      $update = $this->crud_model->update('barang',$data,'KODE_BARANG',$id2);
     }
 }

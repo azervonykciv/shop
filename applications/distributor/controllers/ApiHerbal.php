@@ -54,19 +54,23 @@ class ApiHerbal extends REST_Controller {
 
 	public function stok_get()
 	{
+		// get my setting
 		$setting   = $this->Crud_model->get('setting', '*');
 		$api_key   = $setting[0]->token;
+		// get params
 		$id_barang = $this->get('id1');
-		$url       = 'http://localhost/shop/ware/api_server?id1='.$id_barang;
-
+		$url       = 'http://localhost/shop/ware/api_server/stock?id1='.$id_barang;
+		// make request
 		$client   = new GuzzleHttp\Client();
 		$response = $client->request(
-				'put',
+				'GET',
 				$url,
 				['headers' => ['X-API-KEY' => $api_key]]
 		);
+		// set response
 		$response = json_decode($response->getBody());
 		$response['url'] = $url;
+		// send response
 		$this->set_response($response, REST_Controller::HTTP_OK);
 	}
 }
