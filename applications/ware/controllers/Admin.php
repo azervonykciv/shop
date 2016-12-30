@@ -18,30 +18,6 @@ class Admin extends CI_Controller
 
     }
 
-    /**public function listReport()
-    {
-        $report = $this->jrm->getReport();
-        $user = $this->m_login->ambil_user($this->session->userdata('uname'));
-        $data = [
-            'report' => $report,
-            'user' => $user,
-        ];
-        $this->template->load('template', 'admin/list-dosen-report_view', $data);
-    }
-
-    public function editReport($id)
-    {
-        $jadwal = $this->jdm->getReport($id);
-        $user = $this->m_login->ambil_user($this->session->userdata('uname'));
-        $data = [
-            'jadwal' => $jadwal,
-            'user' => $user,
-        ];
-        $this->template->load('template', 'admin/update-jadwal-report_view', $data);
-    }
-
-    **/
-
 
     public function listBarang()
     {
